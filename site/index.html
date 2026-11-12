@@ -5,6 +5,7 @@
 <meta name="theme-color" content="#eeeae1"><meta name="description" content="Recorded radar localization experiments: inspect trajectories, geometric evidence, and held-out results.">
 <title>Radar Field Console — Ammara Noor</title>
 <link rel="stylesheet" href="console.css">
+<link rel="stylesheet" href="readability.css">
 </head>
 <body>
 <div class="app-shell">
@@ -23,7 +24,7 @@
 </header>
 <main>
 <section class="masthead">
- <div><div class="eyebrow"><span class="cross">+</span> AUTONOMOUS SYSTEMS / RADAR LOCALIZATION</div><h1>Radar-SLAM<br>analysis console<span class="orange">.</span></h1></div>
+ <div><div class="eyebrow"><span class="cross">+</span> AUTONOMOUS SYSTEMS / RADAR LOCALIZATION</div><h1>Radar-SLAM<br>analysis console<span class="orange">.</span></h1><p class="masthead-description">From radar observations to verified loop constraints.<br>Compare trajectories, inspect failed matches, and trace each result.</p></div>
  <div class="masthead-note"><span class="section-label">EXPERIMENT BRIEF / V4</span><p>Recorded radar experiments.<br>Inspect estimates, constraints and errors.</p><div class="brief-footer"><span>BOREAS PUBLIC DATA</span><span>2021 ARCHIVE ↗</span></div></div>
 </section>
 <nav class="tabs" role="tablist" aria-label="Views"><button class="tab active" role="tab" aria-selected="true" data-nav="trajectory"><span>01</span>Trajectory desk</button><button class="tab" role="tab" aria-selected="false" data-nav="observations"><span>02</span>Radar observations</button><button class="tab" role="tab" aria-selected="false" data-nav="ledger"><span>03</span>Experiment ledger</button><button class="export-button" id="exportRecord">Export record <span>↓</span></button></nav>
@@ -31,7 +32,7 @@
 <section class="view active" id="view-trajectory" aria-label="Trajectory desk">
  <div class="desk-grid">
   <div class="trajectory-desk">
-   <div class="panel-heading"><div><span class="section-label">NAVIGATION / RETURN SEGMENT</span><h2>Trajectory reconstruction</h2></div><span class="run-stamp">RUN 02 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div>
+   <div class="panel-heading"><div><span class="section-label">NAVIGATION / RETURN SEGMENT</span><h2>Trajectory reconstruction</h2><p class="panel-description">Compare odometry with the final graph after loop verification.</p></div><span class="run-stamp">RUN 02 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div>
    <div class="plot-shell">
     <div class="plot-toolbar"><div class="coordinate-label"><span class="tiny-square"></span>LOCAL SENSOR FRAME <span>/ METRES</span></div><label class="map-toggle"><input id="showMap" type="checkbox" checked><span>Final fused map</span></label></div>
     <svg id="trajectoryPlot" viewBox="0 0 1000 550" role="img" aria-label="Measured trajectory with supplied reference, radar odometry, and checked-loop estimates"></svg>
