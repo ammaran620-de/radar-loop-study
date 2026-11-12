@@ -1,0 +1,283 @@
+{
+  "gate": {
+    "overlap": 0.7,
+    "rmse_m": 1.5
+  },
+  "algorithm": {
+    "name": "coarse_to_fine_phase_initialized_icp",
+    "raster_resolution_m": 1.0,
+    "raster_size": 256,
+    "coarse_points": 160,
+    "coarse_iterations": 8,
+    "refine_starts": 2,
+    "refine_iterations": 25,
+    "correspondence_m": 4.0
+  },
+  "training_session": "boreas-2021-09-02-11-42",
+  "criterion": "Maximize correct selected queries subject to zero development pose errors; exploratory, not safety calibration",
+  "thresholds": {
+    "translation_m": 2,
+    "rotation_deg": 5
+  },
+  "calibration_grid": [
+    {
+      "gate": {
+        "overlap": 0.4,
+        "rmse_m": 1.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 1,
+        "correct_pose": 1,
+        "wrong_pose": 0,
+        "abstained": 39,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.03915448388997706,
+        "median_rotation_error_deg": 0.5256851974321438
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.4,
+        "rmse_m": 1.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 18,
+        "correct_pose": 18,
+        "wrong_pose": 0,
+        "abstained": 22,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.09444660017924111,
+        "median_rotation_error_deg": 0.1951881225207786
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.4,
+        "rmse_m": 2.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 30,
+        "correct_pose": 21,
+        "wrong_pose": 9,
+        "abstained": 10,
+        "pose_precision": 0.7,
+        "median_translation_error_m": 0.24071644732978087,
+        "median_rotation_error_deg": 0.28929506867024213
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.4,
+        "rmse_m": 2.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 40,
+        "correct_pose": 20,
+        "wrong_pose": 20,
+        "abstained": 0,
+        "pose_precision": 0.5,
+        "median_translation_error_m": 6.600850647137551,
+        "median_rotation_error_deg": 0.8348143363357596
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.5,
+        "rmse_m": 1.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 1,
+        "correct_pose": 1,
+        "wrong_pose": 0,
+        "abstained": 39,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.03915448388997706,
+        "median_rotation_error_deg": 0.5256851974321438
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.5,
+        "rmse_m": 1.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 18,
+        "correct_pose": 18,
+        "wrong_pose": 0,
+        "abstained": 22,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.09444660017924111,
+        "median_rotation_error_deg": 0.1951881225207786
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.5,
+        "rmse_m": 2.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 28,
+        "correct_pose": 21,
+        "wrong_pose": 7,
+        "abstained": 12,
+        "pose_precision": 0.75,
+        "median_translation_error_m": 0.21357183776335592,
+        "median_rotation_error_deg": 0.2712591469423979
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.5,
+        "rmse_m": 2.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 37,
+        "correct_pose": 20,
+        "wrong_pose": 17,
+        "abstained": 3,
+        "pose_precision": 0.5405405405405406,
+        "median_translation_error_m": 0.756944267268998,
+        "median_rotation_error_deg": 0.3595491959838388
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.6,
+        "rmse_m": 1.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 1,
+        "correct_pose": 1,
+        "wrong_pose": 0,
+        "abstained": 39,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.03915448388997706,
+        "median_rotation_error_deg": 0.5256851974321438
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.6,
+        "rmse_m": 1.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 18,
+        "correct_pose": 18,
+        "wrong_pose": 0,
+        "abstained": 22,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.09444660017924111,
+        "median_rotation_error_deg": 0.1951881225207786
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.6,
+        "rmse_m": 2.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 25,
+        "correct_pose": 21,
+        "wrong_pose": 4,
+        "abstained": 15,
+        "pose_precision": 0.84,
+        "median_translation_error_m": 0.12586800618655866,
+        "median_rotation_error_deg": 0.24314156580272314
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.6,
+        "rmse_m": 2.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 28,
+        "correct_pose": 21,
+        "wrong_pose": 7,
+        "abstained": 12,
+        "pose_precision": 0.75,
+        "median_translation_error_m": 0.21357183776335592,
+        "median_rotation_error_deg": 0.2712591469423979
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.7,
+        "rmse_m": 1.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 1,
+        "correct_pose": 1,
+        "wrong_pose": 0,
+        "abstained": 39,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.03915448388997706,
+        "median_rotation_error_deg": 0.5256851974321438
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.7,
+        "rmse_m": 1.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 18,
+        "correct_pose": 18,
+        "wrong_pose": 0,
+        "abstained": 22,
+        "pose_precision": 1.0,
+        "median_translation_error_m": 0.09444660017924111,
+        "median_rotation_error_deg": 0.1951881225207786
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.7,
+        "rmse_m": 2.0
+      },
+      "result": {
+        "queries": 40,
+        "selected": 23,
+        "correct_pose": 21,
+        "wrong_pose": 2,
+        "abstained": 17,
+        "pose_precision": 0.9130434782608695,
+        "median_translation_error_m": 0.11199908900937734,
+        "median_rotation_error_deg": 0.23746202234376068
+      }
+    },
+    {
+      "gate": {
+        "overlap": 0.7,
+        "rmse_m": 2.5
+      },
+      "result": {
+        "queries": 40,
+        "selected": 24,
+        "correct_pose": 21,
+        "wrong_pose": 3,
+        "abstained": 16,
+        "pose_precision": 0.875,
+        "median_translation_error_m": 0.11893354759796801,
+        "median_rotation_error_deg": 0.24030179407324193
+      }
+    }
+  ],
+  "registration_source_sha256": "84195a108d62e9d6efedce77d38ff28a4540381801656a48bae874c7a7be2ddc",
+  "development_manifest_sha256": "a94c6724f8483439031fafbf2d83f6a4e773cb44f6c0e0784e0ecbe7dee6d427",
+  "config_sha256": "1fe040bbf6e9de2c8cd1aba128c2680939ee0b3c9fe15068b74d42a1142d0d33"
+}

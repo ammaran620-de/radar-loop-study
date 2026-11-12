@@ -1,0 +1,177 @@
+{
+  "version": "3.0",
+  "scope": "Frozen learned radar retrieval with experimental 2D geometric verification",
+  "model": {
+    "name": "RadarLoc",
+    "upstream": "https://github.com/jac99/RadarLoc",
+    "checkpoint_sha256": "aa36dcd85b7394d8c76fb77215fef2cc21448eecab6b86c3b24a507ef42193bb",
+    "frozen": true,
+    "training": "Authors' released pretrained checkpoint; no fine-tuning on this sample",
+    "preprocessing": "Author normalization and area-resize; full Boreas range is an out-of-domain adaptation",
+    "descriptor_dimension": 256,
+    "median_forward_ms": 8.135875999869313,
+    "p95_forward_ms": 14.142166599935969,
+    "torch_version": "2.15.0+cpu"
+  },
+  "verification_config": {
+    "range_m": [
+      5,
+      80
+    ],
+    "points": 400,
+    "max_correspondence_m": 4.0,
+    "trim_fraction": 0.75,
+    "max_iterations": 20,
+    "accept_overlap": 0.5,
+    "accept_rmse_m": 1.5,
+    "accept_sector_coverage": 6,
+    "coverage_sectors": 12,
+    "max_translation_m": 40.0
+  },
+  "reference_count": 120,
+  "query_count": 40,
+  "reference_sequence": "boreas-2021-08-05-13-34",
+  "query_sequence": "boreas-2021-09-02-11-42",
+  "retrieval": {
+    "5": {
+      "eligible_queries": 11,
+      "queries": 40,
+      "coverage": 0.275,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "hits_at_1": 11,
+      "hits_at_5": 11,
+      "top1_within_radius_all_queries": 0.275,
+      "median_top1_position_error_m": 18.725311860659417,
+      "no_positive_queries": 29
+    },
+    "10": {
+      "eligible_queries": 16,
+      "queries": 40,
+      "coverage": 0.4,
+      "recall_at_1": 0.9375,
+      "recall_at_5": 1.0,
+      "hits_at_1": 15,
+      "hits_at_5": 16,
+      "top1_within_radius_all_queries": 0.375,
+      "median_top1_position_error_m": 18.725311860659417,
+      "no_positive_queries": 24
+    },
+    "25": {
+      "eligible_queries": 33,
+      "queries": 40,
+      "coverage": 0.825,
+      "recall_at_1": 0.6363636363636364,
+      "recall_at_5": 0.7575757575757576,
+      "hits_at_1": 21,
+      "hits_at_5": 25,
+      "top1_within_radius_all_queries": 0.525,
+      "median_top1_position_error_m": 18.725311860659417,
+      "no_positive_queries": 7
+    },
+    "50": {
+      "eligible_queries": 40,
+      "queries": 40,
+      "coverage": 1.0,
+      "recall_at_1": 0.575,
+      "recall_at_5": 0.675,
+      "hits_at_1": 23,
+      "hits_at_5": 27,
+      "top1_within_radius_all_queries": 0.575,
+      "median_top1_position_error_m": 18.725311860659417,
+      "no_positive_queries": 0
+    }
+  },
+  "decisions": {
+    "5": {
+      "accepted_queries": 11,
+      "correct_accepted": 10,
+      "false_accepted": 1,
+      "precision": 0.9090909090909091,
+      "eligible_query_recall": 0.9090909090909091,
+      "eligible_queries": 11,
+      "total_queries": 40,
+      "policy": "First candidate passing experimental checks among top 3 learned retrievals"
+    },
+    "10": {
+      "accepted_queries": 11,
+      "correct_accepted": 10,
+      "false_accepted": 1,
+      "precision": 0.9090909090909091,
+      "eligible_query_recall": 0.625,
+      "eligible_queries": 16,
+      "total_queries": 40,
+      "policy": "First candidate passing experimental checks among top 3 learned retrievals"
+    },
+    "25": {
+      "accepted_queries": 11,
+      "correct_accepted": 11,
+      "false_accepted": 0,
+      "precision": 1.0,
+      "eligible_query_recall": 0.3333333333333333,
+      "eligible_queries": 33,
+      "total_queries": 40,
+      "policy": "First candidate passing experimental checks among top 3 learned retrievals"
+    },
+    "50": {
+      "accepted_queries": 11,
+      "correct_accepted": 11,
+      "false_accepted": 0,
+      "precision": 1.0,
+      "eligible_query_recall": 0.275,
+      "eligible_queries": 40,
+      "total_queries": 40,
+      "policy": "First candidate passing experimental checks among top 3 learned retrievals"
+    }
+  },
+  "sector_baseline": {
+    "5": {
+      "eligible_queries": 11,
+      "queries": 40,
+      "coverage": 0.275,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "hits_at_1": 11,
+      "hits_at_5": 11,
+      "top1_within_radius_all_queries": 0.275,
+      "median_top1_position_error_m": 32.51555808321328,
+      "no_positive_queries": 29
+    },
+    "10": {
+      "eligible_queries": 16,
+      "queries": 40,
+      "coverage": 0.4,
+      "recall_at_1": 0.875,
+      "recall_at_5": 0.9375,
+      "hits_at_1": 14,
+      "hits_at_5": 15,
+      "top1_within_radius_all_queries": 0.35,
+      "median_top1_position_error_m": 32.51555808321328,
+      "no_positive_queries": 24
+    },
+    "25": {
+      "eligible_queries": 33,
+      "queries": 40,
+      "coverage": 0.825,
+      "recall_at_1": 0.5757575757575758,
+      "recall_at_5": 0.6363636363636364,
+      "hits_at_1": 19,
+      "hits_at_5": 21,
+      "top1_within_radius_all_queries": 0.475,
+      "median_top1_position_error_m": 32.51555808321328,
+      "no_positive_queries": 7
+    },
+    "50": {
+      "eligible_queries": 40,
+      "queries": 40,
+      "coverage": 1.0,
+      "recall_at_1": 0.55,
+      "recall_at_5": 0.675,
+      "hits_at_1": 22,
+      "hits_at_5": 27,
+      "top1_within_radius_all_queries": 0.55,
+      "median_top1_position_error_m": 32.51555808321328,
+      "no_positive_queries": 0
+    }
+  }
+}

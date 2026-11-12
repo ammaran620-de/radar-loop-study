@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Revisit Lab</title>
+<style>
+:root {
+  --bg: #f3f3ef;
+  --card: #fff;
+  --ink: #172629;
+  --muted: #637276;
+  --line: #d8dfdc;
+  --green: #126c59;
+  --amber: #a55522;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font:
+    15px/1.5 system-ui,
+    sans-serif;
+}
+header {
+  padding: 32px 5vw 24px;
+  background: #172c31;
+  color: #f7faf8;
+}
+.kicker {
+  letter-spacing: 0.15em;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #b8d9ca;
+}
+h1 {
+  font-size: 38px;
+  letter-spacing: -1.5px;
+  margin: 6px 0;
+}
+h2 {
+  font-size: 19px;
+  margin: 0 0 12px;
+}
+header p {
+  max-width: 820px;
+  margin: 4px 0 12px;
+  color: #c6d4d4;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-size: 12px;
+  padding: 4px 9px;
+  border: 1px solid #65807f;
+  border-radius: 4px;
+}
+main {
+  max-width: 1450px;
+  padding: 26px 5vw;
+  margin: auto;
+}
+.notice {
+  padding: 13px 17px;
+  background: #fff8e9;
+  border-left: 3px solid #b77a34;
+  margin-bottom: 20px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.metric,
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 18px;
+}
+.metric strong {
+  display: block;
+  font-size: 29px;
+}
+.muted,
+small {
+  color: var(--muted);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 18px;
+}
+.controls {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+select,
+button {
+  padding: 9px 12px;
+  border: 1px solid #c2ceca;
+  background: white;
+  border-radius: 5px;
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  border-color: var(--green);
+}
+select {
+  max-width: 100%;
+}
+#querylist {
+  max-height: 345px;
+  overflow: auto;
+  display: grid;
+  gap: 5px;
+}
+.qbutton {
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+}
+.qbutton.active {
+  background: #e6f1eb;
+  border-color: var(--green);
+}
+.twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+figure {
+  margin: 0;
+}
+figure img {
+  width: 100%;
+  display: block;
+  background: #15242b;
+  border-radius: 5px;
+}
+figcaption {
+  font-size: 12px;
+  margin-top: 5px;
+  color: var(--muted);
+}
+.status {
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #e5f2ea;
+  color: #16694f;
+  display: inline-block;
+}
+.status.fail {
+  background: #fff0e7;
+  color: #9c4820;
+}
+.status.none {
+  background: #eef0f2;
+  color: #52636a;
+}
+.candidate {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  cursor: pointer;
+}
+.candidate img {
+  width: 110px;
+  border-radius: 4px;
+}
+.candidate.active {
+  background: #f0f6f2;
+}
+.candidate strong {
+  font-size: 13px;
+}
+.mono {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.route {
+  width: 100%;
+  height: 290px;
+  background: #f8faf8;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+details {
+  margin-top: 18px;
+}
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.footer {
+  margin: 24px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+a {
+  color: var(--green);
+}
+.legend {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  #querylist {
+    max-height: 160px;
+  }
+  .twocol {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+@media print {
+  header {
+    color: #172629;
+    background: white;
+  }
+  .controls,
+  #querylist {
+    display: none;
+  }
+  .layout {
+    display: block;
+  }
+  .card {
+    break-inside: avoid;
+  }
+  .metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+</style></head><body>
+<header><div class="kicker">Ammara Noor · Research preparation experiment</div><h1>Radar Revisit Lab</h1>
+<p>Inspect cross-run radar retrieval, check candidate locations, and investigate where place recognition fails.</p>
+<div class="tags"><span class="tag">Real Boreas radar scans</span><span class="tag">Hand-engineered baseline</span><span class="tag">Offline experiment</span></div></header>
+<main><div class="notice"><strong>Experiment scope</strong> · Matches are revisit candidates. Position plots use supplied ground truth. This experiment does not estimate odometry, optimize a map, train a neural network, or validate geometric loop closures.</div>
+<div class="controls"><label>Evaluation radius <select id="radius"><option value="5">5 m</option><option value="10">10 m</option><option value="25" selected>25 m</option><option value="50">50 m</option></select></label><button id="download">Export results JSON</button><button onclick="window.print()">Print experiment view</button></div>
+<div class="metrics" id="metrics"></div>
+<div class="layout">
+<aside class="card"><h2>Observation explorer</h2><p class="muted" id="dataset"></p><select id="filter"><option value="all">All queries</option><option value="hit">Top-1 within radius</option><option value="miss">Top-1 outside radius</option><option value="uncovered">No reference within radius</option></select><div id="querylist" style="margin-top:12px"></div>
+<details><summary>How matching works</summary><p>Strip the 11 metadata bytes from each azimuth row. Boreas byte 10 is unused. Apply the −0.31 m range offset and keep the 2.5–100 m interval. Subtract the scan median and clamp at zero. Average intensity into 60 angular sectors and 32 range rings, then L2-normalize.</p><p>Compare descriptors using the maximum cosine score over circular angular shifts. A ring-mean cosine baseline is evaluated separately. Ground-truth coordinates are used only after ranking.</p><p>Similarity is a descriptor score, not a probability. The best angular shift is not a calibrated pose estimate.</p></details></aside>
+<section id="detailpanel"><div class="card"><div id="title"></div><div class="twocol" style="margin-top:16px"><figure><img id="queryimg" alt="Query radar polar intensity"><figcaption>Query scan · azimuth rows × range columns, 0–100 m</figcaption></figure><figure><img id="matchimg" alt="Retrieved reference radar polar intensity"><figcaption>Selected reference scan · display contrast is normalized per scan</figcaption></figure></div>
+<div id="matchdetail" style="margin:14px 0"></div><svg id="route" class="route" viewBox="0 0 700 290" aria-label="Ground truth sample positions"></svg><div class="legend"><span><i class="dot" style="background:#b2c7c0"></i>Reference positions</span><span><i class="dot" style="background:#167cbe"></i>Query</span><span><i class="dot" style="background:#d56a2c"></i>Retrieved reference</span></div><p class="muted" style="font-size:12px">Dots are sampled ground-truth positions in a shared ENU_ref frame, not an estimated route. Connecting line shows the positional discrepancy of the selected match.</p></div>
+<div class="card" style="margin-top:15px"><h2>Top five candidates</h2><div id="candidates"></div></div></section></div>
+<div class="card" style="margin-top:18px"><h2>Failure analysis</h2><p class="muted">Representative examples selected by explicit rules. A high similarity score can still refer to a distant place.</p><table><thead><tr><th>Case</th><th>Query</th><th>Nearest reference</th><th>Retrieved separation</th><th>Similarity</th></tr></thead><tbody id="cases"></tbody></table><p>Distances measure separation between supplied reference positions. They do not measure an estimated robot pose.</p></div>
+<div class="card" style="margin-top:18px"><h2>Protocol and limitations</h2><div id="protocol"></div><p id="baseline"></p><table><thead><tr><th>Radius</th><th>Eligible queries</th><th>Recall@1</th><th>Recall@5</th></tr></thead><tbody id="sensitivity"></tbody></table>
+<p class="muted">Recall is computed only for queries with at least one reference within the selected radius. Coverage reports how many queries meet that condition. Top-1 success across all queries is reported separately. No candidate-acceptance threshold has been calibrated; precision of accepted loop closures is not reported.</p>
+<p class="muted">This is a small exploratory subset, not the official Boreas benchmark. Radius sensitivity is shown to make the evaluation rule visible, not to select the most flattering result. No deskewing, sensor-fusion, geometric verification, or trajectory correction is implemented.</p></div>
+<div class="footer">Data attribution · Boreas, University of Toronto / ASRL, CC BY 4.0. <a href="https://github.com/utiasASRL/pyboreas">Dataset documentation</a> · <a href="https://doi.org/10.1177/02783649231160195">Boreas dataset paper</a>. Original experiment code prepared with AI assistance; review the code and report before presenting.</div>
+</main>
+<script id="results" type="application/json">__RESULTS_JSON__</script><script>
+const data = JSON.parse(document.getElementById("results").textContent);
+const $ = (id) => document.getElementById(id);
+let queryIndex = 0,
+  candidateIndex = 0;
+$("radius").value = String(data.radius_m);
+const pct = (n) => (n === null ? "N/A" : (n * 100).toFixed(1) + "%");
+const refById = Object.fromEntries(data.references.map((r) => [r.id, r]));
+function radius() {
+  return Number($("radius").value);
+}
+function eligible(q) {
+  return q.nearest_reference_distance_m <= radius();
+}
+function hit(q) {
+  return q.candidates[0].distance_m <= radius();
+}
+function metrics() {
+  const m = data.sensitivity[String(radius())];
+  const baseline = data.ring_sensitivity[String(radius())];
+  $("baseline").textContent =
+    "Comparison at " +
+    radius() +
+    " m. Ring-mean top-1 hits " +
+    baseline.hits_at_1 +
+    "/" +
+    baseline.eligible_queries +
+    "; ring-sector top-1 hits " +
+    m.hits_at_1 +
+    "/" +
+    m.eligible_queries +
+    ". Same data and evaluation rule; this subset only.";
+  const cards = [
+    [
+      "Eligible-query Recall@1",
+      pct(m.recall_at_1),
+      m.hits_at_1 + "/" + m.eligible_queries + " eligible queries",
+    ],
+    [
+      "Eligible-query Recall@5",
+      pct(m.recall_at_5),
+      m.hits_at_5 + "/" + m.eligible_queries + " eligible queries",
+    ],
+    [
+      "All-query top-1 success",
+      pct(m.top1_within_radius_all_queries),
+      m.hits_at_1 + "/" + m.queries + " total queries",
+    ],
+    [
+      "Reference coverage",
+      m.eligible_queries + " / " + m.queries,
+      "Reference within " + radius() + " m",
+    ],
+    [
+      "Median retrieval",
+      data.median_retrieval_ms.toFixed(2) + " ms",
+      "Single pass; comparison only; this machine",
+    ],
+  ];
+  $("metrics").innerHTML = cards
+    .map(
+      (card) =>
+        '<div class="metric"><small>' +
+        card[0] +
+        "</small><strong>" +
+        card[1] +
+        "</strong><small>" +
+        card[2] +
+        "</small></div>",
+    )
+    .join("");
+  representativeCases();
+}
+function list() {
+  const mode = $("filter").value;
+  const indexes = data.queries
+    .map((q, i) => i)
+    .filter(
+      (i) =>
+        mode === "all" ||
+        (mode === "hit" && hit(data.queries[i])) ||
+        (mode === "miss" && !hit(data.queries[i])) ||
+        (mode === "uncovered" && !eligible(data.queries[i])),
+    );
+  if (!indexes.includes(queryIndex)) queryIndex = indexes[0] ?? -1;
+  $("querylist").innerHTML = indexes.length
+    ? indexes
+        .map(
+          (i) =>
+            '<button class="qbutton ' +
+            (i === queryIndex ? "active" : "") +
+            '" data-index="' +
+            i +
+            '">' +
+            data.queries[i].id +
+            " · " +
+            data.queries[i].candidates[0].distance_m.toFixed(1) +
+            " m</button>",
+        )
+        .join("")
+    : "<p>No queries in this category.</p>";
+  document.querySelectorAll("[data-index]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        queryIndex = Number(b.dataset.index);
+        candidateIndex = 0;
+        list();
+        detail();
+      }),
+  );
+}
+function plot(q, r) {
+  const points = data.references.concat(data.queries),
+    xs = points.map((p) => p.x),
+    ys = points.map((p) => p.y);
+  const minX = Math.min(...xs),
+    maxX = Math.max(...xs),
+    minY = Math.min(...ys),
+    maxY = Math.max(...ys);
+  const scale = Math.min(
+    640 / Math.max(maxX - minX, 1),
+    230 / Math.max(maxY - minY, 1),
+  );
+  const x = (p) => 30 + (p.x - minX) * scale,
+    y = (p) => 260 - (p.y - minY) * scale;
+  const circle = (p, color, size) =>
+    '<circle cx="' +
+    x(p) +
+    '" cy="' +
+    y(p) +
+    '" r="' +
+    size +
+    '" fill="' +
+    color +
+    '"/>';
+  $("route").innerHTML =
+    '<text x="15" y="20" fill="#526b69" font-size="12">Ground-truth sample positions · equal axis scale</text>' +
+    data.references.map((p) => circle(p, "#b2c7c0", 2.4)).join("") +
+    '<line x1="' +
+    x(q) +
+    '" y1="' +
+    y(q) +
+    '" x2="' +
+    x(r) +
+    '" y2="' +
+    y(r) +
+    '" stroke="#cc7135" stroke-width="2" stroke-dasharray="5 4"/>' +
+    circle(r, "#d56a2c", 6) +
+    circle(q, "#167cbe", 5);
+}
+function detail() {
+  if (queryIndex < 0) {
+    $("detailpanel").hidden = true;
+    return;
+  }
+  $("detailpanel").hidden = false;
+  const q = data.queries[queryIndex],
+    c = q.candidates[candidateIndex],
+    r = refById[c.reference_id];
+  const status = !eligible(q)
+    ? ["No positive in sampled reference set", "none"]
+    : hit(q)
+      ? ["Top-1 within evaluation radius", ""]
+      : ["Top-1 false retrieval at selected radius", "fail"];
+  $("title").innerHTML =
+    "<h2>" +
+    q.id +
+    '</h2><span class="status ' +
+    status[1] +
+    '">' +
+    status[0] +
+    '</span><p class="mono">Query run ' +
+    data.query_sequence +
+    " · " +
+    q.timestamp_us +
+    "</p>";
+  $("queryimg").src = q.preview;
+  $("matchimg").src = c.preview;
+  $("matchdetail").innerHTML =
+    "<strong>" +
+    c.distance_m.toFixed(1) +
+    " m ground-truth separation</strong> · similarity " +
+    c.score.toFixed(4) +
+    " · angular bin shift " +
+    c.sector_shift +
+    ' / 60<p class="muted" style="margin:4px 0">Nearest available reference is ' +
+    q.nearest_reference_distance_m.toFixed(1) +
+    " m away. Scores and positions are separate quantities.</p>";
+  plot(q, r);
+  $("candidates").innerHTML = q.candidates
+    .map(
+      (a, i) =>
+        '<div class="candidate ' +
+        (i === candidateIndex ? "active" : "") +
+        '" data-candidate="' +
+        i +
+        '"><img src="' +
+        a.preview +
+        '" alt="Candidate ' +
+        (i + 1) +
+        '"><div><strong>#' +
+        (i + 1) +
+        " · " +
+        a.reference_id +
+        "</strong><br><span>" +
+        a.distance_m.toFixed(1) +
+        " m · cosine " +
+        a.score.toFixed(4) +
+        "</span><br><small>" +
+        (a.distance_m <= radius() ? "Within radius" : "Outside radius") +
+        "</small></div></div>",
+    )
+    .join("");
+  document.querySelectorAll("[data-candidate]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        candidateIndex = Number(b.dataset.candidate);
+        detail();
+      }),
+  );
+}
+$("dataset").textContent =
+  data.reference_count +
+  " reference scans · " +
+  data.query_count +
+  " queries. Separate recording runs.";
+$("protocol").innerHTML =
+  "<p><strong>Reference run</strong> " +
+  data.reference_sequence +
+  "<br><strong>Query run</strong> " +
+  data.query_sequence +
+  "</p><p>" +
+  data.sampling +
+  ". Identical scan hashes across splits are rejected. Separate runs prevent adjacent-frame query matches.</p>" +
+  "<p>Positions use the current Boreas S3 sensor-pose files in their documented shared ENU_ref frame. Each pose timestamp matches its scan filename exactly.</p>" +
+  "<p>The experiment is a baseline comparison on 40 queries. Conditional recall and all-query success use different denominators. " +
+  "Range resolution is " +
+  data.radar_range_resolution_m +
+  " m, with an offset of " +
+  data.radar_range_offset_m +
+  " m.</p>";
+function representativeCases() {
+  const successful = data.queries.find((q) => hit(q));
+  const eligibleFailures = data.queries.filter((q) => eligible(q) && !hit(q));
+  const worstFailure = eligibleFailures.sort(
+    (a, b) => b.candidates[0].distance_m - a.candidates[0].distance_m,
+  )[0];
+  const uncovered = data.queries.find((q) => !eligible(q));
+  const examples = [
+    ["First correct top-1", successful],
+    ["Largest eligible top-1 error", worstFailure],
+    ["First uncovered query", uncovered],
+  ];
+  $("cases").innerHTML = examples
+    .filter((item) => item[1])
+    .map(
+      ([label, q]) =>
+        "<tr><td>" +
+        label +
+        '</td><td><button data-case="' +
+        q.id +
+        '">' +
+        q.id +
+        "</button></td><td>" +
+        q.nearest_reference_distance_m.toFixed(1) +
+        " m</td><td>" +
+        q.candidates[0].distance_m.toFixed(1) +
+        " m</td><td>" +
+        q.candidates[0].score.toFixed(4) +
+        "</td></tr>",
+    )
+    .join("");
+  document.querySelectorAll("[data-case]").forEach((button) => {
+    button.onclick = () => {
+      $("filter").value = "all";
+      queryIndex = data.queries.findIndex((q) => q.id === button.dataset.case);
+      candidateIndex = 0;
+      list();
+      detail();
+    };
+  });
+}
+$("sensitivity").innerHTML = Object.entries(data.sensitivity)
+  .map(
+    ([r, m]) =>
+      "<tr><td>" +
+      r +
+      " m</td><td>" +
+      m.eligible_queries +
+      "/" +
+      m.queries +
+      "</td><td>" +
+      pct(m.recall_at_1) +
+      "</td><td>" +
+      pct(m.recall_at_5) +
+      "</td></tr>",
+  )
+  .join("");
+$("radius").onchange = () => {
+  candidateIndex = 0;
+  metrics();
+  list();
+  detail();
+};
+$("filter").onchange = () => {
+  candidateIndex = 0;
+  list();
+  detail();
+};
+$("download").onclick = () => {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(
+    new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }),
+  );
+  a.download = "radar_revisit_results.json";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+};
+metrics();
+list();
+detail();
+</script></body></html>

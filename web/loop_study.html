@@ -1,0 +1,140 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar Loop Study</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f2;color:#1b2f35;font:14px/1.5 system-ui,sans-serif}
+header{padding:28px 5vw;background:#172e35;color:#fff}h1{margin:5px 0;font-size:34px;letter-spacing:-1px}header p{max-width:850px;color:#c7d9dc}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:#b9d6c3}
+main{padding:22px 5vw;max-width:1500px;margin:auto}.notice{background:#fff6e4;border-left:3px solid #bd8036;padding:12px 16px;margin-bottom:18px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.card,.metric{background:#fff;border:1px solid #d4dfda;border-radius:7px;padding:17px}.metric strong{font-size:27px;display:block}.muted,small{color:#607479}h2{font-size:18px;margin:0 0 10px}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap}select,button{font:inherit;padding:8px 11px;background:white;border:1px solid #bbc9c3;border-radius:4px;color:inherit;cursor:pointer}
+.layout{display:grid;grid-template-columns:300px 1fr;gap:16px}.querylist{max-height:540px;overflow:auto;display:grid;gap:5px}.querybutton{text-align:left;font-size:12px;width:100%}.active{background:#e5f0ea!important;border-color:#4b8f76!important}
+.images{display:grid;grid-template-columns:1fr 1fr;gap:12px}figure{margin:0}figure img{width:100%;display:block;border-radius:5px}figcaption{font-size:12px;color:#607479;margin-top:4px}
+.candidate{padding:12px;border:1px solid #d4dfda;border-radius:5px;margin:7px 0;cursor:pointer}.badge{display:inline-block;padding:3px 7px;border-radius:4px;background:#e3f0e9;color:#206448;font-size:12px}.reject{background:#f9ece4;color:#a24e25}.neutral{background:#eaf0f1;color:#536b72}
+svg{width:100%;height:330px;background:#f6f8f7;border:1px solid #d4dfda;border-radius:5px}.legend{display:flex;gap:15px;font-size:12px;margin:5px 0 12px}
+table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:9px;border-bottom:1px solid #dce4df;font-size:12px}a{color:#22735b}.footer{font-size:12px;color:#607479;margin:20px 0}.mono{font:11px ui-monospace,monospace;overflow-wrap:anywhere}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.querylist{max-height:160px}.images{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="eyebrow">Radar SLAM reliability experiment · Ammara Noor</div><h1>Radar Loop Study</h1><p>Frozen learned radar descriptors propose revisits. Independent scan registration checks their geometric support. Supplied positions evaluate both stages.</p></header>
+<main><div class="notice"><strong>Research scope.</strong> The learned network is the authors’ pretrained RadarLoc checkpoint. Registration gates are experimental and uncalibrated. Results are a small cross-run study; map optimization, odometry, and embedded deployment remain future work.</div>
+<div class="controls"><label>Ground-truth evaluation radius <select id="radius"><option>5</option><option>10</option><option selected>25</option><option>50</option></select> metres</label><button id="export">Export study JSON</button></div>
+<div id="metrics" class="metrics"></div>
+<div class="layout"><aside class="card"><h2>Query observations</h2><p class="muted" id="sample"></p><select id="filter"><option value="all">All queries</option><option value="accepted">Has candidate passing checks</option><option value="abstain">All candidates rejected</option><option value="false">False accepted candidate</option></select><div id="queries" class="querylist" style="margin-top:12px"></div>
+<details><summary>Read the evidence</summary><p>A learned descriptor retrieves three reference observations. A separate hand-engineered descriptor supplies only a coarse angular initialization for registration.</p><p>Multiple-start trimmed ICP estimates a 2D transform. Fixed checks examine symmetric return overlap, residual, angular support, and translation magnitude. Ground truth never initializes registration or chooses matches.</p><p>A candidate passing these checks is still experimental. Repeated structures and radar multipath can produce false acceptance.</p></details></aside>
+<section id="detail"><div class="card"><div id="heading"></div><div class="images"><figure><img id="queryimage" alt="Query radar observation"><figcaption>Query polar radar image</figcaption></figure><figure><img id="referenceimage" alt="Retrieved radar observation"><figcaption>Selected reference polar image</figcaption></figure></div><div id="pairinfo" style="margin:15px 0"></div><svg id="alignment" viewBox="0 0 700 330" aria-label="Local radar return alignment"></svg><div class="legend"><span style="color:#cc6b27">● Transformed query returns</span><span style="color:#277caa">● Reference returns</span></div><p class="muted">Local 2D return alignment estimated by registration. No ground-truth transform is supplied. These sparse strongest-return points may include clutter and moving objects.</p></div><div class="card" style="margin-top:16px"><h2>Top-three learned candidates</h2><div id="candidates"></div></div></section></div>
+<div class="card" style="margin-top:18px"><h2>Comparison and trade-off</h2><table><thead><tr><th>Stage</th><th>Measure at selected radius</th><th>Numerator / denominator</th></tr></thead><tbody id="comparison"></tbody></table><p class="muted">Retrieval recall counts queries that have a nearby reference. Accepted precision counts only queries for which the first passing candidate is selected. Rejected queries are abstentions. The two measures have different denominators.</p></div>
+<div class="card" style="margin-top:18px"><h2>Protocol and model provenance</h2><div id="provenance"></div><p class="muted">Fixed verification settings were chosen as engineering starting points, without label-based tuning. Their precision is measured here, not guaranteed. The sample is too small to establish safety or generalization.</p></div>
+<div class="footer">Boreas data, University of Toronto ASRL, CC BY 4.0. RadarLoc, Komorowski et al., Warsaw University of Technology, MIT. <a href="https://github.com/jac99/RadarLoc">Model source</a> · <a href="https://github.com/utiasASRL/pyboreas">Data documentation</a>. Experiment prepared with AI assistance. This work is independent of IST.</div></main>
+<script id="study" type="application/json">__STUDY_JSON__</script>
+<script>
+const study = JSON.parse(document.getElementById('study').textContent);
+const el = id => document.getElementById(id);
+const pct = value => value === null ? 'N/A' : (100 * value).toFixed(1) + '%';
+let selectedQuery = 0;
+let selectedCandidate = 0;
+const refs = Object.fromEntries(study.references.map(r => [r.id, r]));
+const radius = () => Number(el('radius').value);
+const chosen = q => q.candidates.find(c => c.verification.accepted);
+function updateMetrics() {
+ const r = study.retrieval[String(radius())];
+ const d = study.decisions[String(radius())];
+ const cards = [
+  ['Learned Recall@1', pct(r.recall_at_1), r.hits_at_1 + '/' + r.eligible_queries + ' eligible queries'],
+  ['Accepted precision', pct(d.precision), d.correct_accepted + '/' + d.accepted_queries + ' accepted queries'],
+  ['Accepted recall', pct(d.eligible_query_recall), d.correct_accepted + '/' + d.eligible_queries + ' eligible queries'],
+  ['False accepted', String(d.false_accepted), d.accepted_queries + ' accepted / ' + d.total_queries + ' total queries']
+ ];
+ el('metrics').innerHTML = cards.map(c => '<div class="metric"><small>' + c[0] + '</small><strong>' + c[1] + '</strong><small>' + c[2] + '</small></div>').join('');
+ const baseline = study.sector_baseline[String(radius())];
+ el('comparison').innerHTML = [
+  ['Hand-engineered retrieval', 'Top-1 recall ' + pct(baseline.recall_at_1), baseline.hits_at_1 + '/' + baseline.eligible_queries],
+  ['Frozen learned retrieval', 'Top-1 recall ' + pct(r.recall_at_1), r.hits_at_1 + '/' + r.eligible_queries],
+  ['First candidate passing geometric checks', 'Accepted precision ' + pct(d.precision), d.correct_accepted + '/' + d.accepted_queries],
+  ['Accepted true candidates', 'Eligible-query recall ' + pct(d.eligible_query_recall), d.correct_accepted + '/' + d.eligible_queries]
+ ].map(row => '<tr>' + row.map(v => '<td>' + v + '</td>').join('') + '</tr>').join('');
+}
+function updateList() {
+ const filter = el('filter').value;
+ const indexes = study.queries.map((q, i) => i).filter(i => {
+  const q = study.queries[i], accepted = chosen(q);
+  return filter === 'all' || (filter === 'accepted' && accepted) ||
+   (filter === 'abstain' && !accepted) ||
+   (filter === 'false' && accepted && accepted.distance_m > radius());
+ });
+ if (!indexes.includes(selectedQuery)) selectedQuery = indexes[0] ?? -1;
+ el('queries').innerHTML = indexes.length ? indexes.map(i => {
+  const q = study.queries[i], accepted = chosen(q);
+  return '<button class="querybutton ' + (i === selectedQuery ? 'active' : '') +
+   '" data-query="' + i + '">' + q.id + ' · ' +
+   (accepted ? 'passes checks · ' + accepted.distance_m.toFixed(1) + ' m' : 'abstain') + '</button>';
+ }).join('') : '<p>No queries in this category.</p>';
+ document.querySelectorAll('[data-query]').forEach(button => {
+  button.onclick = () => {
+   selectedQuery = Number(button.dataset.query);
+   selectedCandidate = 0;
+   updateList();
+   updateDetail();
+  };
+ });
+}
+function alignmentPlot(q, candidate) {
+ const v = candidate.verification;
+ if (v.yaw_rad === undefined) {
+  el('alignment').innerHTML = '<text x="20" y="40">Insufficient returns for alignment</text>';
+  return;
+ }
+ const cos = Math.cos(v.yaw_rad), sin = Math.sin(v.yaw_rad);
+ const transformed = study.points[q.id].map(p => [
+  cos * p[0] - sin * p[1] + v.translation_xy_m[0],
+  sin * p[0] + cos * p[1] + v.translation_xy_m[1]
+ ]);
+ const target = study.points[candidate.reference_id];
+ const all = transformed.concat(target);
+ const extent = Math.max(...all.map(p => Math.max(Math.abs(p[0]), Math.abs(p[1]))), 1);
+ const scale = 140 / extent;
+ const points = (cloud, color) => cloud.map(p =>
+  '<circle cx="' + (350 + p[0] * scale) + '" cy="' + (165 - p[1] * scale) +
+  '" r="1.8" fill="' + color + '" fill-opacity=".7"/>').join('');
+ el('alignment').innerHTML = '<text x="14" y="22" fill="#607479" font-size="12">Local metric coordinates · equal axis scale · extent ±' + extent.toFixed(0) + ' m</text>' +
+  points(target, '#277caa') + points(transformed, '#cc6b27');
+}
+function updateDetail() {
+ el('detail').hidden = selectedQuery < 0;
+ if (selectedQuery < 0) return;
+ const q = study.queries[selectedQuery], c = q.candidates[selectedCandidate], v = c.verification;
+ el('heading').innerHTML = '<h2>' + q.id + '</h2><p class="mono">' + q.sequence + ' · ' + q.timestamp_us + '</p>';
+ el('queryimage').src = study.images[q.id];
+ el('referenceimage').src = study.images[c.reference_id];
+ el('pairinfo').innerHTML = '<span class="badge ' + (v.accepted ? '' : 'reject') + '">' +
+  (v.accepted ? 'Passes experimental checks' : 'Rejected by checks') + '</span>' +
+  '<p>Learned cosine ' + c.score.toFixed(4) + ' · supplied-position separation ' +
+  c.distance_m.toFixed(1) + ' m · ' + (c.distance_m <= radius() ? 'within' : 'outside') + ' evaluation radius</p>' +
+  '<p>Symmetric overlap ' + pct(v.overlap ?? null) + ' · residual ' +
+  (v.rmse_m === null || v.rmse_m === undefined ? 'N/A' : v.rmse_m.toFixed(2) + ' m') +
+  ' · angular sectors ' + (v.sector_coverage ?? 0) + '/12</p><small>' + v.reason + '</small>';
+ alignmentPlot(q, c);
+ el('candidates').innerHTML = q.candidates.map((candidate, index) =>
+  '<div class="candidate ' + (index === selectedCandidate ? 'active' : '') +
+  '" data-candidate="' + index + '"><strong>#' + (index + 1) + ' · ' +
+  candidate.reference_id + '</strong><br>Cosine ' + candidate.score.toFixed(4) +
+  ' · ' + candidate.distance_m.toFixed(1) + ' m · ' +
+  (candidate.verification.accepted ? 'passes checks' : 'rejected') + '</div>'
+ ).join('');
+ document.querySelectorAll('[data-candidate]').forEach(button => {
+  button.onclick = () => { selectedCandidate = Number(button.dataset.candidate); updateDetail(); };
+ });
+}
+el('sample').textContent = study.reference_count + ' reference scans and ' + study.query_count + ' queries from separate dates.';
+el('provenance').innerHTML = '<p>Frozen RadarLoc descriptor · 256 dimensions · no fine-tuning on this sample.</p>' +
+ '<p>Reference run ' + study.reference_sequence + '<br>Query run ' + study.query_sequence + '</p>' +
+ '<p>Published training data: MulRan, per the authors’ repository. Boreas is an out-of-domain adaptation; this experiment does not claim reproduction of the published benchmark.</p>' +
+ '<p>CPU forward median ' + study.model.median_forward_ms.toFixed(2) + ' ms, p95 ' +
+ study.model.p95_forward_ms.toFixed(2) + ' ms, one observed pass. Preprocessing and verification excluded.</p>' +
+ '<p class="mono">Checkpoint SHA-256 ' + study.model.checkpoint_sha256 + '</p>';
+el('radius').onchange = () => { updateMetrics(); updateList(); updateDetail(); };
+el('filter').onchange = () => { selectedCandidate = 0; updateList(); updateDetail(); };
+el('export').onclick = () => {
+ const link = document.createElement('a');
+ link.href = URL.createObjectURL(new Blob([JSON.stringify(study)], {type:'application/json'}));
+ link.download = 'radar_loop_study.json'; link.click();
+ setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+};
+updateMetrics(); updateList(); updateDetail();
+</script></body></html>

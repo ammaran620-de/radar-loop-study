@@ -1,0 +1,7 @@
+numpy==2.3.5
+Pillow==13.0.0
+# CPU wheel from https://download.pytorch.org/whl/cpu
+torch==2.15.0+cpu
+opencv-python-headless==5.0.0.93
+scipy==1.17.0
+matplotlib==3.10.8

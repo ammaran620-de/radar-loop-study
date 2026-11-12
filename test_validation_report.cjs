@@ -1,0 +1,16 @@
+const fs = require('node:fs');
+const assert = require('node:assert/strict');
+const {JSDOM} = require('jsdom');
+const dom = new JSDOM(fs.readFileSync(process.argv[2], 'utf8'));
+const d=dom.window.document;
+assert.equal(d.querySelectorAll('table').length,3);
+assert.equal(d.querySelectorAll('img').length,1);
+assert(d.querySelector('img').src.startsWith('data:image/png;base64,'));
+assert(d.body.textContent.includes('13/13'));
+assert(d.body.textContent.includes('0.590 m'));
+assert(d.body.textContent.includes('twenty-seven held-out queries abstain'));
+assert(d.body.textContent.includes('not a live real-time guarantee'));
+assert.equal(d.querySelectorAll('script').length,0);
+assert.equal(d.querySelectorAll('img[src^="http"]').length,0);
+console.log('PASS: report result tables, numerical snapshot, embedded scientific figure and limitation text');
+dom.window.close();

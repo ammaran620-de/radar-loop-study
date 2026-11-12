@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+data/*/
+Radar_Revisit_Lab.html
+Radar_Loop_Study.html
+results/learned_loop_study.json
+results/results.json
+results/run_log.json
+*.zip
+*.partial
+results/study_run_log.txt
+Radar_Validation_Report.html
+results/*.log
+
+# Downloaded and regenerated assets
+third_party/radarloc/weights/*.pth
+site/study-data.js
+results/*.png

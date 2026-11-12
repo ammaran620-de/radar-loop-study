@@ -1,0 +1,3550 @@
+{
+  "scope": "CPU file replay, warm reference database; includes query file I/O, preprocessing, neural inference, retrieval and sequential candidate checks",
+  "not_measured": [
+    "sensor acquisition",
+    "ROS transport",
+    "embedded target hardware",
+    "long-running live operation"
+  ],
+  "reference_setup_s": 8.23643253399996,
+  "reference_cache_array_bytes": 1812480,
+  "python": "3.12.14",
+  "torch": "2.15.0+cpu",
+  "machine": "x86_64",
+  "sessions": {
+    "development": {
+      "median_image_to_decision_ms": 175.6944790001853,
+      "p95_image_to_decision_ms": 207.06242729977473,
+      "selected": 18,
+      "records": [
+        {
+          "query_id": "query_0",
+          "selected_reference_id": "reference_37",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_37",
+              "registration": {
+                "overlap": 0.915,
+                "rmse_m": 1.0969002963092072,
+                "sector_coverage": 12,
+                "yaw_rad": -0.017695551589171358,
+                "translation_xy_m": [
+                  -2.7326678280059995,
+                  -0.1840293117735026
+                ],
+                "phase_response": 0.6542087774723768,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 131.6925099999935
+        },
+        {
+          "query_id": "query_105",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_75",
+              "registration": {
+                "overlap": 0.565,
+                "rmse_m": 1.7408063317678828,
+                "sector_coverage": 12,
+                "yaw_rad": -2.8379399167627537,
+                "translation_xy_m": [
+                  -1.7368332406078206,
+                  2.2083367696188745
+                ],
+                "phase_response": 0.1758412392809987,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_188",
+              "registration": {
+                "overlap": 0.5725,
+                "rmse_m": 1.8739009057034968,
+                "sector_coverage": 11,
+                "yaw_rad": -2.6357931307931937,
+                "translation_xy_m": [
+                  2.294274302043455,
+                  0.9262127618143703
+                ],
+                "phase_response": 0.2651891685090959,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2256",
+              "registration": {
+                "overlap": 0.5125,
+                "rmse_m": 2.020601109252809,
+                "sector_coverage": 11,
+                "yaw_rad": 2.802783411945882,
+                "translation_xy_m": [
+                  0.3991284545207957,
+                  0.6269809943397269
+                ],
+                "phase_response": 0.15710800141096115,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 188.8141879999239
+        },
+        {
+          "query_id": "query_211",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_188",
+              "registration": {
+                "overlap": 0.4025,
+                "rmse_m": 2.225556132372639,
+                "sector_coverage": 10,
+                "yaw_rad": 3.0796913640333528,
+                "translation_xy_m": [
+                  -1.1717524123857908,
+                  -0.917329383564425
+                ],
+                "phase_response": 0.41614479711279273,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3610",
+              "registration": {
+                "overlap": 0.325,
+                "rmse_m": 2.022472392904173,
+                "sector_coverage": 12,
+                "yaw_rad": -1.4223062942695943,
+                "translation_xy_m": [
+                  7.867368879141404,
+                  -1.5654614386430261
+                ],
+                "phase_response": 0.20737050857860595,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1654",
+              "registration": {
+                "overlap": 0.42,
+                "rmse_m": 1.9950294681147398,
+                "sector_coverage": 12,
+                "yaw_rad": -1.4794521148111517,
+                "translation_xy_m": [
+                  3.02798708854751,
+                  2.92911460759923
+                ],
+                "phase_response": 0.2700146015267819,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 174.32496400033415
+        },
+        {
+          "query_id": "query_317",
+          "selected_reference_id": "reference_0",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_0",
+              "registration": {
+                "overlap": 0.905,
+                "rmse_m": 1.214545688443751,
+                "sector_coverage": 12,
+                "yaw_rad": -3.045500717996848,
+                "translation_xy_m": [
+                  -0.0010859283261264114,
+                  1.8804206682418536
+                ],
+                "phase_response": 0.4802209949120879,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 103.53911699985474
+        },
+        {
+          "query_id": "query_423",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2332",
+              "registration": {
+                "overlap": 0.48,
+                "rmse_m": 2.0330644987208513,
+                "sector_coverage": 11,
+                "yaw_rad": 0.5553176743004358,
+                "translation_xy_m": [
+                  -0.3044008151208481,
+                  9.166490952169728
+                ],
+                "phase_response": 0.2995779609773308,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.4075,
+                "rmse_m": 2.2321036435697543,
+                "sector_coverage": 11,
+                "yaw_rad": -2.9686620979294194,
+                "translation_xy_m": [
+                  2.975306451392876,
+                  -4.110936016710313
+                ],
+                "phase_response": 0.08421057113446295,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1617",
+              "registration": {
+                "overlap": 0.465,
+                "rmse_m": 1.9165359057783335,
+                "sector_coverage": 11,
+                "yaw_rad": 0.12856959452867558,
+                "translation_xy_m": [
+                  1.5405975378658079,
+                  -2.3642761220426243
+                ],
+                "phase_response": 0.33371185965370387,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 182.87575599970296
+        },
+        {
+          "query_id": "query_529",
+          "selected_reference_id": "reference_451",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_4250",
+              "registration": {
+                "overlap": 0.74,
+                "rmse_m": 1.5995921598327267,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1017539922049053,
+                "translation_xy_m": [
+                  -13.241428292238693,
+                  -1.3379828552167794
+                ],
+                "phase_response": 0.2952138513792306,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_451",
+              "registration": {
+                "overlap": 0.7575,
+                "rmse_m": 1.3176831761800174,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0046988134475712505,
+                "translation_xy_m": [
+                  -11.828820144798474,
+                  -0.25946918394668744
+                ],
+                "phase_response": 0.2561711373273283,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 138.99569900013375
+        },
+        {
+          "query_id": "query_635",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1090",
+              "registration": {
+                "overlap": 0.3925,
+                "rmse_m": 2.3392927621341117,
+                "sector_coverage": 12,
+                "yaw_rad": -0.3786373806844653,
+                "translation_xy_m": [
+                  1.893184312417261,
+                  -0.16548543813752065
+                ],
+                "phase_response": 0.06420927704311907,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4137",
+              "registration": {
+                "overlap": 0.77,
+                "rmse_m": 1.5997744219928691,
+                "sector_coverage": 12,
+                "yaw_rad": 3.1073019254193244,
+                "translation_xy_m": [
+                  5.914367947835451,
+                  -7.535850871857074
+                ],
+                "phase_response": 0.5113945089979097,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3987",
+              "registration": {
+                "overlap": 0.4275,
+                "rmse_m": 2.3970574197983083,
+                "sector_coverage": 12,
+                "yaw_rad": -0.02195500109499283,
+                "translation_xy_m": [
+                  8.287792556422186,
+                  -7.799952088117125
+                ],
+                "phase_response": 0.0873251873999834,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 275.7065060000059
+        },
+        {
+          "query_id": "query_741",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1090",
+              "registration": {
+                "overlap": 0.5025,
+                "rmse_m": 2.2683268927863285,
+                "sector_coverage": 12,
+                "yaw_rad": 0.02376494504455837,
+                "translation_xy_m": [
+                  -0.9073067212061794,
+                  0.3649567647498668
+                ],
+                "phase_response": 0.08939106855541468,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3987",
+              "registration": {
+                "overlap": 0.48,
+                "rmse_m": 2.324810456608693,
+                "sector_coverage": 12,
+                "yaw_rad": -0.1204945192185337,
+                "translation_xy_m": [
+                  8.748355097357214,
+                  0.34794580624152155
+                ],
+                "phase_response": 0.06318007886875421,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3761",
+              "registration": {
+                "overlap": 0.475,
+                "rmse_m": 2.400446209765946,
+                "sector_coverage": 12,
+                "yaw_rad": 0.10393213771609232,
+                "translation_xy_m": [
+                  -0.7903951238137158,
+                  1.6859205116180473
+                ],
+                "phase_response": 0.08665387937799096,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 181.24793900005898
+        },
+        {
+          "query_id": "query_847",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_601",
+              "registration": {
+                "overlap": 0.45,
+                "rmse_m": 2.146968692815456,
+                "sector_coverage": 11,
+                "yaw_rad": -2.727963557186053,
+                "translation_xy_m": [
+                  -1.1234731589803257,
+                  0.6002558383019839
+                ],
+                "phase_response": 0.019744238699786365,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3836",
+              "registration": {
+                "overlap": 0.4325,
+                "rmse_m": 2.308447110901253,
+                "sector_coverage": 12,
+                "yaw_rad": -0.001149833478492799,
+                "translation_xy_m": [
+                  -5.611839626467747,
+                  -2.1601935018904834
+                ],
+                "phase_response": 0.029282864241395146,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1090",
+              "registration": {
+                "overlap": 0.55,
+                "rmse_m": 2.1417870053571257,
+                "sector_coverage": 12,
+                "yaw_rad": -0.05118088628135264,
+                "translation_xy_m": [
+                  -10.054145915455067,
+                  -0.7526627214865281
+                ],
+                "phase_response": 0.04928297095466405,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 183.3903060000921
+        },
+        {
+          "query_id": "query_953",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1015",
+              "registration": {
+                "overlap": 0.5025,
+                "rmse_m": 2.204163369254071,
+                "sector_coverage": 12,
+                "yaw_rad": -0.09327741076739163,
+                "translation_xy_m": [
+                  -2.0134293597144186,
+                  1.5449490556991665
+                ],
+                "phase_response": 0.04113911907188594,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_827",
+              "registration": {
+                "overlap": 0.475,
+                "rmse_m": 2.133779704614433,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0924230077997251,
+                "translation_xy_m": [
+                  -2.820556407623788,
+                  1.4502020640348716
+                ],
+                "phase_response": 0.016782436869107187,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_865",
+              "registration": {
+                "overlap": 0.54,
+                "rmse_m": 2.165370461762504,
+                "sector_coverage": 12,
+                "yaw_rad": -0.07984773757580779,
+                "translation_xy_m": [
+                  -1.9826834902482695,
+                  2.0758580820778936
+                ],
+                "phase_response": 0.01096505078021437,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 188.1711659998473
+        },
+        {
+          "query_id": "query_1059",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1354",
+              "registration": {
+                "overlap": 0.5075,
+                "rmse_m": 2.0047215141225223,
+                "sector_coverage": 12,
+                "yaw_rad": -0.5324572307241239,
+                "translation_xy_m": [
+                  -4.06514202138511,
+                  -0.6174365008633704
+                ],
+                "phase_response": 0.21041012334171683,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_150",
+              "registration": {
+                "overlap": 0.52,
+                "rmse_m": 2.009399045047874,
+                "sector_coverage": 12,
+                "yaw_rad": 2.4972756223196777,
+                "translation_xy_m": [
+                  -0.40774459761069337,
+                  0.7060244570717212
+                ],
+                "phase_response": 0.12690484547056258,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1617",
+              "registration": {
+                "overlap": 0.405,
+                "rmse_m": 2.128311240076352,
+                "sector_coverage": 12,
+                "yaw_rad": 2.490200691369341,
+                "translation_xy_m": [
+                  1.6760804297375675,
+                  -2.25580501549275
+                ],
+                "phase_response": 0.12766993534751236,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 180.74831200010522
+        },
+        {
+          "query_id": "query_1165",
+          "selected_reference_id": "reference_1354",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1354",
+              "registration": {
+                "overlap": 0.8575,
+                "rmse_m": 1.210685577672468,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0022244414067499824,
+                "translation_xy_m": [
+                  4.57138581054728,
+                  -0.29720921858796884
+                ],
+                "phase_response": 0.397590754320845,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 114.92653000004793
+        },
+        {
+          "query_id": "query_1271",
+          "selected_reference_id": "reference_1354",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1354",
+              "registration": {
+                "overlap": 0.86,
+                "rmse_m": 1.1554432779327433,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0036219878690747207,
+                "translation_xy_m": [
+                  4.425037995003856,
+                  -0.2650448204703851
+                ],
+                "phase_response": 0.6480984458466992,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 109.9906069998724
+        },
+        {
+          "query_id": "query_1377",
+          "selected_reference_id": "reference_1504",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1504",
+              "registration": {
+                "overlap": 0.8875,
+                "rmse_m": 1.1369334398639035,
+                "sector_coverage": 12,
+                "yaw_rad": 0.018324934919866233,
+                "translation_xy_m": [
+                  -3.4828149064438003,
+                  -0.4223273348585497
+                ],
+                "phase_response": 0.6396030186442658,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 109.05360499964445
+        },
+        {
+          "query_id": "query_1483",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2595",
+              "registration": {
+                "overlap": 0.6325,
+                "rmse_m": 1.901494344226767,
+                "sector_coverage": 12,
+                "yaw_rad": 0.11335234428854808,
+                "translation_xy_m": [
+                  -3.306859538644878,
+                  0.25843411062851773
+                ],
+                "phase_response": 0.2916243390645832,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.575,
+                "rmse_m": 2.295015312427906,
+                "sector_coverage": 12,
+                "yaw_rad": -2.9946811047835165,
+                "translation_xy_m": [
+                  0.9767421646026748,
+                  -0.9328853652757834
+                ],
+                "phase_response": 0.05320550804026425,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3046",
+              "registration": {
+                "overlap": 0.5225,
+                "rmse_m": 2.21640031314251,
+                "sector_coverage": 12,
+                "yaw_rad": 3.0230288862706,
+                "translation_xy_m": [
+                  1.060041989916263,
+                  0.8794850443884586
+                ],
+                "phase_response": 0.0899555531796068,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 196.40353400018284
+        },
+        {
+          "query_id": "query_1589",
+          "selected_reference_id": "reference_1692",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1692",
+              "registration": {
+                "overlap": 0.8625,
+                "rmse_m": 1.2122340277349748,
+                "sector_coverage": 12,
+                "yaw_rad": -0.015320709110101527,
+                "translation_xy_m": [
+                  10.103442715456719,
+                  0.20816687862455296
+                ],
+                "phase_response": 0.5615287137916312,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 115.26058899971758
+        },
+        {
+          "query_id": "query_1695",
+          "selected_reference_id": "reference_1805",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1805",
+              "registration": {
+                "overlap": 0.7375,
+                "rmse_m": 1.4667292244107792,
+                "sector_coverage": 12,
+                "yaw_rad": 0.08908201584699171,
+                "translation_xy_m": [
+                  13.24338249737557,
+                  1.0444035604556607
+                ],
+                "phase_response": 0.39478834066540003,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 111.37475000032282
+        },
+        {
+          "query_id": "query_1801",
+          "selected_reference_id": "reference_1955",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1918",
+              "registration": {
+                "overlap": 0.58,
+                "rmse_m": 2.020176855375461,
+                "sector_coverage": 12,
+                "yaw_rad": -0.13939166907612954,
+                "translation_xy_m": [
+                  2.1034557326981655,
+                  -0.34560842286067994
+                ],
+                "phase_response": 0.20136040984652936,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1955",
+              "registration": {
+                "overlap": 0.7675,
+                "rmse_m": 1.3852779686051804,
+                "sector_coverage": 12,
+                "yaw_rad": 0.026152276897840644,
+                "translation_xy_m": [
+                  -8.644528798036218,
+                  -0.4636322458792012
+                ],
+                "phase_response": 0.3444505074294284,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 142.6971699997921
+        },
+        {
+          "query_id": "query_1907",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2858",
+              "registration": {
+                "overlap": 0.8525,
+                "rmse_m": 1.5728843426689507,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1334726705668268,
+                "translation_xy_m": [
+                  7.467798077029486,
+                  -4.010532220773854
+                ],
+                "phase_response": 0.020541338250041008,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2745",
+              "registration": {
+                "overlap": 0.665,
+                "rmse_m": 2.034381975969193,
+                "sector_coverage": 12,
+                "yaw_rad": 2.964055678337764,
+                "translation_xy_m": [
+                  -0.5241314719783051,
+                  3.5462369085825753
+                ],
+                "phase_response": 0.14799881563521922,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1730",
+              "registration": {
+                "overlap": 0.7175,
+                "rmse_m": 2.128645234454265,
+                "sector_coverage": 12,
+                "yaw_rad": -0.029312279524955367,
+                "translation_xy_m": [
+                  -0.666068896101531,
+                  -0.9592566257665933
+                ],
+                "phase_response": 0.33539188001304865,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 193.19509799970547
+        },
+        {
+          "query_id": "query_2013",
+          "selected_reference_id": "reference_2143",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_2143",
+              "registration": {
+                "overlap": 0.9125,
+                "rmse_m": 1.0812822619913807,
+                "sector_coverage": 12,
+                "yaw_rad": -0.028515351692782378,
+                "translation_xy_m": [
+                  1.8588680292014024,
+                  -0.129324955093344
+                ],
+                "phase_response": 0.7155087233986706,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 104.42503400008718
+        },
+        {
+          "query_id": "query_2119",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2670",
+              "registration": {
+                "overlap": 0.5825,
+                "rmse_m": 2.1713176156502794,
+                "sector_coverage": 12,
+                "yaw_rad": -0.07348749379885865,
+                "translation_xy_m": [
+                  -6.446205464526906,
+                  -1.3026738782721874
+                ],
+                "phase_response": 0.14184508938342333,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.54,
+                "rmse_m": 2.2252504937038107,
+                "sector_coverage": 12,
+                "yaw_rad": -3.120980304943373,
+                "translation_xy_m": [
+                  -0.23518331233084003,
+                  -3.373984991194834
+                ],
+                "phase_response": 0.09018453606404364,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1429",
+              "registration": {
+                "overlap": 0.4525,
+                "rmse_m": 2.1574164416057364,
+                "sector_coverage": 12,
+                "yaw_rad": 2.8522658790977298,
+                "translation_xy_m": [
+                  -0.5340000819818883,
+                  1.8333085922477805
+                ],
+                "phase_response": -0.02906282222829759,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 191.00921099970947
+        },
+        {
+          "query_id": "query_2225",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.5275,
+                "rmse_m": 2.152438419952047,
+                "sector_coverage": 12,
+                "yaw_rad": -3.052529396892089,
+                "translation_xy_m": [
+                  6.669414596974392,
+                  -1.9664872198200687
+                ],
+                "phase_response": 0.1496298121055588,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1579",
+              "registration": {
+                "overlap": 0.6025,
+                "rmse_m": 2.1553310574777096,
+                "sector_coverage": 12,
+                "yaw_rad": -0.2159567749265639,
+                "translation_xy_m": [
+                  -16.64076280458099,
+                  -2.933167485905699
+                ],
+                "phase_response": 0.17244981392286718,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_150",
+              "registration": {
+                "overlap": 0.5325,
+                "rmse_m": 1.9006241660740824,
+                "sector_coverage": 12,
+                "yaw_rad": -0.2954087723353469,
+                "translation_xy_m": [
+                  -0.9061257566805135,
+                  -0.5980750638764012
+                ],
+                "phase_response": 0.07874438900034875,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 180.4286769997816
+        },
+        {
+          "query_id": "query_2331",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2745",
+              "registration": {
+                "overlap": 0.63,
+                "rmse_m": 2.141743186460154,
+                "sector_coverage": 12,
+                "yaw_rad": -0.06321551642654781,
+                "translation_xy_m": [
+                  1.2874796503905783,
+                  0.5043539622186876
+                ],
+                "phase_response": 0.1794709466630593,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1880",
+              "registration": {
+                "overlap": 0.6125,
+                "rmse_m": 2.0633111490756533,
+                "sector_coverage": 12,
+                "yaw_rad": 0.15215875979358154,
+                "translation_xy_m": [
+                  -2.67361837251152,
+                  -0.878784991135819
+                ],
+                "phase_response": 0.1404309746576473,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2520",
+              "registration": {
+                "overlap": 0.7275,
+                "rmse_m": 1.8383962700440812,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1390849506393304,
+                "translation_xy_m": [
+                  0.5304479357968923,
+                  -1.032014518460798
+                ],
+                "phase_response": 0.13021039636805654,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 181.3913420000972
+        },
+        {
+          "query_id": "query_2437",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1767",
+              "registration": {
+                "overlap": 0.68,
+                "rmse_m": 2.0936110840810165,
+                "sector_coverage": 12,
+                "yaw_rad": -3.106537465304853,
+                "translation_xy_m": [
+                  -0.49383933769837257,
+                  -2.098904536518857
+                ],
+                "phase_response": 0.17454753367928788,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2520",
+              "registration": {
+                "overlap": 0.78,
+                "rmse_m": 1.792762542998924,
+                "sector_coverage": 12,
+                "yaw_rad": 0.02985779404783466,
+                "translation_xy_m": [
+                  -0.5511558430320005,
+                  0.13511583237694066
+                ],
+                "phase_response": 0.2325745071284473,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2369",
+              "registration": {
+                "overlap": 0.66,
+                "rmse_m": 2.134823402996616,
+                "sector_coverage": 12,
+                "yaw_rad": -2.5253719638481646,
+                "translation_xy_m": [
+                  -6.33188005985647,
+                  -7.519478974488766
+                ],
+                "phase_response": 0.16239565325668082,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 186.94839499994487
+        },
+        {
+          "query_id": "query_2543",
+          "selected_reference_id": "reference_2632",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_2632",
+              "registration": {
+                "overlap": 0.9125,
+                "rmse_m": 1.091077137659737,
+                "sector_coverage": 12,
+                "yaw_rad": 0.013638312484440524,
+                "translation_xy_m": [
+                  3.52894321478845,
+                  0.4513092203159438
+                ],
+                "phase_response": 0.6010224024066702,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 115.19957900009103
+        },
+        {
+          "query_id": "query_2649",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1354",
+              "registration": {
+                "overlap": 0.5475,
+                "rmse_m": 2.0157290458521184,
+                "sector_coverage": 12,
+                "yaw_rad": 3.123650400542476,
+                "translation_xy_m": [
+                  4.134391349773223,
+                  3.832941526835725
+                ],
+                "phase_response": 0.22662862110882998,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.5425,
+                "rmse_m": 2.228026201809004,
+                "sector_coverage": 12,
+                "yaw_rad": 3.05952130044973,
+                "translation_xy_m": [
+                  1.977055063862996,
+                  2.16892004039199
+                ],
+                "phase_response": 0.08852743351599202,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3460",
+              "registration": {
+                "overlap": 0.4525,
+                "rmse_m": 2.1624873999246415,
+                "sector_coverage": 12,
+                "yaw_rad": 2.9181860810263456,
+                "translation_xy_m": [
+                  0.5897769709900751,
+                  -0.7636854132209115
+                ],
+                "phase_response": 0.02500159537885338,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 193.99085000031846
+        },
+        {
+          "query_id": "query_2755",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1579",
+              "registration": {
+                "overlap": 0.67,
+                "rmse_m": 2.0079776627446173,
+                "sector_coverage": 12,
+                "yaw_rad": 0.15458451548133512,
+                "translation_xy_m": [
+                  -11.075868102140417,
+                  -0.8107971362106196
+                ],
+                "phase_response": 0.055023372173309326,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2783",
+              "registration": {
+                "overlap": 0.59,
+                "rmse_m": 1.9915803425210232,
+                "sector_coverage": 12,
+                "yaw_rad": 2.9958807395371796,
+                "translation_xy_m": [
+                  -0.11858603868685501,
+                  -2.392669515795992
+                ],
+                "phase_response": 0.057462377881165594,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3197",
+              "registration": {
+                "overlap": 0.655,
+                "rmse_m": 2.1416390855682863,
+                "sector_coverage": 12,
+                "yaw_rad": -0.006003362421901466,
+                "translation_xy_m": [
+                  -10.20558701973719,
+                  -1.479246750573906
+                ],
+                "phase_response": 0.0721930181607604,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 178.04127899989908
+        },
+        {
+          "query_id": "query_2861",
+          "selected_reference_id": "reference_2933",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_2933",
+              "registration": {
+                "overlap": 0.8325,
+                "rmse_m": 1.1515556187201799,
+                "sector_coverage": 12,
+                "yaw_rad": 0.0014515795461827775,
+                "translation_xy_m": [
+                  3.5142245682086033,
+                  0.201029446389457
+                ],
+                "phase_response": 0.48027725820429623,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 116.36930499980735
+        },
+        {
+          "query_id": "query_2967",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3009",
+              "registration": {
+                "overlap": 0.4875,
+                "rmse_m": 2.014647193792012,
+                "sector_coverage": 12,
+                "yaw_rad": 1.699993160814455,
+                "translation_xy_m": [
+                  10.20640681388953,
+                  -1.1237255039120118
+                ],
+                "phase_response": 0.07957245028228499,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1692",
+              "registration": {
+                "overlap": 0.4575,
+                "rmse_m": 2.0156601710179216,
+                "sector_coverage": 11,
+                "yaw_rad": 1.357205498290798,
+                "translation_xy_m": [
+                  11.103858658916698,
+                  3.765420478450104
+                ],
+                "phase_response": 0.22956990916281939,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.4875,
+                "rmse_m": 2.2404539195705384,
+                "sector_coverage": 12,
+                "yaw_rad": 1.864940300838648,
+                "translation_xy_m": [
+                  -0.0554873968624948,
+                  2.5527475057368294
+                ],
+                "phase_response": 0.056631375511642545,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 204.28583500006425
+        },
+        {
+          "query_id": "query_3073",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2858",
+              "registration": {
+                "overlap": 0.625,
+                "rmse_m": 1.9634280491551148,
+                "sector_coverage": 12,
+                "yaw_rad": 0.07196097284667159,
+                "translation_xy_m": [
+                  2.3901675159051265,
+                  0.07598529760206314
+                ],
+                "phase_response": 0.223749574564863,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3197",
+              "registration": {
+                "overlap": 0.7125,
+                "rmse_m": 2.182898790067438,
+                "sector_coverage": 12,
+                "yaw_rad": -0.09385919581456746,
+                "translation_xy_m": [
+                  -1.038837160701385,
+                  1.659031545145543
+                ],
+                "phase_response": 0.05527640867512673,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3347",
+              "registration": {
+                "overlap": 0.5775,
+                "rmse_m": 2.264452522840352,
+                "sector_coverage": 12,
+                "yaw_rad": 0.06455996747548313,
+                "translation_xy_m": [
+                  1.3403606295698385,
+                  0.6172010593984427
+                ],
+                "phase_response": 0.11660338949877769,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 212.34969600027398
+        },
+        {
+          "query_id": "query_3179",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.4925,
+                "rmse_m": 2.031419212628696,
+                "sector_coverage": 12,
+                "yaw_rad": 0.15148497343997158,
+                "translation_xy_m": [
+                  -3.692464248514784,
+                  10.662339558085364
+                ],
+                "phase_response": 0.21035008516628295,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1654",
+              "registration": {
+                "overlap": 0.4875,
+                "rmse_m": 2.3312447134609093,
+                "sector_coverage": 12,
+                "yaw_rad": -1.1748467611808535,
+                "translation_xy_m": [
+                  -0.2701534625016534,
+                  -0.09874317102913775
+                ],
+                "phase_response": 0.11408475268399343,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.6275,
+                "rmse_m": 2.011787121718444,
+                "sector_coverage": 12,
+                "yaw_rad": 0.06445426651982428,
+                "translation_xy_m": [
+                  3.093005949315022,
+                  1.0200660245868063
+                ],
+                "phase_response": 0.2608496162574738,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 206.78414999974848
+        },
+        {
+          "query_id": "query_3285",
+          "selected_reference_id": "reference_3347",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_3347",
+              "registration": {
+                "overlap": 0.88,
+                "rmse_m": 1.193856051246531,
+                "sector_coverage": 12,
+                "yaw_rad": 0.0152784053870658,
+                "translation_xy_m": [
+                  -2.8649030623799154,
+                  -0.035401865021187785
+                ],
+                "phase_response": 0.7442039040615782,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 118.94884899993485
+        },
+        {
+          "query_id": "query_3391",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1429",
+              "registration": {
+                "overlap": 0.495,
+                "rmse_m": 2.096939737385385,
+                "sector_coverage": 12,
+                "yaw_rad": -0.006114317519908022,
+                "translation_xy_m": [
+                  -0.8201071477474671,
+                  3.0615384965300545
+                ],
+                "phase_response": 0.1596352751366794,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1354",
+              "registration": {
+                "overlap": 0.5225,
+                "rmse_m": 2.0850195059180363,
+                "sector_coverage": 12,
+                "yaw_rad": 0.10824619764791549,
+                "translation_xy_m": [
+                  -0.3209357100900221,
+                  0.9059129787262334
+                ],
+                "phase_response": 0.028427880024537444,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.4975,
+                "rmse_m": 2.0960299871596555,
+                "sector_coverage": 12,
+                "yaw_rad": 0.65665252365003,
+                "translation_xy_m": [
+                  -0.9170740032039689,
+                  2.4644579931804653
+                ],
+                "phase_response": 0.10207644524052739,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 188.72287600015625
+        },
+        {
+          "query_id": "query_3497",
+          "selected_reference_id": "reference_3798",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_3798",
+              "registration": {
+                "overlap": 0.75,
+                "rmse_m": 1.4794647764147766,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0078139846396343,
+                "translation_xy_m": [
+                  -8.204969772826725,
+                  -3.5037236844581265
+                ],
+                "phase_response": 0.3785801049671136,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 124.61473700022907
+        },
+        {
+          "query_id": "query_3603",
+          "selected_reference_id": "reference_3911",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_3911",
+              "registration": {
+                "overlap": 0.7625,
+                "rmse_m": 1.4869125333307134,
+                "sector_coverage": 12,
+                "yaw_rad": -0.010209676101768433,
+                "translation_xy_m": [
+                  -7.52598815305449,
+                  -3.467478951294912
+                ],
+                "phase_response": 0.3586258814902976,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 113.18793300006291
+        },
+        {
+          "query_id": "query_3709",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_677",
+              "registration": {
+                "overlap": 0.4875,
+                "rmse_m": 2.3167120393216423,
+                "sector_coverage": 12,
+                "yaw_rad": -0.9728337968956081,
+                "translation_xy_m": [
+                  11.094588621196085,
+                  3.314752725847986
+                ],
+                "phase_response": 0.13462633767630905,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4062",
+              "registration": {
+                "overlap": 0.535,
+                "rmse_m": 2.4389788854443926,
+                "sector_coverage": 12,
+                "yaw_rad": -0.008860205132162582,
+                "translation_xy_m": [
+                  -0.6238599962318644,
+                  0.42134152188900215
+                ],
+                "phase_response": 0.13356542203109711,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4024",
+              "registration": {
+                "overlap": 0.385,
+                "rmse_m": 2.126609146859538,
+                "sector_coverage": 12,
+                "yaw_rad": 3.1327878307753863,
+                "translation_xy_m": [
+                  8.408810097622494,
+                  -1.0893486679014772
+                ],
+                "phase_response": 0.07870209799148142,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 172.50280000007479
+        },
+        {
+          "query_id": "query_3815",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_4175",
+              "registration": {
+                "overlap": 0.7275,
+                "rmse_m": 1.5100275137921282,
+                "sector_coverage": 12,
+                "yaw_rad": 0.16485923805420274,
+                "translation_xy_m": [
+                  -7.023913352287566,
+                  -0.7655768620308607
+                ],
+                "phase_response": 0.4531188514083624,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_677",
+              "registration": {
+                "overlap": 0.41,
+                "rmse_m": 2.284401839446971,
+                "sector_coverage": 12,
+                "yaw_rad": -1.487516014368477,
+                "translation_xy_m": [
+                  -12.634119807617884,
+                  7.490753339403777
+                ],
+                "phase_response": 0.10344732366502285,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4137",
+              "registration": {
+                "overlap": 0.4225,
+                "rmse_m": 2.42402838283249,
+                "sector_coverage": 12,
+                "yaw_rad": 2.8002395580005133,
+                "translation_xy_m": [
+                  0.88342265888398,
+                  -1.1844057448241725
+                ],
+                "phase_response": 0.0483732596039772,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 177.06399400003647
+        },
+        {
+          "query_id": "query_3921",
+          "selected_reference_id": "reference_4250",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_4250",
+              "registration": {
+                "overlap": 0.7475,
+                "rmse_m": 1.3956537648515173,
+                "sector_coverage": 12,
+                "yaw_rad": 0.013355597607323546,
+                "translation_xy_m": [
+                  11.157707919649042,
+                  0.3269856637031547
+                ],
+                "phase_response": 0.46849741466576234,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 108.46850200005065
+        },
+        {
+          "query_id": "query_4027",
+          "selected_reference_id": "reference_4363",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_4363",
+              "registration": {
+                "overlap": 0.9075,
+                "rmse_m": 1.1758352618909258,
+                "sector_coverage": 12,
+                "yaw_rad": 0.06732909065207623,
+                "translation_xy_m": [
+                  5.042307838067897,
+                  -0.13050786768306327
+                ],
+                "phase_response": 0.5689856379758567,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 102.25148000017725
+        },
+        {
+          "query_id": "query_4133",
+          "selected_reference_id": "reference_37",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_37",
+              "registration": {
+                "overlap": 0.9375,
+                "rmse_m": 1.0245066484624636,
+                "sector_coverage": 12,
+                "yaw_rad": -0.01622350171492034,
+                "translation_xy_m": [
+                  -2.02041919811698,
+                  -0.013039047996390468
+                ],
+                "phase_response": 0.705788595834747,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 98.81654099990556
+        }
+      ]
+    },
+    "heldout": {
+      "median_image_to_decision_ms": 177.97927350011378,
+      "p95_image_to_decision_ms": 190.7216760498386,
+      "selected": 13,
+      "records": [
+        {
+          "query_id": "heldout_0",
+          "selected_reference_id": "reference_37",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_37",
+              "registration": {
+                "overlap": 0.9625,
+                "rmse_m": 0.7845347217612684,
+                "sector_coverage": 12,
+                "yaw_rad": 0.02034313595664677,
+                "translation_xy_m": [
+                  -0.3332910414456158,
+                  0.39044000057331907
+                ],
+                "phase_response": 0.7141156327270437,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 116.01768399987122
+        },
+        {
+          "query_id": "heldout_91",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_188",
+              "registration": {
+                "overlap": 0.68,
+                "rmse_m": 1.4489000008913464,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1379240099437293,
+                "translation_xy_m": [
+                  13.620637111749884,
+                  -1.3198214211575707
+                ],
+                "phase_response": 0.1533446661196649,
+                "accepted": false,
+                "reason": "low_overlap"
+              }
+            },
+            {
+              "reference_id": "reference_3046",
+              "registration": {
+                "overlap": 0.385,
+                "rmse_m": 2.1187548325908034,
+                "sector_coverage": 12,
+                "yaw_rad": 0.04764879703064543,
+                "translation_xy_m": [
+                  0.453321260631232,
+                  -0.959946050689331
+                ],
+                "phase_response": 0.07072824344504625,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_112",
+              "registration": {
+                "overlap": 0.685,
+                "rmse_m": 1.7471404641754702,
+                "sector_coverage": 12,
+                "yaw_rad": 0.36615379165570133,
+                "translation_xy_m": [
+                  8.863047395923315,
+                  2.5853081282829655
+                ],
+                "phase_response": 0.3209921414963901,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 177.6663120003832
+        },
+        {
+          "query_id": "heldout_183",
+          "selected_reference_id": "reference_112",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_112",
+              "registration": {
+                "overlap": 0.86,
+                "rmse_m": 1.1701497985957132,
+                "sector_coverage": 12,
+                "yaw_rad": 2.825185068259905,
+                "translation_xy_m": [
+                  -9.939690852393346,
+                  0.03829512603057652
+                ],
+                "phase_response": 0.6028107511810958,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 110.56338600019444
+        },
+        {
+          "query_id": "heldout_275",
+          "selected_reference_id": "reference_300",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_300",
+              "registration": {
+                "overlap": 0.9275,
+                "rmse_m": 0.9209474164015168,
+                "sector_coverage": 12,
+                "yaw_rad": 0.009736090080487175,
+                "translation_xy_m": [
+                  -0.8820666587001047,
+                  0.2540961562690748
+                ],
+                "phase_response": 0.7349145830376074,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 96.34384999981194
+        },
+        {
+          "query_id": "heldout_366",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_4287",
+              "registration": {
+                "overlap": 0.7125,
+                "rmse_m": 1.743465012986085,
+                "sector_coverage": 12,
+                "yaw_rad": 3.1220306626945553,
+                "translation_xy_m": [
+                  6.264491282418415,
+                  -0.9256086037482508
+                ],
+                "phase_response": 0.3749695459846407,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_376",
+              "registration": {
+                "overlap": 0.6725,
+                "rmse_m": 1.7775170795773634,
+                "sector_coverage": 12,
+                "yaw_rad": -0.17113846272042005,
+                "translation_xy_m": [
+                  -0.6324887410988411,
+                  0.9783722490831527
+                ],
+                "phase_response": 0.554820335120894,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_112",
+              "registration": {
+                "overlap": 0.645,
+                "rmse_m": 2.018478574104474,
+                "sector_coverage": 12,
+                "yaw_rad": -0.11468447272758077,
+                "translation_xy_m": [
+                  0.3261490482984666,
+                  4.355160438482851
+                ],
+                "phase_response": 0.2684601810760796,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 189.2770920003386
+        },
+        {
+          "query_id": "heldout_458",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_526",
+              "registration": {
+                "overlap": 0.435,
+                "rmse_m": 2.304953842540629,
+                "sector_coverage": 12,
+                "yaw_rad": -1.3680085379029208,
+                "translation_xy_m": [
+                  -0.04471604382974586,
+                  0.4867011383988629
+                ],
+                "phase_response": 0.04089323681546375,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4212",
+              "registration": {
+                "overlap": 0.405,
+                "rmse_m": 2.216646007077456,
+                "sector_coverage": 11,
+                "yaw_rad": 0.30028006206276237,
+                "translation_xy_m": [
+                  6.591586446710098,
+                  21.488649075580845
+                ],
+                "phase_response": 0.08802094351267442,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3610",
+              "registration": {
+                "overlap": 0.445,
+                "rmse_m": 2.2630563265229573,
+                "sector_coverage": 12,
+                "yaw_rad": -0.5788466112372795,
+                "translation_xy_m": [
+                  0.8423065540283546,
+                  0.5630245355048304
+                ],
+                "phase_response": 0.006027435068972409,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 169.21476200013785
+        },
+        {
+          "query_id": "heldout_550",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_601",
+              "registration": {
+                "overlap": 0.4125,
+                "rmse_m": 2.2444462521089674,
+                "sector_coverage": 12,
+                "yaw_rad": -2.9787996631292093,
+                "translation_xy_m": [
+                  1.4893357300848253,
+                  1.1036784882766324
+                ],
+                "phase_response": 0.10619455750565976,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3610",
+              "registration": {
+                "overlap": 0.42,
+                "rmse_m": 2.197762585043907,
+                "sector_coverage": 12,
+                "yaw_rad": 3.1087966492384282,
+                "translation_xy_m": [
+                  -3.2489794669240775,
+                  4.658732311807785
+                ],
+                "phase_response": 0.04138973471708596,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_977",
+              "registration": {
+                "overlap": 0.4875,
+                "rmse_m": 2.2196207306654903,
+                "sector_coverage": 12,
+                "yaw_rad": -2.827189590980081,
+                "translation_xy_m": [
+                  0.397881030599164,
+                  -0.5121650814034514
+                ],
+                "phase_response": 0.010737398260971531,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 174.92547099982403
+        },
+        {
+          "query_id": "heldout_641",
+          "selected_reference_id": "reference_940",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_940",
+              "registration": {
+                "overlap": 0.735,
+                "rmse_m": 1.3793732100061813,
+                "sector_coverage": 12,
+                "yaw_rad": 0.022991306796124097,
+                "translation_xy_m": [
+                  -6.312592414280149,
+                  -0.29546238564218635
+                ],
+                "phase_response": 0.22889991430565715,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 108.7120839997624
+        },
+        {
+          "query_id": "heldout_733",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1053",
+              "registration": {
+                "overlap": 0.685,
+                "rmse_m": 1.6553417492694156,
+                "sector_coverage": 12,
+                "yaw_rad": -0.009631953150125362,
+                "translation_xy_m": [
+                  8.995898389371309,
+                  0.32890764144264134
+                ],
+                "phase_response": 0.41001015924848616,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4062",
+              "registration": {
+                "overlap": 0.47,
+                "rmse_m": 2.3520436803767897,
+                "sector_coverage": 12,
+                "yaw_rad": -0.009646721272853953,
+                "translation_xy_m": [
+                  -2.6966574439429096,
+                  1.6432339745943416
+                ],
+                "phase_response": 0.07405969058163464,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4024",
+              "registration": {
+                "overlap": 0.45,
+                "rmse_m": 2.479100396298157,
+                "sector_coverage": 12,
+                "yaw_rad": -0.3216097160363129,
+                "translation_xy_m": [
+                  -0.9293560832919707,
+                  -0.3089291171094785
+                ],
+                "phase_response": 0.11300730786751956,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 168.0229439998584
+        },
+        {
+          "query_id": "heldout_825",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1128",
+              "registration": {
+                "overlap": 0.675,
+                "rmse_m": 1.719587351527586,
+                "sector_coverage": 12,
+                "yaw_rad": -0.016166424430107965,
+                "translation_xy_m": [
+                  -4.411578735965276,
+                  -0.934445030232258
+                ],
+                "phase_response": 0.13951413141330704,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1241",
+              "registration": {
+                "overlap": 0.6475,
+                "rmse_m": 1.3243904128875894,
+                "sector_coverage": 12,
+                "yaw_rad": 0.007131108710922462,
+                "translation_xy_m": [
+                  -5.000759490683948,
+                  -0.5669348642647827
+                ],
+                "phase_response": 0.2930104580009356,
+                "accepted": false,
+                "reason": "low_overlap"
+              }
+            },
+            {
+              "reference_id": "reference_1203",
+              "registration": {
+                "overlap": 0.6375,
+                "rmse_m": 1.4394637509705839,
+                "sector_coverage": 12,
+                "yaw_rad": 0.004312696826832901,
+                "translation_xy_m": [
+                  -5.029268292927323,
+                  -0.5835391618366212
+                ],
+                "phase_response": 0.05471058189868927,
+                "accepted": false,
+                "reason": "low_overlap"
+              }
+            }
+          ],
+          "image_to_decision_ms": 179.4390560003194
+        },
+        {
+          "query_id": "heldout_916",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1278",
+              "registration": {
+                "overlap": 0.625,
+                "rmse_m": 1.5391551369333625,
+                "sector_coverage": 12,
+                "yaw_rad": -0.005249728003044588,
+                "translation_xy_m": [
+                  17.63153901333984,
+                  -0.005669940014086495
+                ],
+                "phase_response": 0.3218425348168239,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1090",
+              "registration": {
+                "overlap": 0.5475,
+                "rmse_m": 2.0193553821367147,
+                "sector_coverage": 11,
+                "yaw_rad": -0.010416570374923701,
+                "translation_xy_m": [
+                  -0.1710554014968048,
+                  -2.1563570780142705
+                ],
+                "phase_response": 0.007898029289208353,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_601",
+              "registration": {
+                "overlap": 0.4375,
+                "rmse_m": 2.3838833966799258,
+                "sector_coverage": 12,
+                "yaw_rad": 0.3277215636586276,
+                "translation_xy_m": [
+                  0.7149656975287084,
+                  0.025876425214345786
+                ],
+                "phase_response": 0.06606538651976734,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 181.69070800013287
+        },
+        {
+          "query_id": "heldout_1008",
+          "selected_reference_id": "reference_1429",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1429",
+              "registration": {
+                "overlap": 0.8625,
+                "rmse_m": 1.1100450052108253,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0037239079881663164,
+                "translation_xy_m": [
+                  1.6028421860949376,
+                  -0.09132014706006335
+                ],
+                "phase_response": 0.3463731030933559,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 120.20586299968272
+        },
+        {
+          "query_id": "heldout_1100",
+          "selected_reference_id": "reference_1466",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1466",
+              "registration": {
+                "overlap": 0.84,
+                "rmse_m": 1.1957779162640885,
+                "sector_coverage": 12,
+                "yaw_rad": 0.2904537130132809,
+                "translation_xy_m": [
+                  -3.7107217705567894,
+                  -0.06057342726051953
+                ],
+                "phase_response": 0.6314739268273115,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 111.35740400004579
+        },
+        {
+          "query_id": "heldout_1191",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3347",
+              "registration": {
+                "overlap": 0.835,
+                "rmse_m": 1.541887141296433,
+                "sector_coverage": 12,
+                "yaw_rad": 3.107611849523412,
+                "translation_xy_m": [
+                  -7.845652264033121,
+                  -5.044012643184956
+                ],
+                "phase_response": 0.5862039453350008,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1617",
+              "registration": {
+                "overlap": 0.6075,
+                "rmse_m": 2.2156870969854023,
+                "sector_coverage": 12,
+                "yaw_rad": -2.749753373806495,
+                "translation_xy_m": [
+                  -0.21132822700336748,
+                  -0.30263356781642875
+                ],
+                "phase_response": 0.09952370123937726,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1654",
+              "registration": {
+                "overlap": 0.565,
+                "rmse_m": 2.0769345933489207,
+                "sector_coverage": 12,
+                "yaw_rad": -0.08279052028433675,
+                "translation_xy_m": [
+                  2.4092041325822056,
+                  -0.5984929073005228
+                ],
+                "phase_response": 0.08547813876066357,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 167.85433899985946
+        },
+        {
+          "query_id": "heldout_1283",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2783",
+              "registration": {
+                "overlap": 0.545,
+                "rmse_m": 2.035793833515017,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1293807540603695,
+                "translation_xy_m": [
+                  1.1972400004467274,
+                  -0.3199827331714358
+                ],
+                "phase_response": 0.12488512881100178,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1579",
+              "registration": {
+                "overlap": 0.5675,
+                "rmse_m": 2.128514613956496,
+                "sector_coverage": 12,
+                "yaw_rad": 2.832356995641751,
+                "translation_xy_m": [
+                  0.3444896129738437,
+                  -3.989753362630315
+                ],
+                "phase_response": 0.07649689691606909,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.53,
+                "rmse_m": 2.0440695270779563,
+                "sector_coverage": 12,
+                "yaw_rad": -3.0129858988594975,
+                "translation_xy_m": [
+                  -2.021459731683803,
+                  -2.247899795625249
+                ],
+                "phase_response": 0.0777786182006821,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 187.59669200017015
+        },
+        {
+          "query_id": "heldout_1375",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3347",
+              "registration": {
+                "overlap": 0.64,
+                "rmse_m": 2.053483376257988,
+                "sector_coverage": 12,
+                "yaw_rad": -0.0904296359977263,
+                "translation_xy_m": [
+                  11.64431446781654,
+                  -0.06974997805376457
+                ],
+                "phase_response": 0.24216639233054593,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.5875,
+                "rmse_m": 2.0571284994972774,
+                "sector_coverage": 12,
+                "yaw_rad": 0.08240130507935797,
+                "translation_xy_m": [
+                  -0.6392760210900497,
+                  -0.6804872162819904
+                ],
+                "phase_response": 0.05661951319780201,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3197",
+              "registration": {
+                "overlap": 0.735,
+                "rmse_m": 1.8948567099036575,
+                "sector_coverage": 12,
+                "yaw_rad": -0.06212204158534971,
+                "translation_xy_m": [
+                  4.3231743192657355,
+                  0.27366339575644344
+                ],
+                "phase_response": 0.3152822970878333,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 191.779274000055
+        },
+        {
+          "query_id": "heldout_1466",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3046",
+              "registration": {
+                "overlap": 0.85,
+                "rmse_m": 1.5071521317992014,
+                "sector_coverage": 12,
+                "yaw_rad": 3.028649803242695,
+                "translation_xy_m": [
+                  2.3193020134618982,
+                  -3.157944008957177
+                ],
+                "phase_response": 0.38286214298568666,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.5175,
+                "rmse_m": 2.356797269323095,
+                "sector_coverage": 12,
+                "yaw_rad": -2.972553310012996,
+                "translation_xy_m": [
+                  1.8160473934546495,
+                  -2.69959554719806
+                ],
+                "phase_response": 0.055681539117358625,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1654",
+              "registration": {
+                "overlap": 0.4975,
+                "rmse_m": 2.0173578636125606,
+                "sector_coverage": 12,
+                "yaw_rad": -0.11957655552058477,
+                "translation_xy_m": [
+                  -2.873441955421721,
+                  0.8731509869517612
+                ],
+                "phase_response": 0.24986306601203978,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 181.64497299994764
+        },
+        {
+          "query_id": "heldout_1558",
+          "selected_reference_id": "reference_1955",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_1955",
+              "registration": {
+                "overlap": 0.8675,
+                "rmse_m": 1.276089437416661,
+                "sector_coverage": 12,
+                "yaw_rad": -0.002227361979988604,
+                "translation_xy_m": [
+                  4.929025698822745,
+                  -0.12752099493025795
+                ],
+                "phase_response": 0.6119379851734266,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 102.57978100025866
+        },
+        {
+          "query_id": "heldout_1650",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1579",
+              "registration": {
+                "overlap": 0.665,
+                "rmse_m": 1.9779129747105326,
+                "sector_coverage": 12,
+                "yaw_rad": -0.16073401570055657,
+                "translation_xy_m": [
+                  5.32523643855243,
+                  0.37852210745309206
+                ],
+                "phase_response": 0.26465244335122406,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.61,
+                "rmse_m": 2.374193694428437,
+                "sector_coverage": 12,
+                "yaw_rad": 3.0204724594042056,
+                "translation_xy_m": [
+                  -1.1939994177856244,
+                  -2.598721166775906
+                ],
+                "phase_response": 0.12834550793922972,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3197",
+              "registration": {
+                "overlap": 0.6775,
+                "rmse_m": 2.18177807540238,
+                "sector_coverage": 12,
+                "yaw_rad": 0.006747109546341744,
+                "translation_xy_m": [
+                  1.933850099009154,
+                  0.05329926436122666
+                ],
+                "phase_response": 0.08200114103965461,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 178.29223499984437
+        },
+        {
+          "query_id": "heldout_1741",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3460",
+              "registration": {
+                "overlap": 0.495,
+                "rmse_m": 2.297678036860371,
+                "sector_coverage": 12,
+                "yaw_rad": 0.26049518623860685,
+                "translation_xy_m": [
+                  0.9273192430513573,
+                  2.737958413508445
+                ],
+                "phase_response": 0.14732369140256196,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_300",
+              "registration": {
+                "overlap": 0.6175,
+                "rmse_m": 1.9136148685517596,
+                "sector_coverage": 12,
+                "yaw_rad": 0.06261038418981436,
+                "translation_xy_m": [
+                  -0.05305282639099808,
+                  -1.703726391772222
+                ],
+                "phase_response": 0.24047559616155922,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2181",
+              "registration": {
+                "overlap": 0.6825,
+                "rmse_m": 1.9121334351276056,
+                "sector_coverage": 12,
+                "yaw_rad": 0.005442749217467749,
+                "translation_xy_m": [
+                  1.1146052669442463,
+                  -0.3431169476839363
+                ],
+                "phase_response": 0.2970022573135793,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 177.10794899994653
+        },
+        {
+          "query_id": "heldout_1833",
+          "selected_reference_id": "reference_2256",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_2256",
+              "registration": {
+                "overlap": 0.9025,
+                "rmse_m": 0.9143572677126444,
+                "sector_coverage": 12,
+                "yaw_rad": -0.008769518326707117,
+                "translation_xy_m": [
+                  1.829488288389101,
+                  0.48789913621526787
+                ],
+                "phase_response": 0.8580840551294386,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 115.00781299992013
+        },
+        {
+          "query_id": "heldout_1925",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2745",
+              "registration": {
+                "overlap": 0.645,
+                "rmse_m": 2.2093767252176826,
+                "sector_coverage": 12,
+                "yaw_rad": -0.269075693365613,
+                "translation_xy_m": [
+                  -1.068880741789079,
+                  -1.3675652210215445
+                ],
+                "phase_response": 0.06149146053940058,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1654",
+              "registration": {
+                "overlap": 0.565,
+                "rmse_m": 2.183255066077052,
+                "sector_coverage": 12,
+                "yaw_rad": -0.12662795215162753,
+                "translation_xy_m": [
+                  -3.764476839189585,
+                  1.0882312850153781
+                ],
+                "phase_response": 0.11491540272254497,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.49,
+                "rmse_m": 2.155237790373229,
+                "sector_coverage": 11,
+                "yaw_rad": 0.06865890108043278,
+                "translation_xy_m": [
+                  0.2961705789317773,
+                  -0.8181990612675427
+                ],
+                "phase_response": 0.049640520475804806,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 187.34800099991844
+        },
+        {
+          "query_id": "heldout_2016",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.4275,
+                "rmse_m": 2.1562429717778686,
+                "sector_coverage": 11,
+                "yaw_rad": -2.6996261502501038,
+                "translation_xy_m": [
+                  0.09977903350335204,
+                  -1.2245031388394876
+                ],
+                "phase_response": 0.1897013788111508,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3309",
+              "registration": {
+                "overlap": 0.535,
+                "rmse_m": 2.0820896825894497,
+                "sector_coverage": 11,
+                "yaw_rad": 2.925022696693493,
+                "translation_xy_m": [
+                  -0.853733231885278,
+                  -4.115139415438143
+                ],
+                "phase_response": 0.31731504877097905,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_338",
+              "registration": {
+                "overlap": 0.4525,
+                "rmse_m": 1.8967856189604397,
+                "sector_coverage": 9,
+                "yaw_rad": 1.7166488150569574,
+                "translation_xy_m": [
+                  -2.0922561941514104,
+                  1.021573522454985
+                ],
+                "phase_response": 0.18943026033230126,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 185.3522870001143
+        },
+        {
+          "query_id": "heldout_2108",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.7525,
+                "rmse_m": 1.5158143946258271,
+                "sector_coverage": 12,
+                "yaw_rad": 0.37094145305158976,
+                "translation_xy_m": [
+                  -18.078316735365622,
+                  -4.098830604171942
+                ],
+                "phase_response": 0.2650793045759201,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1918",
+              "registration": {
+                "overlap": 0.5975,
+                "rmse_m": 1.9642114852725339,
+                "sector_coverage": 12,
+                "yaw_rad": -2.912194857419255,
+                "translation_xy_m": [
+                  -7.1741142440837775,
+                  -5.280930228098165
+                ],
+                "phase_response": 0.15752650040667504,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2520",
+              "registration": {
+                "overlap": 0.69,
+                "rmse_m": 1.8022434295590612,
+                "sector_coverage": 12,
+                "yaw_rad": 0.16153739256914879,
+                "translation_xy_m": [
+                  -4.431348696835052,
+                  1.65528330522181
+                ],
+                "phase_response": 0.13944124476984143,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 170.63830699999016
+        },
+        {
+          "query_id": "heldout_2200",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2256",
+              "registration": {
+                "overlap": 0.86,
+                "rmse_m": 1.5170282784473457,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1333787848414243,
+                "translation_xy_m": [
+                  1.548939102566488,
+                  -4.635666683816038
+                ],
+                "phase_response": 0.5139740951126441,
+                "accepted": false,
+                "reason": "high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2332",
+              "registration": {
+                "overlap": 0.5225,
+                "rmse_m": 2.3251745484950233,
+                "sector_coverage": 12,
+                "yaw_rad": -3.1209348464211155,
+                "translation_xy_m": [
+                  -1.350290081446248,
+                  -2.0806398817525573
+                ],
+                "phase_response": 0.004181930795311928,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1993",
+              "registration": {
+                "overlap": 0.5325,
+                "rmse_m": 2.2511488014839287,
+                "sector_coverage": 12,
+                "yaw_rad": 0.18570502017726512,
+                "translation_xy_m": [
+                  -0.04943004018897309,
+                  -0.16824897560259305
+                ],
+                "phase_response": 0.23967230191919953,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 190.11338900008923
+        },
+        {
+          "query_id": "heldout_2291",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.575,
+                "rmse_m": 2.0942279910574038,
+                "sector_coverage": 12,
+                "yaw_rad": -3.053509848204977,
+                "translation_xy_m": [
+                  -2.3097366038611615,
+                  1.816089970350769
+                ],
+                "phase_response": 0.21210647057159804,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2708",
+              "registration": {
+                "overlap": 0.6125,
+                "rmse_m": 1.790200110029129,
+                "sector_coverage": 12,
+                "yaw_rad": -0.05863649871033321,
+                "translation_xy_m": [
+                  -6.0666904049196475,
+                  -0.023154216612288926
+                ],
+                "phase_response": 0.30114040500484407,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2332",
+              "registration": {
+                "overlap": 0.53,
+                "rmse_m": 2.1251187711570094,
+                "sector_coverage": 12,
+                "yaw_rad": 2.8839401324319844,
+                "translation_xy_m": [
+                  1.0442746278783048,
+                  0.27479746723462456
+                ],
+                "phase_response": 0.1281372949888464,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 187.00876200000494
+        },
+        {
+          "query_id": "heldout_2383",
+          "selected_reference_id": "reference_2821",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_2821",
+              "registration": {
+                "overlap": 0.9575,
+                "rmse_m": 1.0104079705890707,
+                "sector_coverage": 12,
+                "yaw_rad": 0.0026933103858779164,
+                "translation_xy_m": [
+                  0.11106260482956822,
+                  0.5784236189788359
+                ],
+                "phase_response": 0.5969978568609804,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 107.00119900002392
+        },
+        {
+          "query_id": "heldout_2475",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1918",
+              "registration": {
+                "overlap": 0.5325,
+                "rmse_m": 2.2394240106293233,
+                "sector_coverage": 12,
+                "yaw_rad": 0.20485371875484448,
+                "translation_xy_m": [
+                  -0.7106816751815629,
+                  -0.8317976139514173
+                ],
+                "phase_response": 0.08188954542856663,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3347",
+              "registration": {
+                "overlap": 0.6675,
+                "rmse_m": 2.1170197675539297,
+                "sector_coverage": 12,
+                "yaw_rad": -0.11841031733410161,
+                "translation_xy_m": [
+                  1.0620486372524345,
+                  -1.8047985585910025
+                ],
+                "phase_response": 0.2206087043741718,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1692",
+              "registration": {
+                "overlap": 0.575,
+                "rmse_m": 2.0447496814597215,
+                "sector_coverage": 12,
+                "yaw_rad": -0.09650665749376464,
+                "translation_xy_m": [
+                  -1.486382307324517,
+                  0.6017201836238029
+                ],
+                "phase_response": 0.05836331460159272,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 188.29797999978837
+        },
+        {
+          "query_id": "heldout_2566",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1918",
+              "registration": {
+                "overlap": 0.63,
+                "rmse_m": 2.1753275835037953,
+                "sector_coverage": 12,
+                "yaw_rad": 0.1204955767685288,
+                "translation_xy_m": [
+                  0.23588336390428785,
+                  -1.9719458412890167
+                ],
+                "phase_response": 0.17142947809770703,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3197",
+              "registration": {
+                "overlap": 0.67,
+                "rmse_m": 2.2435203479792425,
+                "sector_coverage": 12,
+                "yaw_rad": 0.09330315720858794,
+                "translation_xy_m": [
+                  0.18408534662395865,
+                  0.9177217579786086
+                ],
+                "phase_response": 0.11466585053130984,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2595",
+              "registration": {
+                "overlap": 0.6175,
+                "rmse_m": 1.956414023059005,
+                "sector_coverage": 12,
+                "yaw_rad": -0.07628117184546362,
+                "translation_xy_m": [
+                  0.0536227250904733,
+                  0.5679467680508605
+                ],
+                "phase_response": -0.04143053316511214,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 236.83173000017632
+        },
+        {
+          "query_id": "heldout_2658",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2557",
+              "registration": {
+                "overlap": 0.5725,
+                "rmse_m": 1.9234237500100715,
+                "sector_coverage": 12,
+                "yaw_rad": 0.33693125899928694,
+                "translation_xy_m": [
+                  1.0035612898138118,
+                  1.377100405567172
+                ],
+                "phase_response": 0.20608712430112064,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3272",
+              "registration": {
+                "overlap": 0.46,
+                "rmse_m": 2.226089861496975,
+                "sector_coverage": 12,
+                "yaw_rad": 0.018529890828158105,
+                "translation_xy_m": [
+                  -0.329926730872647,
+                  -2.34249269513334
+                ],
+                "phase_response": 0.21143660554662347,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4175",
+              "registration": {
+                "overlap": 0.475,
+                "rmse_m": 2.4897409924317686,
+                "sector_coverage": 12,
+                "yaw_rad": 0.6500112300303033,
+                "translation_xy_m": [
+                  2.5261059686213923,
+                  4.955650245221218
+                ],
+                "phase_response": 0.10302944353315979,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 186.84497499998542
+        },
+        {
+          "query_id": "heldout_2750",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2632",
+              "registration": {
+                "overlap": 0.6675,
+                "rmse_m": 2.0301950480186166,
+                "sector_coverage": 12,
+                "yaw_rad": -0.06601381593578545,
+                "translation_xy_m": [
+                  -5.316672850547325,
+                  1.2560074056210642
+                ],
+                "phase_response": 0.1649617524817586,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3347",
+              "registration": {
+                "overlap": 0.6225,
+                "rmse_m": 1.9617839493011986,
+                "sector_coverage": 12,
+                "yaw_rad": 3.003130486080744,
+                "translation_xy_m": [
+                  11.35040671240694,
+                  -8.009070120397961
+                ],
+                "phase_response": 0.2635063473135233,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1730",
+              "registration": {
+                "overlap": 0.6225,
+                "rmse_m": 2.026595688922305,
+                "sector_coverage": 11,
+                "yaw_rad": -0.00912793117342978,
+                "translation_xy_m": [
+                  2.8510139560396626,
+                  -0.0931543933826523
+                ],
+                "phase_response": 0.13723451166879386,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 186.72929199965438
+        },
+        {
+          "query_id": "heldout_2841",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_2595",
+              "registration": {
+                "overlap": 0.6375,
+                "rmse_m": 2.022421300591461,
+                "sector_coverage": 12,
+                "yaw_rad": 0.18990166258065871,
+                "translation_xy_m": [
+                  -1.7345675118877375,
+                  -1.1782354286822403
+                ],
+                "phase_response": 0.18557585263624787,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4363",
+              "registration": {
+                "overlap": 0.605,
+                "rmse_m": 2.2503567441660537,
+                "sector_coverage": 12,
+                "yaw_rad": -3.0801442106319077,
+                "translation_xy_m": [
+                  -4.468061045319822,
+                  -3.2431519477033257
+                ],
+                "phase_response": 0.055518921348266304,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2181",
+              "registration": {
+                "overlap": 0.5825,
+                "rmse_m": 2.203077246575945,
+                "sector_coverage": 12,
+                "yaw_rad": 0.11956864627370001,
+                "translation_xy_m": [
+                  -0.7613859627938955,
+                  -1.0056507559323005
+                ],
+                "phase_response": 0.00030797976069152355,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 190.66601299982722
+        },
+        {
+          "query_id": "heldout_2933",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_1843",
+              "registration": {
+                "overlap": 0.46,
+                "rmse_m": 2.1856123643286463,
+                "sector_coverage": 12,
+                "yaw_rad": 0.18581645190295884,
+                "translation_xy_m": [
+                  1.3979737407300032,
+                  0.14898775260759145
+                ],
+                "phase_response": 0.1405707141966559,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_2332",
+              "registration": {
+                "overlap": 0.5875,
+                "rmse_m": 2.1633129184524664,
+                "sector_coverage": 12,
+                "yaw_rad": -0.5483098818285999,
+                "translation_xy_m": [
+                  0.9458987086039226,
+                  -1.3333662021330244
+                ],
+                "phase_response": -0.0027642458444461226,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1617",
+              "registration": {
+                "overlap": 0.62,
+                "rmse_m": 2.1850904853244493,
+                "sector_coverage": 12,
+                "yaw_rad": -0.21932093440638886,
+                "translation_xy_m": [
+                  0.4043095841916886,
+                  0.03048220596365126
+                ],
+                "phase_response": 0.16785652795806527,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 182.679697000367
+        },
+        {
+          "query_id": "heldout_3025",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3535",
+              "registration": {
+                "overlap": 0.6125,
+                "rmse_m": 1.9490207271806914,
+                "sector_coverage": 12,
+                "yaw_rad": 0.030299398894282105,
+                "translation_xy_m": [
+                  -0.1810802935620924,
+                  -2.534379283830446
+                ],
+                "phase_response": 0.12097739859018475,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1466",
+              "registration": {
+                "overlap": 0.6375,
+                "rmse_m": 2.007998007746931,
+                "sector_coverage": 12,
+                "yaw_rad": 0.3577483972328545,
+                "translation_xy_m": [
+                  -0.2466492262561037,
+                  -2.7420914630123483
+                ],
+                "phase_response": 0.09268988913390785,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_3573",
+              "registration": {
+                "overlap": 0.5325,
+                "rmse_m": 2.0223411034919563,
+                "sector_coverage": 12,
+                "yaw_rad": 0.0781260167883242,
+                "translation_xy_m": [
+                  -1.374841748211831,
+                  -2.480284722538099
+                ],
+                "phase_response": -0.005270938854664564,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 187.19274800014318
+        },
+        {
+          "query_id": "heldout_3116",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3686",
+              "registration": {
+                "overlap": 0.49,
+                "rmse_m": 2.29258199823878,
+                "sector_coverage": 12,
+                "yaw_rad": -1.6454098013018337,
+                "translation_xy_m": [
+                  -15.862031693196581,
+                  -5.123743714924467
+                ],
+                "phase_response": 0.08868393255397677,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_1090",
+              "registration": {
+                "overlap": 0.4375,
+                "rmse_m": 2.385261337409063,
+                "sector_coverage": 12,
+                "yaw_rad": -2.8515507197220042,
+                "translation_xy_m": [
+                  -6.880417944627204,
+                  0.5457652046902132
+                ],
+                "phase_response": 0.05705401604063809,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_677",
+              "registration": {
+                "overlap": 0.4425,
+                "rmse_m": 2.3768256468959907,
+                "sector_coverage": 12,
+                "yaw_rad": 2.798149796176546,
+                "translation_xy_m": [
+                  -2.95948651703093,
+                  0.6496700084724077
+                ],
+                "phase_response": 0.03211437747813761,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 184.97744300020713
+        },
+        {
+          "query_id": "heldout_3208",
+          "selected_reference_id": "reference_4062",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_4062",
+              "registration": {
+                "overlap": 0.7475,
+                "rmse_m": 1.4937136289547517,
+                "sector_coverage": 12,
+                "yaw_rad": 0.019481177116728907,
+                "translation_xy_m": [
+                  15.223663676394255,
+                  -2.464308654907529
+                ],
+                "phase_response": 0.17384198622312397,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 107.03620899994348
+        },
+        {
+          "query_id": "heldout_3300",
+          "selected_reference_id": "reference_4175",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_4175",
+              "registration": {
+                "overlap": 0.785,
+                "rmse_m": 1.4344334154785032,
+                "sector_coverage": 12,
+                "yaw_rad": 0.16336301047001436,
+                "translation_xy_m": [
+                  -4.85265814227923,
+                  -0.47260887567592025
+                ],
+                "phase_response": 0.33267243712907657,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 103.76874100029454
+        },
+        {
+          "query_id": "heldout_3391",
+          "selected_reference_id": null,
+          "decision": "abstain",
+          "evidence": [
+            {
+              "reference_id": "reference_3610",
+              "registration": {
+                "overlap": 0.3875,
+                "rmse_m": 2.205632164071027,
+                "sector_coverage": 12,
+                "yaw_rad": 2.7264605274890954,
+                "translation_xy_m": [
+                  -7.625560829080422,
+                  -7.218292409650341
+                ],
+                "phase_response": 0.2306823953986168,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4400",
+              "registration": {
+                "overlap": 0.48,
+                "rmse_m": 1.9489946152650701,
+                "sector_coverage": 11,
+                "yaw_rad": 3.028836504831992,
+                "translation_xy_m": [
+                  2.4443325951428676,
+                  0.012618966522909343
+                ],
+                "phase_response": 0.44133362773573026,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            },
+            {
+              "reference_id": "reference_4250",
+              "registration": {
+                "overlap": 0.6475,
+                "rmse_m": 1.5526631432101796,
+                "sector_coverage": 12,
+                "yaw_rad": 0.11783276390888878,
+                "translation_xy_m": [
+                  20.2117820292746,
+                  0.6447424278639577
+                ],
+                "phase_response": 0.24190626153722405,
+                "accepted": false,
+                "reason": "low_overlap, high_residual"
+              }
+            }
+          ],
+          "image_to_decision_ms": 181.4273760001015
+        },
+        {
+          "query_id": "heldout_3483",
+          "selected_reference_id": "reference_4363",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_4363",
+              "registration": {
+                "overlap": 0.965,
+                "rmse_m": 1.0022030078900024,
+                "sector_coverage": 12,
+                "yaw_rad": 0.06571669253205918,
+                "translation_xy_m": [
+                  -1.1897678224592763,
+                  -0.18743651690298035
+                ],
+                "phase_response": 0.7838610166218132,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 104.32401900015975
+        },
+        {
+          "query_id": "heldout_3575",
+          "selected_reference_id": "reference_37",
+          "decision": "provisional_candidate",
+          "evidence": [
+            {
+              "reference_id": "reference_37",
+              "registration": {
+                "overlap": 0.9425,
+                "rmse_m": 1.1346353063226111,
+                "sector_coverage": 12,
+                "yaw_rad": -0.007090504831499083,
+                "translation_xy_m": [
+                  -2.966130737892345,
+                  0.4650917383193766
+                ],
+                "phase_response": 0.6384356671478599,
+                "accepted": true,
+                "reason": "passed_frozen_gate"
+              }
+            }
+          ],
+          "image_to_decision_ms": 117.34781199993449
+        }
+      ]
+    }
+  }
+}

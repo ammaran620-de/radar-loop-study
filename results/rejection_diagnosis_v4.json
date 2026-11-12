@@ -1,0 +1,708 @@
+{
+  "warning": "Oracle uses ground truth solely to diagnose development failures. Excluded from frozen and held-out inference.",
+  "nearby_pairs": 41,
+  "normal_correct_pairs": 36,
+  "oracle_correct_pairs": 41,
+  "initialization_limited_pairs": 5,
+  "old_selected_queries": 11,
+  "old_pose_correct_queries": 11,
+  "records": [
+    {
+      "query_id": "query_0",
+      "reference_id": "reference_37",
+      "normal_pose_error": {
+        "translation_error_m": 0.026102753709651646,
+        "rotation_error_deg": 0.151769665218174,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.02610275370965303,
+        "rotation_error_deg": 0.15176966521815055,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_0",
+      "reference_id": "reference_0",
+      "normal_pose_error": {
+        "translation_error_m": 0.026823153441165593,
+        "rotation_error_deg": 0.5988424649877623,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.061564774111265964,
+        "rotation_error_deg": 0.11244239920833986,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_0",
+      "reference_id": "reference_4476",
+      "normal_pose_error": {
+        "translation_error_m": 0.09036281541857183,
+        "rotation_error_deg": 0.6299658812009504,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.04033510282517013,
+        "rotation_error_deg": 0.1638183459189192,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_211",
+      "reference_id": "reference_188",
+      "normal_pose_error": {
+        "translation_error_m": 11.927558996006352,
+        "rotation_error_deg": 171.10691381348008,
+        "pose_correct": false
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.36055561919983575,
+        "rotation_error_deg": 0.0758358120960132,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": true,
+      "initialization_limited": true
+    },
+    {
+      "query_id": "query_317",
+      "reference_id": "reference_0",
+      "normal_pose_error": {
+        "translation_error_m": 0.451627802971613,
+        "rotation_error_deg": 1.0502182837902811,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.48589812738398075,
+        "rotation_error_deg": 0.18685494487606144,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_317",
+      "reference_id": "reference_37",
+      "normal_pose_error": {
+        "translation_error_m": 0.4458133630774115,
+        "rotation_error_deg": 0.6471701540188594,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.5146144445298754,
+        "rotation_error_deg": 0.36605146310271586,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_317",
+      "reference_id": "reference_4476",
+      "normal_pose_error": {
+        "translation_error_m": 0.4069888724852086,
+        "rotation_error_deg": 0.8363263175600423,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.36015117901581406,
+        "rotation_error_deg": 0.31682451970033865,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_529",
+      "reference_id": "reference_4250",
+      "normal_pose_error": {
+        "translation_error_m": 0.6593923073629252,
+        "rotation_error_deg": 0.13617192913822437,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.6567814183540218,
+        "rotation_error_deg": 0.13866065742925954,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_529",
+      "reference_id": "reference_451",
+      "normal_pose_error": {
+        "translation_error_m": 0.09164585266133479,
+        "rotation_error_deg": 0.037759691689500545,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.09164585266133735,
+        "rotation_error_deg": 0.03775969168950268,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_635",
+      "reference_id": "reference_4137",
+      "normal_pose_error": {
+        "translation_error_m": 1.2741422982687503,
+        "rotation_error_deg": 0.3260347730700729,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 1.319465631252965,
+        "rotation_error_deg": 0.24500911427187763,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1165",
+      "reference_id": "reference_1354",
+      "normal_pose_error": {
+        "translation_error_m": 0.10646285528719807,
+        "rotation_error_deg": 0.24314156580272314,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.10060843958291224,
+        "rotation_error_deg": 0.2313124121942424,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1165",
+      "reference_id": "reference_1391",
+      "normal_pose_error": {
+        "translation_error_m": 0.11209810377528173,
+        "rotation_error_deg": 0.14749228202332396,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.10592104679809518,
+        "rotation_error_deg": 0.11645257910089722,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1165",
+      "reference_id": "reference_1429",
+      "normal_pose_error": {
+        "translation_error_m": 0.18339898462201348,
+        "rotation_error_deg": 0.2389926576151467,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.13362484540127317,
+        "rotation_error_deg": 0.06380798294282997,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1271",
+      "reference_id": "reference_1354",
+      "normal_pose_error": {
+        "translation_error_m": 0.25435533704802316,
+        "rotation_error_deg": 0.30239438546963077,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.08685909476760914,
+        "rotation_error_deg": 0.3251784335759515,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1271",
+      "reference_id": "reference_1391",
+      "normal_pose_error": {
+        "translation_error_m": 0.19657450950124958,
+        "rotation_error_deg": 0.20260694827409978,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.19657450950124786,
+        "rotation_error_deg": 0.20260694827410364,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1271",
+      "reference_id": "reference_1429",
+      "normal_pose_error": {
+        "translation_error_m": 0.10563512067965988,
+        "rotation_error_deg": 0.025383565012200363,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.10563512067965618,
+        "rotation_error_deg": 0.025383565012215073,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1377",
+      "reference_id": "reference_1504",
+      "normal_pose_error": {
+        "translation_error_m": 0.05370280935986022,
+        "rotation_error_deg": 0.000944209767335771,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.05370280935985974,
+        "rotation_error_deg": 0.0009442097673377588,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1377",
+      "reference_id": "reference_3385",
+      "normal_pose_error": {
+        "translation_error_m": 21.114668958008497,
+        "rotation_error_deg": 174.73444737355072,
+        "pose_correct": false
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 1.0317673192886394,
+        "rotation_error_deg": 0.3380438845390859,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": true
+    },
+    {
+      "query_id": "query_1589",
+      "reference_id": "reference_1692",
+      "normal_pose_error": {
+        "translation_error_m": 0.016286346367309027,
+        "rotation_error_deg": 0.23746202234376068,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.016286346367306494,
+        "rotation_error_deg": 0.2374620223437747,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1695",
+      "reference_id": "reference_1805",
+      "normal_pose_error": {
+        "translation_error_m": 0.22707755761153858,
+        "rotation_error_deg": 0.07689685733277218,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.21394928557023485,
+        "rotation_error_deg": 0.07717766403343744,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1801",
+      "reference_id": "reference_1955",
+      "normal_pose_error": {
+        "translation_error_m": 0.2853347653442136,
+        "rotation_error_deg": 0.26632254201394223,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.20998196609276734,
+        "rotation_error_deg": 0.029767590679164745,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_1907",
+      "reference_id": "reference_2858",
+      "normal_pose_error": {
+        "translation_error_m": 0.756944267268998,
+        "rotation_error_deg": 0.6194103888812381,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.7633117270616697,
+        "rotation_error_deg": 0.5841712732088905,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_2013",
+      "reference_id": "reference_2143",
+      "normal_pose_error": {
+        "translation_error_m": 0.053607284758124554,
+        "rotation_error_deg": 0.27619575187085355,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.05152100034476161,
+        "rotation_error_deg": 0.09149664173510133,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_2437",
+      "reference_id": "reference_2520",
+      "normal_pose_error": {
+        "translation_error_m": 24.19967541187218,
+        "rotation_error_deg": 0.3774646678771854,
+        "pose_correct": false
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.3433965932950923,
+        "rotation_error_deg": 0.6784724465216382,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": true
+    },
+    {
+      "query_id": "query_2543",
+      "reference_id": "reference_2632",
+      "normal_pose_error": {
+        "translation_error_m": 0.06265716592343025,
+        "rotation_error_deg": 0.1744642757918757,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.06265716592342657,
+        "rotation_error_deg": 0.17446427579187657,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_2861",
+      "reference_id": "reference_2933",
+      "normal_pose_error": {
+        "translation_error_m": 0.11136487180719248,
+        "rotation_error_deg": 0.16901799925972283,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.10486660459610671,
+        "rotation_error_deg": 0.1659550827967418,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3179",
+      "reference_id": "reference_1654",
+      "normal_pose_error": {
+        "translation_error_m": 20.109659707826893,
+        "rotation_error_deg": 113.76979261714864,
+        "pose_correct": false
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.6077614010349464,
+        "rotation_error_deg": 1.063289065710593,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": true
+    },
+    {
+      "query_id": "query_3285",
+      "reference_id": "reference_3347",
+      "normal_pose_error": {
+        "translation_error_m": 0.12586800618655866,
+        "rotation_error_deg": 0.3126759725481802,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.12586800618655705,
+        "rotation_error_deg": 0.31267597254818347,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3497",
+      "reference_id": "reference_3798",
+      "normal_pose_error": {
+        "translation_error_m": 0.04164099834045607,
+        "rotation_error_deg": 0.04626331697593695,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.04164099834045847,
+        "rotation_error_deg": 0.04626331697594043,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3497",
+      "reference_id": "reference_3686",
+      "normal_pose_error": {
+        "translation_error_m": 0.0764746432288614,
+        "rotation_error_deg": 0.03492861891941367,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.055547853861544476,
+        "rotation_error_deg": 0.000570105463302536,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3497",
+      "reference_id": "reference_3761",
+      "normal_pose_error": {
+        "translation_error_m": 0.034977000308291095,
+        "rotation_error_deg": 0.11698891160007747,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.03497700030829521,
+        "rotation_error_deg": 0.11698891160008086,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3603",
+      "reference_id": "reference_3911",
+      "normal_pose_error": {
+        "translation_error_m": 0.09724734769714745,
+        "rotation_error_deg": 0.17731815186053587,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.09724734769714774,
+        "rotation_error_deg": 0.17731815186053615,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3603",
+      "reference_id": "reference_3761",
+      "normal_pose_error": {
+        "translation_error_m": 0.1150747405669902,
+        "rotation_error_deg": 0.17989548052066173,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.12039933631024442,
+        "rotation_error_deg": 0.172955895412906,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3603",
+      "reference_id": "reference_3686",
+      "normal_pose_error": {
+        "translation_error_m": 0.046838658715014185,
+        "rotation_error_deg": 0.12514173242198862,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.046838658715009376,
+        "rotation_error_deg": 0.12514173242198334,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3709",
+      "reference_id": "reference_677",
+      "normal_pose_error": {
+        "translation_error_m": 16.70681954399754,
+        "rotation_error_deg": 128.2434914911268,
+        "pose_correct": false
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 1.216240635850467,
+        "rotation_error_deg": 0.26260268991808394,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": true
+    },
+    {
+      "query_id": "query_3815",
+      "reference_id": "reference_4175",
+      "normal_pose_error": {
+        "translation_error_m": 0.20006611791517326,
+        "rotation_error_deg": 0.11222222094775601,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.20430282591908883,
+        "rotation_error_deg": 0.12940951651125598,
+        "pose_correct": true
+      },
+      "normal_passes_gate": false,
+      "oracle_passes_gate": false,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_3921",
+      "reference_id": "reference_4250",
+      "normal_pose_error": {
+        "translation_error_m": 0.11199908900937734,
+        "rotation_error_deg": 0.3595491959838388,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.11199908900937153,
+        "rotation_error_deg": 0.3595491959838236,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_4027",
+      "reference_id": "reference_4363",
+      "normal_pose_error": {
+        "translation_error_m": 0.060246570099629505,
+        "rotation_error_deg": 0.07679886147829323,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.057080703682809306,
+        "rotation_error_deg": 0.007186819122873298,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_4133",
+      "reference_id": "reference_37",
+      "normal_pose_error": {
+        "translation_error_m": 0.05533160678279042,
+        "rotation_error_deg": 0.21305809318102134,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.05533160678279209,
+        "rotation_error_deg": 0.2130580931810277,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_4133",
+      "reference_id": "reference_0",
+      "normal_pose_error": {
+        "translation_error_m": 0.03915448388997706,
+        "rotation_error_deg": 0.5256851974321438,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.059786205084437126,
+        "rotation_error_deg": 0.2073288142976158,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    },
+    {
+      "query_id": "query_4133",
+      "reference_id": "reference_4476",
+      "normal_pose_error": {
+        "translation_error_m": 0.01784887642995013,
+        "rotation_error_deg": 0.29034776988425853,
+        "pose_correct": true
+      },
+      "oracle_pose_error": {
+        "translation_error_m": 0.017848876429950405,
+        "rotation_error_deg": 0.29034776988426136,
+        "pose_correct": true
+      },
+      "normal_passes_gate": true,
+      "oracle_passes_gate": true,
+      "initialization_limited": false
+    }
+  ]
+}

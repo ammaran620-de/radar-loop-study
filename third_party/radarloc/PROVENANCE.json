@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/jac99/RadarLoc",
+  "retrieved_date": "2026-11-11",
+  "snapshot": "Downloaded from upstream main; content pinned by SHA-256, not a claimed Git commit",
+  "license": "MIT; upstream LICENSE retained",
+  "files": {
+    "LICENSE": "923f1d57d5422e6528c77ab488e41bad9c9009855a05195ce01ac7e374c968f7",
+    "README.md": "20f34da4ac38d87b6110543f4ecd31a85af2612f7e3662ff932da36c2afd4c2b",
+    "layers/radar/pooling.py": "b4680c6f30caf78d7cfda8febf5d418ff46958940b416b8ef2f029616aa2badf",
+    "models/radar/cylindrical_resnet.py": "b9cd216a9748155f238d08e6c1d212405e1b5f8296ee2265afeb1f66515a2811",
+    "models/radar/cylindrical_resnet_FPN.py": "cd60926655844c871f6f42fbe81fdd93396d4791aeed06732cc39b77f9ce357b",
+    "models/radar/radar_net.py": "cd0db1f1ffd7ab0e1920a5ce2b3e9216fefc00c0633d72e49caa451dba94de78",
+    "weights/radarloc.pth": "aa36dcd85b7394d8c76fb77215fef2cc21448eecab6b86c3b24a507ef42193bb"
+  }
+}

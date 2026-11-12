@@ -1,0 +1,2940 @@
+{
+  "stage": "development",
+  "gate": {
+    "overlap": 0.7,
+    "rmse_m": 1.5
+  },
+  "model": {
+    "name": "RadarLoc",
+    "upstream": "https://github.com/jac99/RadarLoc",
+    "checkpoint_sha256": "aa36dcd85b7394d8c76fb77215fef2cc21448eecab6b86c3b24a507ef42193bb",
+    "frozen": true,
+    "training": "Authors' released pretrained checkpoint; no fine-tuning on this sample",
+    "preprocessing": "Author normalization and area-resize; full Boreas range is an out-of-domain adaptation",
+    "descriptor_dimension": 256,
+    "median_forward_ms": 8.363986499944076,
+    "p95_forward_ms": 15.378116750071056,
+    "torch_version": "2.15.0+cpu"
+  },
+  "algorithm": {
+    "name": "coarse_to_fine_phase_initialized_icp",
+    "raster_resolution_m": 1.0,
+    "raster_size": 256,
+    "coarse_points": 160,
+    "coarse_iterations": 8,
+    "refine_starts": 2,
+    "refine_iterations": 25,
+    "correspondence_m": 4.0
+  },
+  "summary": {
+    "queries": 40,
+    "selected": 18,
+    "correct_pose": 18,
+    "wrong_pose": 0,
+    "abstained": 22,
+    "pose_precision": 1.0,
+    "median_translation_error_m": 0.09444660017924111,
+    "median_rotation_error_deg": 0.1951881225207786
+  },
+  "retrieval_at_25m": {
+    "eligible_queries": 33,
+    "queries": 40,
+    "coverage": 0.825,
+    "recall_at_1": 0.6363636363636364,
+    "recall_at_5": 0.7575757575757576,
+    "hits_at_1": 21,
+    "hits_at_5": 25,
+    "top1_within_radius_all_queries": 0.525,
+    "median_top1_position_error_m": 18.725311860659417,
+    "no_positive_queries": 7
+  },
+  "timing": {
+    "median_retrieval_and_top3_registration_ms": 103.9037749999352,
+    "p95_retrieval_and_top3_registration_ms": 114.55676505013344
+  },
+  "preparation_all_frames_s": 7.330866707000041,
+  "network_wall_all_frames_s": 4.415607063000152,
+  "experiment_wall_s": 16.0723524619998,
+  "records": [
+    {
+      "query_id": "query_0",
+      "reference_id": "reference_37",
+      "rank": 1,
+      "score": 0.9674822688102722,
+      "distance_m": 2.760473081298083,
+      "verification": {
+        "overlap": 0.915,
+        "rmse_m": 1.0969002963092072,
+        "sector_coverage": 12,
+        "yaw_rad": -0.017695551589171358,
+        "translation_xy_m": [
+          -2.7326678280059995,
+          -0.1840293117735026
+        ],
+        "phase_response": 0.6542087774723768
+      },
+      "verification_ms": 41.61745700002939,
+      "pose_error": {
+        "translation_error_m": 0.026102753709651646,
+        "rotation_error_deg": 0.151769665218174,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_0",
+      "reference_id": "reference_0",
+      "rank": 2,
+      "score": 0.9645487070083618,
+      "distance_m": 2.759181104626242,
+      "verification": {
+        "overlap": 0.9,
+        "rmse_m": 1.0743725902570491,
+        "sector_coverage": 12,
+        "yaw_rad": -0.030574055358759754,
+        "translation_xy_m": [
+          -2.7368153950533416,
+          -0.155515871778202
+        ],
+        "phase_response": 0.663230188190937
+      },
+      "verification_ms": 33.21492099985335,
+      "pose_error": {
+        "translation_error_m": 0.026823153441165593,
+        "rotation_error_deg": 0.5988424649877623,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_0",
+      "reference_id": "reference_4476",
+      "rank": 3,
+      "score": 0.9548319578170776,
+      "distance_m": 3.822828896769161,
+      "verification": {
+        "overlap": 0.895,
+        "rmse_m": 1.266363370704095,
+        "sector_coverage": 12,
+        "yaw_rad": -0.014269305379113058,
+        "translation_xy_m": [
+          -3.7297427951206252,
+          -0.1602601822559209
+        ],
+        "phase_response": 0.4524882920086384
+      },
+      "verification_ms": 33.96187199996348,
+      "pose_error": {
+        "translation_error_m": 0.09036281541857183,
+        "rotation_error_deg": 0.6299658812009504,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_105",
+      "reference_id": "reference_75",
+      "rank": 1,
+      "score": 0.9318257570266724,
+      "distance_m": 35.05990710676057,
+      "verification": {
+        "overlap": 0.565,
+        "rmse_m": 1.7408063317678828,
+        "sector_coverage": 12,
+        "yaw_rad": -2.8379399167627537,
+        "translation_xy_m": [
+          -1.7368332406078206,
+          2.2083367696188745
+        ],
+        "phase_response": 0.1758412392809987
+      },
+      "verification_ms": 31.038067000281444,
+      "pose_error": {
+        "translation_error_m": 36.785799531580544,
+        "rotation_error_deg": 154.62159574696778,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_105",
+      "reference_id": "reference_188",
+      "rank": 2,
+      "score": 0.9218970537185669,
+      "distance_m": 59.69381593920233,
+      "verification": {
+        "overlap": 0.5725,
+        "rmse_m": 1.8739009057034968,
+        "sector_coverage": 11,
+        "yaw_rad": -2.6357931307931937,
+        "translation_xy_m": [
+          2.294274302043455,
+          0.9262127618143703
+        ],
+        "phase_response": 0.2651891685090959
+      },
+      "verification_ms": 38.29716100017322,
+      "pose_error": {
+        "translation_error_m": 58.345643468808305,
+        "rotation_error_deg": 101.11563809475446,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_105",
+      "reference_id": "reference_2256",
+      "rank": 3,
+      "score": 0.9135463237762451,
+      "distance_m": 2218.5273670602696,
+      "verification": {
+        "overlap": 0.5125,
+        "rmse_m": 2.020601109252809,
+        "sector_coverage": 11,
+        "yaw_rad": 2.802783411945882,
+        "translation_xy_m": [
+          0.3991284545207957,
+          0.6269809943397269
+        ],
+        "phase_response": 0.15710800141096115
+      },
+      "verification_ms": 34.43860900006257,
+      "pose_error": {
+        "translation_error_m": 2217.5486002905764,
+        "rotation_error_deg": 122.36236269842385,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_211",
+      "reference_id": "reference_188",
+      "rank": 1,
+      "score": 0.9326409697532654,
+      "distance_m": 13.003084160602247,
+      "verification": {
+        "overlap": 0.4025,
+        "rmse_m": 2.225556132372639,
+        "sector_coverage": 10,
+        "yaw_rad": 3.0796913640333528,
+        "translation_xy_m": [
+          -1.1717524123857908,
+          -0.917329383564425
+        ],
+        "phase_response": 0.41614479711279273
+      },
+      "verification_ms": 31.23194699992382,
+      "pose_error": {
+        "translation_error_m": 11.927558996006352,
+        "rotation_error_deg": 171.10691381348008,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_211",
+      "reference_id": "reference_3610",
+      "rank": 2,
+      "score": 0.9225122928619385,
+      "distance_m": 945.3176296290809,
+      "verification": {
+        "overlap": 0.325,
+        "rmse_m": 2.022472392904173,
+        "sector_coverage": 12,
+        "yaw_rad": -1.4223062942695943,
+        "translation_xy_m": [
+          7.867368879141404,
+          -1.5654614386430261
+        ],
+        "phase_response": 0.20737050857860595
+      },
+      "verification_ms": 39.05101200007266,
+      "pose_error": {
+        "translation_error_m": 937.2333634604845,
+        "rotation_error_deg": 136.7660965150443,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_211",
+      "reference_id": "reference_1654",
+      "rank": 3,
+      "score": 0.9208541512489319,
+      "distance_m": 1511.4343753921864,
+      "verification": {
+        "overlap": 0.42,
+        "rmse_m": 1.9950294681147398,
+        "sector_coverage": 12,
+        "yaw_rad": -1.4794521148111517,
+        "translation_xy_m": [
+          3.02798708854751,
+          2.92911460759923
+        ],
+        "phase_response": 0.2700146015267819
+      },
+      "verification_ms": 36.72596499973224,
+      "pose_error": {
+        "translation_error_m": 1515.3583758441557,
+        "rotation_error_deg": 141.2372773678643,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_317",
+      "reference_id": "reference_0",
+      "rank": 1,
+      "score": 0.962252140045166,
+      "distance_m": 1.9912864984009644,
+      "verification": {
+        "overlap": 0.905,
+        "rmse_m": 1.214545688443751,
+        "sector_coverage": 12,
+        "yaw_rad": -3.045500717996848,
+        "translation_xy_m": [
+          -0.0010859283261264114,
+          1.8804206682418536
+        ],
+        "phase_response": 0.4802209949120879
+      },
+      "verification_ms": 34.13801699980468,
+      "pose_error": {
+        "translation_error_m": 0.451627802971613,
+        "rotation_error_deg": 1.0502182837902811,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_317",
+      "reference_id": "reference_37",
+      "rank": 2,
+      "score": 0.9607733488082886,
+      "distance_m": 1.9930950907726845,
+      "verification": {
+        "overlap": 0.9275,
+        "rmse_m": 1.2685482827268812,
+        "sector_coverage": 12,
+        "yaw_rad": -3.052752734703254,
+        "translation_xy_m": [
+          -9.643052784773125e-05,
+          1.9275941344059986
+        ],
+        "phase_response": 0.48906204593367875
+      },
+      "verification_ms": 45.21613199995045,
+      "pose_error": {
+        "translation_error_m": 0.4458133630774115,
+        "rotation_error_deg": 0.6471701540188594,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_317",
+      "reference_id": "reference_4476",
+      "rank": 3,
+      "score": 0.9506275653839111,
+      "distance_m": 2.03861055005563,
+      "verification": {
+        "overlap": 0.9325,
+        "rmse_m": 1.2607011104988628,
+        "sector_coverage": 12,
+        "yaw_rad": -3.054425825028249,
+        "translation_xy_m": [
+          -1.0080609947588912,
+          1.8721353196165789
+        ],
+        "phase_response": 0.34891405497910455
+      },
+      "verification_ms": 42.249919999903796,
+      "pose_error": {
+        "translation_error_m": 0.4069888724852086,
+        "rotation_error_deg": 0.8363263175600423,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_423",
+      "reference_id": "reference_2332",
+      "rank": 1,
+      "score": 0.9385088086128235,
+      "distance_m": 2165.497018888237,
+      "verification": {
+        "overlap": 0.48,
+        "rmse_m": 2.0330644987208513,
+        "sector_coverage": 11,
+        "yaw_rad": 0.5553176743004358,
+        "translation_xy_m": [
+          -0.3044008151208481,
+          9.166490952169728
+        ],
+        "phase_response": 0.2995779609773308
+      },
+      "verification_ms": 28.947986999810382,
+      "pose_error": {
+        "translation_error_m": 2156.3684433098683,
+        "rotation_error_deg": 167.67338389416366,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_423",
+      "reference_id": "reference_2557",
+      "rank": 2,
+      "score": 0.9323146939277649,
+      "distance_m": 2132.666280471272,
+      "verification": {
+        "overlap": 0.4075,
+        "rmse_m": 2.2321036435697543,
+        "sector_coverage": 11,
+        "yaw_rad": -2.9686620979294194,
+        "translation_xy_m": [
+          2.975306451392876,
+          -4.110936016710313
+        ],
+        "phase_response": 0.08421057113446295
+      },
+      "verification_ms": 36.61537700008921,
+      "pose_error": {
+        "translation_error_m": 2133.6383273649312,
+        "rotation_error_deg": 129.64190333893106,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_423",
+      "reference_id": "reference_1617",
+      "rank": 3,
+      "score": 0.932167649269104,
+      "distance_m": 1235.3292160314952,
+      "verification": {
+        "overlap": 0.465,
+        "rmse_m": 1.9165359057783335,
+        "sector_coverage": 11,
+        "yaw_rad": 0.12856959452867558,
+        "translation_xy_m": [
+          1.5405975378658079,
+          -2.3642761220426243
+        ],
+        "phase_response": 0.33371185965370387
+      },
+      "verification_ms": 34.0066039998419,
+      "pose_error": {
+        "translation_error_m": 1233.275684074848,
+        "rotation_error_deg": 19.812311607340845,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_529",
+      "reference_id": "reference_4250",
+      "rank": 1,
+      "score": 0.9341347813606262,
+      "distance_m": 12.665988444876081,
+      "verification": {
+        "overlap": 0.74,
+        "rmse_m": 1.5995921598327267,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1017539922049053,
+        "translation_xy_m": [
+          -13.241428292238693,
+          -1.3379828552167794
+        ],
+        "phase_response": 0.2952138513792306
+      },
+      "verification_ms": 33.80260800031465,
+      "pose_error": {
+        "translation_error_m": 0.6593923073629252,
+        "rotation_error_deg": 0.13617192913822437,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_529",
+      "reference_id": "reference_451",
+      "rank": 2,
+      "score": 0.9335423707962036,
+      "distance_m": 11.918008610145442,
+      "verification": {
+        "overlap": 0.7575,
+        "rmse_m": 1.3176831761800174,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0046988134475712505,
+        "translation_xy_m": [
+          -11.828820144798474,
+          -0.25946918394668744
+        ],
+        "phase_response": 0.2561711373273283
+      },
+      "verification_ms": 33.3530329999121,
+      "pose_error": {
+        "translation_error_m": 0.09164585266133479,
+        "rotation_error_deg": 0.037759691689500545,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_529",
+      "reference_id": "reference_1090",
+      "rank": 3,
+      "score": 0.9101612567901611,
+      "distance_m": 520.6056581778337,
+      "verification": {
+        "overlap": 0.5125,
+        "rmse_m": 2.272832189093989,
+        "sector_coverage": 12,
+        "yaw_rad": -2.838932930447092,
+        "translation_xy_m": [
+          0.007277612085209419,
+          3.8535811632226613
+        ],
+        "phase_response": 0.16805278626270592
+      },
+      "verification_ms": 35.89041899977019,
+      "pose_error": {
+        "translation_error_m": 520.8740257694642,
+        "rotation_error_deg": 86.04307219739935,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_635",
+      "reference_id": "reference_1090",
+      "rank": 1,
+      "score": 0.9474446773529053,
+      "distance_m": 479.53831274657716,
+      "verification": {
+        "overlap": 0.3925,
+        "rmse_m": 2.3392927621341117,
+        "sector_coverage": 12,
+        "yaw_rad": -0.3786373806844653,
+        "translation_xy_m": [
+          1.893184312417261,
+          -0.16548543813752065
+        ],
+        "phase_response": 0.06420927704311907
+      },
+      "verification_ms": 40.13734899990595,
+      "pose_error": {
+        "translation_error_m": 481.3853506585075,
+        "rotation_error_deg": 30.646917055023042,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_635",
+      "reference_id": "reference_4137",
+      "rank": 2,
+      "score": 0.942704439163208,
+      "distance_m": 10.543675422572967,
+      "verification": {
+        "overlap": 0.77,
+        "rmse_m": 1.5997744219928691,
+        "sector_coverage": 12,
+        "yaw_rad": 3.1073019254193244,
+        "translation_xy_m": [
+          5.914367947835451,
+          -7.535850871857074
+        ],
+        "phase_response": 0.5113945089979097
+      },
+      "verification_ms": 35.20599900002708,
+      "pose_error": {
+        "translation_error_m": 1.2741422982687503,
+        "rotation_error_deg": 0.3260347730700729,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_635",
+      "reference_id": "reference_3987",
+      "rank": 3,
+      "score": 0.9414358139038086,
+      "distance_m": 424.32590962311843,
+      "verification": {
+        "overlap": 0.4275,
+        "rmse_m": 2.3970574197983083,
+        "sector_coverage": 12,
+        "yaw_rad": -0.02195500109499283,
+        "translation_xy_m": [
+          8.287792556422186,
+          -7.799952088117125
+        ],
+        "phase_response": 0.0873251873999834
+      },
+      "verification_ms": 34.150187999784976,
+      "pose_error": {
+        "translation_error_m": 417.17428243778664,
+        "rotation_error_deg": 170.47569284613374,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_741",
+      "reference_id": "reference_1090",
+      "rank": 1,
+      "score": 0.9438964128494263,
+      "distance_m": 241.25245955074536,
+      "verification": {
+        "overlap": 0.5025,
+        "rmse_m": 2.2683268927863285,
+        "sector_coverage": 12,
+        "yaw_rad": 0.02376494504455837,
+        "translation_xy_m": [
+          -0.9073067212061794,
+          0.3649567647498668
+        ],
+        "phase_response": 0.08939106855541468
+      },
+      "verification_ms": 32.94076700012738,
+      "pose_error": {
+        "translation_error_m": 240.38150611294867,
+        "rotation_error_deg": 10.835974821908431,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_741",
+      "reference_id": "reference_3987",
+      "rank": 2,
+      "score": 0.9389691352844238,
+      "distance_m": 186.59790888549202,
+      "verification": {
+        "overlap": 0.48,
+        "rmse_m": 2.324810456608693,
+        "sector_coverage": 12,
+        "yaw_rad": -0.1204945192185337,
+        "translation_xy_m": [
+          8.748355097357214,
+          0.34794580624152155
+        ],
+        "phase_response": 0.06318007886875421
+      },
+      "verification_ms": 29.13545899991732,
+      "pose_error": {
+        "translation_error_m": 177.84464759078196,
+        "rotation_error_deg": 161.6267875926885,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_741",
+      "reference_id": "reference_3761",
+      "rank": 3,
+      "score": 0.9377269744873047,
+      "distance_m": 220.05162092125258,
+      "verification": {
+        "overlap": 0.475,
+        "rmse_m": 2.400446209765946,
+        "sector_coverage": 12,
+        "yaw_rad": 0.10393213771609232,
+        "translation_xy_m": [
+          -0.7903951238137158,
+          1.6859205116180473
+        ],
+        "phase_response": 0.08665387937799096
+      },
+      "verification_ms": 39.8813369997697,
+      "pose_error": {
+        "translation_error_m": 220.78266469477504,
+        "rotation_error_deg": 174.1199783293697,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_847",
+      "reference_id": "reference_601",
+      "rank": 1,
+      "score": 0.9227680563926697,
+      "distance_m": 270.90542746653904,
+      "verification": {
+        "overlap": 0.45,
+        "rmse_m": 2.146968692815456,
+        "sector_coverage": 11,
+        "yaw_rad": -2.727963557186053,
+        "translation_xy_m": [
+          -1.1234731589803257,
+          0.6002558383019839
+        ],
+        "phase_response": 0.019744238699786365
+      },
+      "verification_ms": 34.26305899984072,
+      "pose_error": {
+        "translation_error_m": 272.0525030225795,
+        "rotation_error_deg": 144.74525305371873,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_847",
+      "reference_id": "reference_3836",
+      "rank": 2,
+      "score": 0.9203057289123535,
+      "distance_m": 50.158235027477204,
+      "verification": {
+        "overlap": 0.4325,
+        "rmse_m": 2.308447110901253,
+        "sector_coverage": 12,
+        "yaw_rad": -0.001149833478492799,
+        "translation_xy_m": [
+          -5.611839626467747,
+          -2.1601935018904834
+        ],
+        "phase_response": 0.029282864241395146
+      },
+      "verification_ms": 28.21883800015712,
+      "pose_error": {
+        "translation_error_m": 55.263469852933326,
+        "rotation_error_deg": 179.48489907066534,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_847",
+      "reference_id": "reference_1090",
+      "rank": 3,
+      "score": 0.9203048348426819,
+      "distance_m": 69.44919337696682,
+      "verification": {
+        "overlap": 0.55,
+        "rmse_m": 2.1417870053571257,
+        "sector_coverage": 12,
+        "yaw_rad": -0.05118088628135264,
+        "translation_xy_m": [
+          -10.054145915455067,
+          -0.7526627214865281
+        ],
+        "phase_response": 0.04928297095466405
+      },
+      "verification_ms": 32.27787400010129,
+      "pose_error": {
+        "translation_error_m": 59.38342633773146,
+        "rotation_error_deg": 2.7129428095983683,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_953",
+      "reference_id": "reference_1015",
+      "rank": 1,
+      "score": 0.9480582475662231,
+      "distance_m": 113.58779409290793,
+      "verification": {
+        "overlap": 0.5025,
+        "rmse_m": 2.204163369254071,
+        "sector_coverage": 12,
+        "yaw_rad": -0.09327741076739163,
+        "translation_xy_m": [
+          -2.0134293597144186,
+          1.5449490556991665
+        ],
+        "phase_response": 0.04113911907188594
+      },
+      "verification_ms": 37.34077199987951,
+      "pose_error": {
+        "translation_error_m": 115.66224803700956,
+        "rotation_error_deg": 0.3377706723510064,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_953",
+      "reference_id": "reference_827",
+      "rank": 2,
+      "score": 0.9468603134155273,
+      "distance_m": 113.58781689380734,
+      "verification": {
+        "overlap": 0.475,
+        "rmse_m": 2.133779704614433,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0924230077997251,
+        "translation_xy_m": [
+          -2.820556407623788,
+          1.4502020640348716
+        ],
+        "phase_response": 0.016782436869107187
+      },
+      "verification_ms": 32.285193000006984,
+      "pose_error": {
+        "translation_error_m": 116.46405292882307,
+        "rotation_error_deg": 0.28928353018546904,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_953",
+      "reference_id": "reference_865",
+      "rank": 3,
+      "score": 0.9447345733642578,
+      "distance_m": 113.58773098560195,
+      "verification": {
+        "overlap": 0.54,
+        "rmse_m": 2.165370461762504,
+        "sector_coverage": 12,
+        "yaw_rad": -0.07984773757580779,
+        "translation_xy_m": [
+          -1.9826834902482695,
+          2.0758580820778936
+        ],
+        "phase_response": 0.01096505078021437
+      },
+      "verification_ms": 36.26398999995217,
+      "pose_error": {
+        "translation_error_m": 115.65778446678704,
+        "rotation_error_deg": 0.42866184028052623,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1059",
+      "reference_id": "reference_1354",
+      "rank": 1,
+      "score": 0.9403810501098633,
+      "distance_m": 97.07000654786913,
+      "verification": {
+        "overlap": 0.5075,
+        "rmse_m": 2.0047215141225223,
+        "sector_coverage": 12,
+        "yaw_rad": -0.5324572307241239,
+        "translation_xy_m": [
+          -4.06514202138511,
+          -0.6174365008633704
+        ],
+        "phase_response": 0.21041012334171683
+      },
+      "verification_ms": 36.903748999975505,
+      "pose_error": {
+        "translation_error_m": 92.99746017160261,
+        "rotation_error_deg": 28.14839864173029,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1059",
+      "reference_id": "reference_150",
+      "rank": 2,
+      "score": 0.9306038618087769,
+      "distance_m": 1180.1622990793196,
+      "verification": {
+        "overlap": 0.52,
+        "rmse_m": 2.009399045047874,
+        "sector_coverage": 12,
+        "yaw_rad": 2.4972756223196777,
+        "translation_xy_m": [
+          -0.40774459761069337,
+          0.7060244570717212
+        ],
+        "phase_response": 0.12690484547056258
+      },
+      "verification_ms": 29.415818999950716,
+      "pose_error": {
+        "translation_error_m": 1180.4753510965106,
+        "rotation_error_deg": 102.65811249740116,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1059",
+      "reference_id": "reference_1617",
+      "rank": 3,
+      "score": 0.9253356456756592,
+      "distance_m": 426.8216868793447,
+      "verification": {
+        "overlap": 0.405,
+        "rmse_m": 2.128311240076352,
+        "sector_coverage": 12,
+        "yaw_rad": 2.490200691369341,
+        "translation_xy_m": [
+          1.6760804297375675,
+          -2.25580501549275
+        ],
+        "phase_response": 0.12766993534751236
+      },
+      "verification_ms": 36.75878400008514,
+      "pose_error": {
+        "translation_error_m": 427.095555187163,
+        "rotation_error_deg": 44.06279086716395,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1165",
+      "reference_id": "reference_1354",
+      "rank": 1,
+      "score": 0.9652883410453796,
+      "distance_m": 4.68658969131071,
+      "verification": {
+        "overlap": 0.8575,
+        "rmse_m": 1.210685577672468,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0022244414067499824,
+        "translation_xy_m": [
+          4.57138581054728,
+          -0.29720921858796884
+        ],
+        "phase_response": 0.397590754320845
+      },
+      "verification_ms": 37.67712900025799,
+      "pose_error": {
+        "translation_error_m": 0.10646285528719807,
+        "rotation_error_deg": 0.24314156580272314,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1165",
+      "reference_id": "reference_1391",
+      "rank": 2,
+      "score": 0.9593957662582397,
+      "distance_m": 6.30539240975969,
+      "verification": {
+        "overlap": 0.865,
+        "rmse_m": 1.249508377281148,
+        "sector_coverage": 12,
+        "yaw_rad": 0.013022336626269027,
+        "translation_xy_m": [
+          -6.309427141924585,
+          -0.5983622165033619
+        ],
+        "phase_response": 0.6538596525788307
+      },
+      "verification_ms": 32.70975299983547,
+      "pose_error": {
+        "translation_error_m": 0.11209810377528173,
+        "rotation_error_deg": 0.14749228202332396,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1165",
+      "reference_id": "reference_1429",
+      "rank": 3,
+      "score": 0.9473776817321777,
+      "distance_m": 10.057520737477663,
+      "verification": {
+        "overlap": 0.8175,
+        "rmse_m": 1.235168078530742,
+        "sector_coverage": 12,
+        "yaw_rad": 0.004274388742049032,
+        "translation_xy_m": [
+          -10.224453103925072,
+          -0.5592154120968291
+        ],
+        "phase_response": 0.5356154757319018
+      },
+      "verification_ms": 31.94685300013589,
+      "pose_error": {
+        "translation_error_m": 0.18339898462201348,
+        "rotation_error_deg": 0.2389926576151467,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1271",
+      "reference_id": "reference_1354",
+      "rank": 1,
+      "score": 0.969597339630127,
+      "distance_m": 4.6866139240668225,
+      "verification": {
+        "overlap": 0.86,
+        "rmse_m": 1.1554432779327433,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0036219878690747207,
+        "translation_xy_m": [
+          4.425037995003856,
+          -0.2650448204703851
+        ],
+        "phase_response": 0.6480984458466992
+      },
+      "verification_ms": 36.235148000287154,
+      "pose_error": {
+        "translation_error_m": 0.25435533704802316,
+        "rotation_error_deg": 0.30239438546963077,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1271",
+      "reference_id": "reference_1391",
+      "rank": 2,
+      "score": 0.9621776342391968,
+      "distance_m": 6.305367086517419,
+      "verification": {
+        "overlap": 0.8325,
+        "rmse_m": 1.173653212128311,
+        "sector_coverage": 12,
+        "yaw_rad": 0.011696906455632834,
+        "translation_xy_m": [
+          -6.237774573860076,
+          -0.6789393012804045
+        ],
+        "phase_response": 0.3160240846918896
+      },
+      "verification_ms": 33.00874400019893,
+      "pose_error": {
+        "translation_error_m": 0.19657450950124958,
+        "rotation_error_deg": 0.20260694827409978,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1271",
+      "reference_id": "reference_1429",
+      "rank": 3,
+      "score": 0.9459717273712158,
+      "distance_m": 10.057495543117076,
+      "verification": {
+        "overlap": 0.82,
+        "rmse_m": 1.2879474540427172,
+        "sector_coverage": 12,
+        "yaw_rad": 0.008524887430518688,
+        "translation_xy_m": [
+          -10.124076707310119,
+          -0.5976624298616087
+        ],
+        "phase_response": 0.48071893537417054
+      },
+      "verification_ms": 36.083528000290244,
+      "pose_error": {
+        "translation_error_m": 0.10563512067965988,
+        "rotation_error_deg": 0.025383565012200363,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1377",
+      "reference_id": "reference_1504",
+      "rank": 1,
+      "score": 0.9703975915908813,
+      "distance_m": 3.548615295605462,
+      "verification": {
+        "overlap": 0.8875,
+        "rmse_m": 1.1369334398639035,
+        "sector_coverage": 12,
+        "yaw_rad": 0.018324934919866233,
+        "translation_xy_m": [
+          -3.4828149064438003,
+          -0.4223273348585497
+        ],
+        "phase_response": 0.6396030186442658
+      },
+      "verification_ms": 33.06233800003611,
+      "pose_error": {
+        "translation_error_m": 0.05370280935986022,
+        "rotation_error_deg": 0.000944209767335771,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1377",
+      "reference_id": "reference_3385",
+      "rank": 2,
+      "score": 0.9291033148765564,
+      "distance_m": 20.54348420895264,
+      "verification": {
+        "overlap": 0.775,
+        "rmse_m": 2.1467474765730645,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0583130243127474,
+        "translation_xy_m": [
+          -1.3415507330588385,
+          -2.5164746088045953
+        ],
+        "phase_response": 0.06340695393737406
+      },
+      "verification_ms": 42.21860600000582,
+      "pose_error": {
+        "translation_error_m": 21.114668958008497,
+        "rotation_error_deg": 174.73444737355072,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1377",
+      "reference_id": "reference_1993",
+      "rank": 3,
+      "score": 0.9148203730583191,
+      "distance_m": 742.2254685295098,
+      "verification": {
+        "overlap": 0.5775,
+        "rmse_m": 2.066109897083433,
+        "sector_coverage": 12,
+        "yaw_rad": -0.22251697844769106,
+        "translation_xy_m": [
+          0.6257895179259226,
+          -3.074170411326297
+        ],
+        "phase_response": 0.25730470195412636
+      },
+      "verification_ms": 33.15087500004665,
+      "pose_error": {
+        "translation_error_m": 744.7315816735676,
+        "rotation_error_deg": 102.21223433997646,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1483",
+      "reference_id": "reference_2595",
+      "rank": 1,
+      "score": 0.9390076398849487,
+      "distance_m": 965.625311481875,
+      "verification": {
+        "overlap": 0.6325,
+        "rmse_m": 1.901494344226767,
+        "sector_coverage": 12,
+        "yaw_rad": 0.11335234428854808,
+        "translation_xy_m": [
+          -3.306859538644878,
+          0.25843411062851773
+        ],
+        "phase_response": 0.2916243390645832
+      },
+      "verification_ms": 39.213513000049716,
+      "pose_error": {
+        "translation_error_m": 968.4086086188204,
+        "rotation_error_deg": 28.195961362014238,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1483",
+      "reference_id": "reference_3272",
+      "rank": 2,
+      "score": 0.9338847398757935,
+      "distance_m": 92.05113500266022,
+      "verification": {
+        "overlap": 0.575,
+        "rmse_m": 2.295015312427906,
+        "sector_coverage": 12,
+        "yaw_rad": -2.9946811047835165,
+        "translation_xy_m": [
+          0.9767421646026748,
+          -0.9328853652757834
+        ],
+        "phase_response": 0.05320550804026425
+      },
+      "verification_ms": 36.301746999924944,
+      "pose_error": {
+        "translation_error_m": 91.03157458547085,
+        "rotation_error_deg": 13.355386270662493,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1483",
+      "reference_id": "reference_3046",
+      "rank": 3,
+      "score": 0.933057427406311,
+      "distance_m": 557.3329669092203,
+      "verification": {
+        "overlap": 0.5225,
+        "rmse_m": 2.21640031314251,
+        "sector_coverage": 12,
+        "yaw_rad": 3.0230288862706,
+        "translation_xy_m": [
+          1.060041989916263,
+          0.8794850443884586
+        ],
+        "phase_response": 0.0899555531796068
+      },
+      "verification_ms": 39.236823999999615,
+      "pose_error": {
+        "translation_error_m": 557.5836782467783,
+        "rotation_error_deg": 76.02334675088032,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1589",
+      "reference_id": "reference_1692",
+      "rank": 1,
+      "score": 0.9451643228530884,
+      "distance_m": 10.090081164689693,
+      "verification": {
+        "overlap": 0.8625,
+        "rmse_m": 1.2122340277349748,
+        "sector_coverage": 12,
+        "yaw_rad": -0.015320709110101527,
+        "translation_xy_m": [
+          10.103442715456719,
+          0.20816687862455296
+        ],
+        "phase_response": 0.5615287137916312
+      },
+      "verification_ms": 35.75700200008214,
+      "pose_error": {
+        "translation_error_m": 0.016286346367309027,
+        "rotation_error_deg": 0.23746202234376068,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1589",
+      "reference_id": "reference_2557",
+      "rank": 2,
+      "score": 0.9442305564880371,
+      "distance_m": 1074.5735570616139,
+      "verification": {
+        "overlap": 0.6125,
+        "rmse_m": 2.1094171831384543,
+        "sector_coverage": 12,
+        "yaw_rad": 0.15355745928986186,
+        "translation_xy_m": [
+          -6.343689389228086,
+          -1.35284058219655
+        ],
+        "phase_response": 0.14807675208430737
+      },
+      "verification_ms": 33.37371800034816,
+      "pose_error": {
+        "translation_error_m": 1069.94956317894,
+        "rotation_error_deg": 62.11260858234905,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1589",
+      "reference_id": "reference_1730",
+      "rank": 3,
+      "score": 0.9430991411209106,
+      "distance_m": 32.605472434227934,
+      "verification": {
+        "overlap": 0.6625,
+        "rmse_m": 2.0867389777806697,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1166647625158697,
+        "translation_xy_m": [
+          11.047109783198316,
+          -2.5767136044878285
+        ],
+        "phase_response": 0.11967289866879582
+      },
+      "verification_ms": 35.153380000338075,
+      "pose_error": {
+        "translation_error_m": 43.67495895394924,
+        "rotation_error_deg": 178.27633127345575,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1695",
+      "reference_id": "reference_1805",
+      "rank": 1,
+      "score": 0.9477370381355286,
+      "distance_m": 13.492786713826765,
+      "verification": {
+        "overlap": 0.7375,
+        "rmse_m": 1.4667292244107792,
+        "sector_coverage": 12,
+        "yaw_rad": 0.08908201584699171,
+        "translation_xy_m": [
+          13.24338249737557,
+          1.0444035604556607
+        ],
+        "phase_response": 0.39478834066540003
+      },
+      "verification_ms": 31.901436000225658,
+      "pose_error": {
+        "translation_error_m": 0.22707755761153858,
+        "rotation_error_deg": 0.07689685733277218,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1695",
+      "reference_id": "reference_4175",
+      "rank": 2,
+      "score": 0.9415143132209778,
+      "distance_m": 1269.679710650911,
+      "verification": {
+        "overlap": 0.42,
+        "rmse_m": 2.3875270497690915,
+        "sector_coverage": 12,
+        "yaw_rad": -0.09883838409567602,
+        "translation_xy_m": [
+          -0.8476970983446693,
+          0.8860476275186404
+        ],
+        "phase_response": 0.0737828437704593
+      },
+      "verification_ms": 28.03298500020901,
+      "pose_error": {
+        "translation_error_m": 1268.4278650943104,
+        "rotation_error_deg": 138.7586005501414,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1695",
+      "reference_id": "reference_2557",
+      "rank": 3,
+      "score": 0.9377862811088562,
+      "distance_m": 1160.2067342526339,
+      "verification": {
+        "overlap": 0.46,
+        "rmse_m": 2.0945537405290744,
+        "sector_coverage": 12,
+        "yaw_rad": -2.2432707115456214,
+        "translation_xy_m": [
+          9.672786062699537,
+          -0.8857271853199491
+        ],
+        "phase_response": 0.20032849279232323
+      },
+      "verification_ms": 35.98235399977057,
+      "pose_error": {
+        "translation_error_m": 1162.9215468664988,
+        "rotation_error_deg": 117.18130672147151,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1801",
+      "reference_id": "reference_1918",
+      "rank": 1,
+      "score": 0.9505913257598877,
+      "distance_m": 33.705741778522594,
+      "verification": {
+        "overlap": 0.58,
+        "rmse_m": 2.020176855375461,
+        "sector_coverage": 12,
+        "yaw_rad": -0.13939166907612954,
+        "translation_xy_m": [
+          2.1034557326981655,
+          -0.34560842286067994
+        ],
+        "phase_response": 0.20136040984652936
+      },
+      "verification_ms": 38.94404899983783,
+      "pose_error": {
+        "translation_error_m": 31.6081150023224,
+        "rotation_error_deg": 7.985436200812352,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1801",
+      "reference_id": "reference_1955",
+      "rank": 2,
+      "score": 0.9505497217178345,
+      "distance_m": 8.37461417719897,
+      "verification": {
+        "overlap": 0.7675,
+        "rmse_m": 1.3852779686051804,
+        "sector_coverage": 12,
+        "yaw_rad": 0.026152276897840644,
+        "translation_xy_m": [
+          -8.644528798036218,
+          -0.4636322458792012
+        ],
+        "phase_response": 0.3444505074294284
+      },
+      "verification_ms": 27.262774000064383,
+      "pose_error": {
+        "translation_error_m": 0.2853347653442136,
+        "rotation_error_deg": 0.26632254201394223,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1801",
+      "reference_id": "reference_1692",
+      "rank": 3,
+      "score": 0.9455798864364624,
+      "distance_m": 334.813223710452,
+      "verification": {
+        "overlap": 0.6675,
+        "rmse_m": 1.8199353444782596,
+        "sector_coverage": 12,
+        "yaw_rad": -0.03312759178003658,
+        "translation_xy_m": [
+          -4.134296519901409,
+          -1.3668534659965936
+        ],
+        "phase_response": 0.2460655476897955
+      },
+      "verification_ms": 47.28036200003771,
+      "pose_error": {
+        "translation_error_m": 338.50700764546565,
+        "rotation_error_deg": 137.38020006327505,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1907",
+      "reference_id": "reference_2858",
+      "rank": 1,
+      "score": 0.9399023652076721,
+      "distance_m": 9.07398516799605,
+      "verification": {
+        "overlap": 0.8525,
+        "rmse_m": 1.5728843426689507,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1334726705668268,
+        "translation_xy_m": [
+          7.467798077029486,
+          -4.010532220773854
+        ],
+        "phase_response": 0.020541338250041008
+      },
+      "verification_ms": 36.11930699980803,
+      "pose_error": {
+        "translation_error_m": 0.756944267268998,
+        "rotation_error_deg": 0.6194103888812381,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_1907",
+      "reference_id": "reference_2745",
+      "rank": 2,
+      "score": 0.9336744546890259,
+      "distance_m": 276.57450113771887,
+      "verification": {
+        "overlap": 0.665,
+        "rmse_m": 2.034381975969193,
+        "sector_coverage": 12,
+        "yaw_rad": 2.964055678337764,
+        "translation_xy_m": [
+          -0.5241314719783051,
+          3.5462369085825753
+        ],
+        "phase_response": 0.14799881563521922
+      },
+      "verification_ms": 39.136872999733896,
+      "pose_error": {
+        "translation_error_m": 277.2495099280019,
+        "rotation_error_deg": 20.625002708786415,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_1907",
+      "reference_id": "reference_1730",
+      "rank": 3,
+      "score": 0.9326930046081543,
+      "distance_m": 486.15188573983005,
+      "verification": {
+        "overlap": 0.7175,
+        "rmse_m": 2.128645234454265,
+        "sector_coverage": 12,
+        "yaw_rad": -0.029312279524955367,
+        "translation_xy_m": [
+          -0.666068896101531,
+          -0.9592566257665933
+        ],
+        "phase_response": 0.33539188001304865
+      },
+      "verification_ms": 29.347468999731063,
+      "pose_error": {
+        "translation_error_m": 487.1253633698468,
+        "rotation_error_deg": 100.67287976263533,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2013",
+      "reference_id": "reference_2143",
+      "rank": 1,
+      "score": 0.9751909971237183,
+      "distance_m": 1.8408987208810885,
+      "verification": {
+        "overlap": 0.9125,
+        "rmse_m": 1.0812822619913807,
+        "sector_coverage": 12,
+        "yaw_rad": -0.028515351692782378,
+        "translation_xy_m": [
+          1.8588680292014024,
+          -0.129324955093344
+        ],
+        "phase_response": 0.7155087233986706
+      },
+      "verification_ms": 31.36198099991816,
+      "pose_error": {
+        "translation_error_m": 0.053607284758124554,
+        "rotation_error_deg": 0.27619575187085355,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_2013",
+      "reference_id": "reference_2332",
+      "rank": 2,
+      "score": 0.941464364528656,
+      "distance_m": 510.9675872517817,
+      "verification": {
+        "overlap": 0.5075,
+        "rmse_m": 2.224233860230373,
+        "sector_coverage": 12,
+        "yaw_rad": -2.440832277604888,
+        "translation_xy_m": [
+          -0.0925567677205485,
+          0.3528974418265119
+        ],
+        "phase_response": 0.012087715964298695
+      },
+      "verification_ms": 37.974590999965585,
+      "pose_error": {
+        "translation_error_m": 510.65491680943194,
+        "rotation_error_deg": 103.67990958629416,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2013",
+      "reference_id": "reference_2557",
+      "rank": 3,
+      "score": 0.9398441314697266,
+      "distance_m": 442.0203996974915,
+      "verification": {
+        "overlap": 0.59,
+        "rmse_m": 2.0243966952264687,
+        "sector_coverage": 12,
+        "yaw_rad": -2.334578641704246,
+        "translation_xy_m": [
+          -2.307568661580333,
+          1.1286722967263294
+        ],
+        "phase_response": 0.08503271319204941
+      },
+      "verification_ms": 35.21382799999628,
+      "pose_error": {
+        "translation_error_m": 442.62549447892695,
+        "rotation_error_deg": 142.35177844780404,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2119",
+      "reference_id": "reference_2670",
+      "rank": 1,
+      "score": 0.9436224102973938,
+      "distance_m": 63.980962283411706,
+      "verification": {
+        "overlap": 0.5825,
+        "rmse_m": 2.1713176156502794,
+        "sector_coverage": 12,
+        "yaw_rad": -0.07348749379885865,
+        "translation_xy_m": [
+          -6.446205464526906,
+          -1.3026738782721874
+        ],
+        "phase_response": 0.14184508938342333
+      },
+      "verification_ms": 37.599877000047854,
+      "pose_error": {
+        "translation_error_m": 57.446574363823096,
+        "rotation_error_deg": 174.64714442714586,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2119",
+      "reference_id": "reference_3272",
+      "rank": 2,
+      "score": 0.9428552985191345,
+      "distance_m": 930.5394680903161,
+      "verification": {
+        "overlap": 0.54,
+        "rmse_m": 2.2252504937038107,
+        "sector_coverage": 12,
+        "yaw_rad": -3.120980304943373,
+        "translation_xy_m": [
+          -0.23518331233084003,
+          -3.373984991194834
+        ],
+        "phase_response": 0.09018453606404364
+      },
+      "verification_ms": 34.21219900019423,
+      "pose_error": {
+        "translation_error_m": 927.31747444714,
+        "rotation_error_deg": 140.35674775141405,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2119",
+      "reference_id": "reference_1429",
+      "rank": 3,
+      "score": 0.939551055431366,
+      "distance_m": 996.6714235214256,
+      "verification": {
+        "overlap": 0.4525,
+        "rmse_m": 2.1574164416057364,
+        "sector_coverage": 12,
+        "yaw_rad": 2.8522658790977298,
+        "translation_xy_m": [
+          -0.5340000819818883,
+          1.8333085922477805
+        ],
+        "phase_response": -0.02906282222829759
+      },
+      "verification_ms": 33.69255000006888,
+      "pose_error": {
+        "translation_error_m": 997.7348936721852,
+        "rotation_error_deg": 117.96124276582023,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2225",
+      "reference_id": "reference_2557",
+      "rank": 1,
+      "score": 0.9461653828620911,
+      "distance_m": 77.49588770449648,
+      "verification": {
+        "overlap": 0.5275,
+        "rmse_m": 2.152438419952047,
+        "sector_coverage": 12,
+        "yaw_rad": -3.052529396892089,
+        "translation_xy_m": [
+          6.669414596974392,
+          -1.9664872198200687
+        ],
+        "phase_response": 0.1496298121055588
+      },
+      "verification_ms": 30.440638000072795,
+      "pose_error": {
+        "translation_error_m": 80.87090539303773,
+        "rotation_error_deg": 3.714994206754677,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2225",
+      "reference_id": "reference_1579",
+      "rank": 2,
+      "score": 0.9391733407974243,
+      "distance_m": 1002.0763079516086,
+      "verification": {
+        "overlap": 0.6025,
+        "rmse_m": 2.1553310574777096,
+        "sector_coverage": 12,
+        "yaw_rad": -0.2159567749265639,
+        "translation_xy_m": [
+          -16.64076280458099,
+          -2.933167485905699
+        ],
+        "phase_response": 0.17244981392286718
+      },
+      "verification_ms": 34.108946999822365,
+      "pose_error": {
+        "translation_error_m": 1001.6889955337654,
+        "rotation_error_deg": 98.81458820389122,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2225",
+      "reference_id": "reference_150",
+      "rank": 3,
+      "score": 0.9330251216888428,
+      "distance_m": 2345.2238884624685,
+      "verification": {
+        "overlap": 0.5325,
+        "rmse_m": 1.9006241660740824,
+        "sector_coverage": 12,
+        "yaw_rad": -0.2954087723353469,
+        "translation_xy_m": [
+          -0.9061257566805135,
+          -0.5980750638764012
+        ],
+        "phase_response": 0.07874438900034875
+      },
+      "verification_ms": 37.928050000118674,
+      "pose_error": {
+        "translation_error_m": 2344.172353433937,
+        "rotation_error_deg": 60.49324831120926,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2331",
+      "reference_id": "reference_2745",
+      "rank": 1,
+      "score": 0.9310678243637085,
+      "distance_m": 518.3646475148586,
+      "verification": {
+        "overlap": 0.63,
+        "rmse_m": 2.141743186460154,
+        "sector_coverage": 12,
+        "yaw_rad": -0.06321551642654781,
+        "translation_xy_m": [
+          1.2874796503905783,
+          0.5043539622186876
+        ],
+        "phase_response": 0.1794709466630593
+      },
+      "verification_ms": 30.943359000048076,
+      "pose_error": {
+        "translation_error_m": 519.746315202913,
+        "rotation_error_deg": 35.27170461464754,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2331",
+      "reference_id": "reference_1880",
+      "rank": 2,
+      "score": 0.9297698736190796,
+      "distance_m": 1167.2246247485878,
+      "verification": {
+        "overlap": 0.6125,
+        "rmse_m": 2.0633111490756533,
+        "sector_coverage": 12,
+        "yaw_rad": 0.15215875979358154,
+        "translation_xy_m": [
+          -2.67361837251152,
+          -0.878784991135819
+        ],
+        "phase_response": 0.1404309746576473
+      },
+      "verification_ms": 35.25771900012842,
+      "pose_error": {
+        "translation_error_m": 1169.8120490327217,
+        "rotation_error_deg": 169.0495249049997,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2331",
+      "reference_id": "reference_2520",
+      "rank": 3,
+      "score": 0.9265091419219971,
+      "distance_m": 143.28987921768785,
+      "verification": {
+        "overlap": 0.7275,
+        "rmse_m": 1.8383962700440812,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1390849506393304,
+        "translation_xy_m": [
+          0.5304479357968923,
+          -1.032014518460798
+        ],
+        "phase_response": 0.13021039636805654
+      },
+      "verification_ms": 37.81628200022169,
+      "pose_error": {
+        "translation_error_m": 144.40820099430087,
+        "rotation_error_deg": 30.824741306039037,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2437",
+      "reference_id": "reference_1767",
+      "rank": 1,
+      "score": 0.9520150423049927,
+      "distance_m": 1106.0845367944673,
+      "verification": {
+        "overlap": 0.68,
+        "rmse_m": 2.0936110840810165,
+        "sector_coverage": 12,
+        "yaw_rad": -3.106537465304853,
+        "translation_xy_m": [
+          -0.49383933769837257,
+          -2.098904536518857
+        ],
+        "phase_response": 0.17454753367928788
+      },
+      "verification_ms": 33.52529600033449,
+      "pose_error": {
+        "translation_error_m": 1107.4529949635746,
+        "rotation_error_deg": 112.89902681019971,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2437",
+      "reference_id": "reference_2520",
+      "rank": 2,
+      "score": 0.9464833736419678,
+      "distance_m": 23.652802775502796,
+      "verification": {
+        "overlap": 0.78,
+        "rmse_m": 1.792762542998924,
+        "sector_coverage": 12,
+        "yaw_rad": 0.02985779404783466,
+        "translation_xy_m": [
+          -0.5511558430320005,
+          0.13511583237694066
+        ],
+        "phase_response": 0.2325745071284473
+      },
+      "verification_ms": 33.46366499999931,
+      "pose_error": {
+        "translation_error_m": 24.19967541187218,
+        "rotation_error_deg": 0.3774646678771854,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2437",
+      "reference_id": "reference_2369",
+      "rank": 3,
+      "score": 0.9395201206207275,
+      "distance_m": 79.21905851479004,
+      "verification": {
+        "overlap": 0.66,
+        "rmse_m": 2.134823402996616,
+        "sector_coverage": 12,
+        "yaw_rad": -2.5253719638481646,
+        "translation_xy_m": [
+          -6.33188005985647,
+          -7.519478974488766
+        ],
+        "phase_response": 0.16239565325668082
+      },
+      "verification_ms": 29.19670600022073,
+      "pose_error": {
+        "translation_error_m": 84.39396589748756,
+        "rotation_error_deg": 12.15668915970958,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2543",
+      "reference_id": "reference_2632",
+      "rank": 1,
+      "score": 0.969925045967102,
+      "distance_m": 3.495539027870937,
+      "verification": {
+        "overlap": 0.9125,
+        "rmse_m": 1.091077137659737,
+        "sector_coverage": 12,
+        "yaw_rad": 0.013638312484440524,
+        "translation_xy_m": [
+          3.52894321478845,
+          0.4513092203159438
+        ],
+        "phase_response": 0.6010224024066702
+      },
+      "verification_ms": 34.771112999806064,
+      "pose_error": {
+        "translation_error_m": 0.06265716592343025,
+        "rotation_error_deg": 0.1744642757918757,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_2543",
+      "reference_id": "reference_1692",
+      "rank": 2,
+      "score": 0.9410126805305481,
+      "distance_m": 1013.0093019808918,
+      "verification": {
+        "overlap": 0.5225,
+        "rmse_m": 2.2864628797805007,
+        "sector_coverage": 12,
+        "yaw_rad": -0.20361763129006477,
+        "translation_xy_m": [
+          0.06846257562132779,
+          -0.12911163470852283
+        ],
+        "phase_response": 0.16771606309339404
+      },
+      "verification_ms": 30.7727900003556,
+      "pose_error": {
+        "translation_error_m": 1012.9802265337007,
+        "rotation_error_deg": 38.179314106646636,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2543",
+      "reference_id": "reference_2031",
+      "rank": 3,
+      "score": 0.9364905953407288,
+      "distance_m": 649.2717481561502,
+      "verification": {
+        "overlap": 0.645,
+        "rmse_m": 1.9671583620564992,
+        "sector_coverage": 12,
+        "yaw_rad": -2.9439437208629373,
+        "translation_xy_m": [
+          -13.67436149998101,
+          0.18842906758502428
+        ],
+        "phase_response": 0.17107351822778583
+      },
+      "verification_ms": 31.843649999700574,
+      "pose_error": {
+        "translation_error_m": 661.2902179614186,
+        "rotation_error_deg": 20.750235750541105,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2649",
+      "reference_id": "reference_1354",
+      "rank": 1,
+      "score": 0.9320589900016785,
+      "distance_m": 907.257294256781,
+      "verification": {
+        "overlap": 0.5475,
+        "rmse_m": 2.0157290458521184,
+        "sector_coverage": 12,
+        "yaw_rad": 3.123650400542476,
+        "translation_xy_m": [
+          4.134391349773223,
+          3.832941526835725
+        ],
+        "phase_response": 0.22662862110882998
+      },
+      "verification_ms": 31.09508099987579,
+      "pose_error": {
+        "translation_error_m": 905.8349093120835,
+        "rotation_error_deg": 37.03811455258199,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2649",
+      "reference_id": "reference_2557",
+      "rank": 2,
+      "score": 0.9272750616073608,
+      "distance_m": 384.6222801968893,
+      "verification": {
+        "overlap": 0.5425,
+        "rmse_m": 2.228026201809004,
+        "sector_coverage": 12,
+        "yaw_rad": 3.05952130044973,
+        "translation_xy_m": [
+          1.977055063862996,
+          2.16892004039199
+        ],
+        "phase_response": 0.08852743351599202
+      },
+      "verification_ms": 32.141443000000436,
+      "pose_error": {
+        "translation_error_m": 387.12331782423155,
+        "rotation_error_deg": 74.06091325937868,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2649",
+      "reference_id": "reference_3460",
+      "rank": 3,
+      "score": 0.9237775206565857,
+      "distance_m": 897.4026860567262,
+      "verification": {
+        "overlap": 0.4525,
+        "rmse_m": 2.1624873999246415,
+        "sector_coverage": 12,
+        "yaw_rad": 2.9181860810263456,
+        "translation_xy_m": [
+          0.5897769709900751,
+          -0.7636854132209115
+        ],
+        "phase_response": 0.02500159537885338
+      },
+      "verification_ms": 29.69839899969884,
+      "pose_error": {
+        "translation_error_m": 897.9539200391237,
+        "rotation_error_deg": 125.9515228124418,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2755",
+      "reference_id": "reference_1579",
+      "rank": 1,
+      "score": 0.9433242678642273,
+      "distance_m": 662.0220583976051,
+      "verification": {
+        "overlap": 0.67,
+        "rmse_m": 2.0079776627446173,
+        "sector_coverage": 12,
+        "yaw_rad": 0.15458451548133512,
+        "translation_xy_m": [
+          -11.075868102140417,
+          -0.8107971362106196
+        ],
+        "phase_response": 0.055023372173309326
+      },
+      "verification_ms": 33.858336999855965,
+      "pose_error": {
+        "translation_error_m": 668.6159860894567,
+        "rotation_error_deg": 62.032952903533214,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2755",
+      "reference_id": "reference_2783",
+      "rank": 2,
+      "score": 0.9395924210548401,
+      "distance_m": 154.32293111893947,
+      "verification": {
+        "overlap": 0.59,
+        "rmse_m": 1.9915803425210232,
+        "sector_coverage": 12,
+        "yaw_rad": 2.9958807395371796,
+        "translation_xy_m": [
+          -0.11858603868685501,
+          -2.392669515795992
+        ],
+        "phase_response": 0.057462377881165594
+      },
+      "verification_ms": 26.21273500017196,
+      "pose_error": {
+        "translation_error_m": 154.34645446923707,
+        "rotation_error_deg": 169.47774325760767,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2755",
+      "reference_id": "reference_3197",
+      "rank": 3,
+      "score": 0.9389519095420837,
+      "distance_m": 564.2415351528225,
+      "verification": {
+        "overlap": 0.655,
+        "rmse_m": 2.1416390855682863,
+        "sector_coverage": 12,
+        "yaw_rad": -0.006003362421901466,
+        "translation_xy_m": [
+          -10.20558701973719,
+          -1.479246750573906
+        ],
+        "phase_response": 0.0721930181607604
+      },
+      "verification_ms": 33.108408999851235,
+      "pose_error": {
+        "translation_error_m": 561.8553867276559,
+        "rotation_error_deg": 118.30309635917536,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2861",
+      "reference_id": "reference_2933",
+      "rank": 1,
+      "score": 0.964148223400116,
+      "distance_m": 3.6293383864312316,
+      "verification": {
+        "overlap": 0.8325,
+        "rmse_m": 1.1515556187201799,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0014515795461827775,
+        "translation_xy_m": [
+          3.5142245682086033,
+          0.201029446389457
+        ],
+        "phase_response": 0.48027725820429623
+      },
+      "verification_ms": 35.785132000000885,
+      "pose_error": {
+        "translation_error_m": 0.11136487180719248,
+        "rotation_error_deg": 0.16901799925972283,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_2861",
+      "reference_id": "reference_3046",
+      "rank": 2,
+      "score": 0.9417259693145752,
+      "distance_m": 247.9370862650849,
+      "verification": {
+        "overlap": 0.52,
+        "rmse_m": 2.2090350615654253,
+        "sector_coverage": 12,
+        "yaw_rad": -0.10138136476497273,
+        "translation_xy_m": [
+          1.087253194894768,
+          0.7953353672801796
+        ],
+        "phase_response": 0.17553517641499639
+      },
+      "verification_ms": 26.88727499980814,
+      "pose_error": {
+        "translation_error_m": 249.2647912411283,
+        "rotation_error_deg": 73.4365052616615,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2861",
+      "reference_id": "reference_1579",
+      "rank": 3,
+      "score": 0.933020293712616,
+      "distance_m": 586.2381189317127,
+      "verification": {
+        "overlap": 0.555,
+        "rmse_m": 2.0618525007390116,
+        "sector_coverage": 12,
+        "yaw_rad": -0.03509138255661171,
+        "translation_xy_m": [
+          2.2532642235015947,
+          0.4710234661867265
+        ],
+        "phase_response": 0.14332634140737355
+      },
+      "verification_ms": 31.85783699973399,
+      "pose_error": {
+        "translation_error_m": 584.0425695177966,
+        "rotation_error_deg": 35.607252516603545,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2967",
+      "reference_id": "reference_3009",
+      "rank": 1,
+      "score": 0.9417668581008911,
+      "distance_m": 89.57849439170135,
+      "verification": {
+        "overlap": 0.4875,
+        "rmse_m": 2.014647193792012,
+        "sector_coverage": 12,
+        "yaw_rad": 1.699993160814455,
+        "translation_xy_m": [
+          10.20640681388953,
+          -1.1237255039120118
+        ],
+        "phase_response": 0.07957245028228499
+      },
+      "verification_ms": 35.04854500033616,
+      "pose_error": {
+        "translation_error_m": 79.58129150605379,
+        "rotation_error_deg": 137.34440341132398,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2967",
+      "reference_id": "reference_1692",
+      "rank": 2,
+      "score": 0.9374262094497681,
+      "distance_m": 316.59857178795363,
+      "verification": {
+        "overlap": 0.4575,
+        "rmse_m": 2.0156601710179216,
+        "sector_coverage": 11,
+        "yaw_rad": 1.357205498290798,
+        "translation_xy_m": [
+          11.103858658916698,
+          3.765420478450104
+        ],
+        "phase_response": 0.22956990916281939
+      },
+      "verification_ms": 34.27000500005306,
+      "pose_error": {
+        "translation_error_m": 304.90744624465,
+        "rotation_error_deg": 177.00654708846977,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_2967",
+      "reference_id": "reference_2557",
+      "rank": 3,
+      "score": 0.9357659816741943,
+      "distance_m": 1131.5177566061323,
+      "verification": {
+        "overlap": 0.4875,
+        "rmse_m": 2.2404539195705384,
+        "sector_coverage": 12,
+        "yaw_rad": 1.864940300838648,
+        "translation_xy_m": [
+          -0.0554873968624948,
+          2.5527475057368294
+        ],
+        "phase_response": 0.056631375511642545
+      },
+      "verification_ms": 34.26544300009482,
+      "pose_error": {
+        "translation_error_m": 1133.904234606246,
+        "rotation_error_deg": 95.69576042840525,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3073",
+      "reference_id": "reference_2858",
+      "rank": 1,
+      "score": 0.9462169408798218,
+      "distance_m": 499.33739010133905,
+      "verification": {
+        "overlap": 0.625,
+        "rmse_m": 1.9634280491551148,
+        "sector_coverage": 12,
+        "yaw_rad": 0.07196097284667159,
+        "translation_xy_m": [
+          2.3901675159051265,
+          0.07598529760206314
+        ],
+        "phase_response": 0.223749574564863
+      },
+      "verification_ms": 32.98110600007931,
+      "pose_error": {
+        "translation_error_m": 496.9161083247795,
+        "rotation_error_deg": 112.35261723148527,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3073",
+      "reference_id": "reference_3197",
+      "rank": 2,
+      "score": 0.9397007822990417,
+      "distance_m": 73.43743344018917,
+      "verification": {
+        "overlap": 0.7125,
+        "rmse_m": 2.182898790067438,
+        "sector_coverage": 12,
+        "yaw_rad": -0.09385919581456746,
+        "translation_xy_m": [
+          -1.038837160701385,
+          1.659031545145543
+        ],
+        "phase_response": 0.05527640867512673
+      },
+      "verification_ms": 40.76261299996986,
+      "pose_error": {
+        "translation_error_m": 72.31242204048391,
+        "rotation_error_deg": 5.554794485203436,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3073",
+      "reference_id": "reference_3347",
+      "rank": 3,
+      "score": 0.9396978616714478,
+      "distance_m": 557.0279264494229,
+      "verification": {
+        "overlap": 0.5775,
+        "rmse_m": 2.264452522840352,
+        "sector_coverage": 12,
+        "yaw_rad": 0.06455996747548313,
+        "translation_xy_m": [
+          1.3403606295698385,
+          0.6172010593984427
+        ],
+        "phase_response": 0.11660338949877769
+      },
+      "verification_ms": 38.129067000227224,
+      "pose_error": {
+        "translation_error_m": 558.1614236874365,
+        "rotation_error_deg": 17.895356231256773,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3179",
+      "reference_id": "reference_2557",
+      "rank": 1,
+      "score": 0.9344251155853271,
+      "distance_m": 1043.4226694638378,
+      "verification": {
+        "overlap": 0.4925,
+        "rmse_m": 2.031419212628696,
+        "sector_coverage": 12,
+        "yaw_rad": 0.15148497343997158,
+        "translation_xy_m": [
+          -3.692464248514784,
+          10.662339558085364
+        ],
+        "phase_response": 0.21035008516628295
+      },
+      "verification_ms": 33.18677400011438,
+      "pose_error": {
+        "translation_error_m": 1049.3009236127375,
+        "rotation_error_deg": 109.47138496546161,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3179",
+      "reference_id": "reference_1654",
+      "rank": 2,
+      "score": 0.9327020645141602,
+      "distance_m": 20.390787205887346,
+      "verification": {
+        "overlap": 0.4875,
+        "rmse_m": 2.3312447134609093,
+        "sector_coverage": 12,
+        "yaw_rad": -1.1748467611808535,
+        "translation_xy_m": [
+          -0.2701534625016534,
+          -0.09874317102913775
+        ],
+        "phase_response": 0.11408475268399343
+      },
+      "verification_ms": 27.045418999932735,
+      "pose_error": {
+        "translation_error_m": 20.109659707826893,
+        "rotation_error_deg": 113.76979261714864,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3179",
+      "reference_id": "reference_3272",
+      "rank": 3,
+      "score": 0.9309141635894775,
+      "distance_m": 65.42537254954453,
+      "verification": {
+        "overlap": 0.6275,
+        "rmse_m": 2.011787121718444,
+        "sector_coverage": 12,
+        "yaw_rad": 0.06445426651982428,
+        "translation_xy_m": [
+          3.093005949315022,
+          1.0200660245868063
+        ],
+        "phase_response": 0.2608496162574738
+      },
+      "verification_ms": 36.52475300032165,
+      "pose_error": {
+        "translation_error_m": 68.56586177852468,
+        "rotation_error_deg": 2.4583131636982913,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3285",
+      "reference_id": "reference_3347",
+      "rank": 1,
+      "score": 0.9687314033508301,
+      "distance_m": 2.944971945032886,
+      "verification": {
+        "overlap": 0.88,
+        "rmse_m": 1.193856051246531,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0152784053870658,
+        "translation_xy_m": [
+          -2.8649030623799154,
+          -0.035401865021187785
+        ],
+        "phase_response": 0.7442039040615782
+      },
+      "verification_ms": 30.620280999755778,
+      "pose_error": {
+        "translation_error_m": 0.12586800618655866,
+        "rotation_error_deg": 0.3126759725481802,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3285",
+      "reference_id": "reference_1617",
+      "rank": 2,
+      "score": 0.9444876909255981,
+      "distance_m": 220.90755386345845,
+      "verification": {
+        "overlap": 0.565,
+        "rmse_m": 2.235798580744241,
+        "sector_coverage": 12,
+        "yaw_rad": 0.3838528469609624,
+        "translation_xy_m": [
+          -0.6362223129275462,
+          -0.7041008089758408
+        ],
+        "phase_response": 0.171430699294433
+      },
+      "verification_ms": 32.56979700017837,
+      "pose_error": {
+        "translation_error_m": 220.16599175522603,
+        "rotation_error_deg": 178.26610885127025,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3285",
+      "reference_id": "reference_2670",
+      "rank": 3,
+      "score": 0.9439116716384888,
+      "distance_m": 868.7266611834615,
+      "verification": {
+        "overlap": 0.61,
+        "rmse_m": 2.102536869662612,
+        "sector_coverage": 12,
+        "yaw_rad": -0.04946273202544013,
+        "translation_xy_m": [
+          -1.2145433886069894,
+          1.052792783139157
+        ],
+        "phase_response": 0.27220781426876783
+      },
+      "verification_ms": 32.85607499992693,
+      "pose_error": {
+        "translation_error_m": 870.2241928791178,
+        "rotation_error_deg": 121.82003435750227,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3391",
+      "reference_id": "reference_1429",
+      "rank": 1,
+      "score": 0.922248363494873,
+      "distance_m": 123.42485159978466,
+      "verification": {
+        "overlap": 0.495,
+        "rmse_m": 2.096939737385385,
+        "sector_coverage": 12,
+        "yaw_rad": -0.006114317519908022,
+        "translation_xy_m": [
+          -0.8201071477474671,
+          3.0615384965300545
+        ],
+        "phase_response": 0.1596352751366794
+      },
+      "verification_ms": 36.043888999756746,
+      "pose_error": {
+        "translation_error_m": 122.87174507993417,
+        "rotation_error_deg": 179.01571819725848,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3391",
+      "reference_id": "reference_1354",
+      "rank": 2,
+      "score": 0.9189220666885376,
+      "distance_m": 108.72570375640353,
+      "verification": {
+        "overlap": 0.5225,
+        "rmse_m": 2.0850195059180363,
+        "sector_coverage": 12,
+        "yaw_rad": 0.10824619764791549,
+        "translation_xy_m": [
+          -0.3209357100900221,
+          0.9059129787262334
+        ],
+        "phase_response": 0.028427880024537444
+      },
+      "verification_ms": 29.34878900032345,
+      "pose_error": {
+        "translation_error_m": 108.47555671487214,
+        "rotation_error_deg": 172.11035979075004,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3391",
+      "reference_id": "reference_3272",
+      "rank": 3,
+      "score": 0.9183815121650696,
+      "distance_m": 466.1384186599219,
+      "verification": {
+        "overlap": 0.4975,
+        "rmse_m": 2.0960299871596555,
+        "sector_coverage": 12,
+        "yaw_rad": 0.65665252365003,
+        "translation_xy_m": [
+          -0.9170740032039689,
+          2.4644579931804653
+        ],
+        "phase_response": 0.10207644524052739
+      },
+      "verification_ms": 36.742528999639035,
+      "pose_error": {
+        "translation_error_m": 465.8699572509969,
+        "rotation_error_deg": 57.12837195473524,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3497",
+      "reference_id": "reference_3798",
+      "rank": 1,
+      "score": 0.959269642829895,
+      "distance_m": 8.939575303714921,
+      "verification": {
+        "overlap": 0.75,
+        "rmse_m": 1.4794647764147766,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0078139846396343,
+        "translation_xy_m": [
+          -8.204969772826725,
+          -3.5037236844581265
+        ],
+        "phase_response": 0.3785801049671136
+      },
+      "verification_ms": 31.362625999918237,
+      "pose_error": {
+        "translation_error_m": 0.04164099834045607,
+        "rotation_error_deg": 0.04626331697593695,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3497",
+      "reference_id": "reference_3686",
+      "rank": 2,
+      "score": 0.9588156938552856,
+      "distance_m": 8.91129568417726,
+      "verification": {
+        "overlap": 0.755,
+        "rmse_m": 1.5568497274977977,
+        "sector_coverage": 12,
+        "yaw_rad": -0.006169589623088447,
+        "translation_xy_m": [
+          -8.241377200965633,
+          -3.585966563776581
+        ],
+        "phase_response": 0.3432121980586089
+      },
+      "verification_ms": 30.21601400041618,
+      "pose_error": {
+        "translation_error_m": 0.0764746432288614,
+        "rotation_error_deg": 0.03492861891941367,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3497",
+      "reference_id": "reference_3761",
+      "rank": 3,
+      "score": 0.9583793878555298,
+      "distance_m": 8.939583030257008,
+      "verification": {
+        "overlap": 0.77,
+        "rmse_m": 1.453055392705278,
+        "sector_coverage": 12,
+        "yaw_rad": -0.009003965393049556,
+        "translation_xy_m": [
+          -8.172768436852097,
+          -3.5528494752204005
+        ],
+        "phase_response": 0.4410275397822261
+      },
+      "verification_ms": 29.32127899975967,
+      "pose_error": {
+        "translation_error_m": 0.034977000308291095,
+        "rotation_error_deg": 0.11698891160007747,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3603",
+      "reference_id": "reference_3911",
+      "rank": 1,
+      "score": 0.9559588432312012,
+      "distance_m": 8.253312842519042,
+      "verification": {
+        "overlap": 0.7625,
+        "rmse_m": 1.4869125333307134,
+        "sector_coverage": 12,
+        "yaw_rad": -0.010209676101768433,
+        "translation_xy_m": [
+          -7.52598815305449,
+          -3.467478951294912
+        ],
+        "phase_response": 0.3586258814902976
+      },
+      "verification_ms": 41.47390199977963,
+      "pose_error": {
+        "translation_error_m": 0.09724734769714745,
+        "rotation_error_deg": 0.17731815186053587,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3603",
+      "reference_id": "reference_3761",
+      "rank": 2,
+      "score": 0.955935537815094,
+      "distance_m": 8.253303233159805,
+      "verification": {
+        "overlap": 0.7775,
+        "rmse_m": 1.4500889386277602,
+        "sector_coverage": 12,
+        "yaw_rad": -0.010446157533770876,
+        "translation_xy_m": [
+          -7.5350445464927445,
+          -3.449512602847988
+        ],
+        "phase_response": 0.4932100879959762
+      },
+      "verification_ms": 34.70437799978754,
+      "pose_error": {
+        "translation_error_m": 0.1150747405669902,
+        "rotation_error_deg": 0.17989548052066173,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3603",
+      "reference_id": "reference_3686",
+      "rank": 3,
+      "score": 0.9547215700149536,
+      "distance_m": 8.225441428874658,
+      "verification": {
+        "overlap": 0.745,
+        "rmse_m": 1.4009826628510573,
+        "sector_coverage": 12,
+        "yaw_rad": -0.00930806266437534,
+        "translation_xy_m": [
+          -7.435653675074949,
+          -3.490162178195469
+        ],
+        "phase_response": 0.3730886917328462
+      },
+      "verification_ms": 27.70029200019053,
+      "pose_error": {
+        "translation_error_m": 0.046838658715014185,
+        "rotation_error_deg": 0.12514173242198862,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3709",
+      "reference_id": "reference_677",
+      "rank": 1,
+      "score": 0.9337387681007385,
+      "distance_m": 23.957837007492067,
+      "verification": {
+        "overlap": 0.4875,
+        "rmse_m": 2.3167120393216423,
+        "sector_coverage": 12,
+        "yaw_rad": -0.9728337968956081,
+        "translation_xy_m": [
+          11.094588621196085,
+          3.314752725847986
+        ],
+        "phase_response": 0.13462633767630905
+      },
+      "verification_ms": 30.60305500002869,
+      "pose_error": {
+        "translation_error_m": 16.70681954399754,
+        "rotation_error_deg": 128.2434914911268,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3709",
+      "reference_id": "reference_4062",
+      "rank": 2,
+      "score": 0.9271979331970215,
+      "distance_m": 30.570957913818813,
+      "verification": {
+        "overlap": 0.535,
+        "rmse_m": 2.4389788854443926,
+        "sector_coverage": 12,
+        "yaw_rad": -0.008860205132162582,
+        "translation_xy_m": [
+          -0.6238599962318644,
+          0.42134152188900215
+        ],
+        "phase_response": 0.13356542203109711
+      },
+      "verification_ms": 36.16477000014129,
+      "pose_error": {
+        "translation_error_m": 29.980232540895695,
+        "rotation_error_deg": 2.3847168529155645,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3709",
+      "reference_id": "reference_4024",
+      "rank": 3,
+      "score": 0.9260390996932983,
+      "distance_m": 45.454045324924074,
+      "verification": {
+        "overlap": 0.385,
+        "rmse_m": 2.126609146859538,
+        "sector_coverage": 12,
+        "yaw_rad": 3.1327878307753863,
+        "translation_xy_m": [
+          8.408810097622494,
+          -1.0893486679014772
+        ],
+        "phase_response": 0.07870209799148142
+      },
+      "verification_ms": 29.720732999976462,
+      "pose_error": {
+        "translation_error_m": 37.04518494664119,
+        "rotation_error_deg": 176.12789081866438,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3815",
+      "reference_id": "reference_4175",
+      "rank": 1,
+      "score": 0.9495462775230408,
+      "distance_m": 7.264829281383586,
+      "verification": {
+        "overlap": 0.7275,
+        "rmse_m": 1.5100275137921282,
+        "sector_coverage": 12,
+        "yaw_rad": 0.16485923805420274,
+        "translation_xy_m": [
+          -7.023913352287566,
+          -0.7655768620308607
+        ],
+        "phase_response": 0.4531188514083624
+      },
+      "verification_ms": 30.033959999855142,
+      "pose_error": {
+        "translation_error_m": 0.20006611791517326,
+        "rotation_error_deg": 0.11222222094775601,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3815",
+      "reference_id": "reference_677",
+      "rank": 2,
+      "score": 0.935934841632843,
+      "distance_m": 299.45239882924534,
+      "verification": {
+        "overlap": 0.41,
+        "rmse_m": 2.284401839446971,
+        "sector_coverage": 12,
+        "yaw_rad": -1.487516014368477,
+        "translation_xy_m": [
+          -12.634119807617884,
+          7.490753339403777
+        ],
+        "phase_response": 0.10344732366502285
+      },
+      "verification_ms": 31.149853999977495,
+      "pose_error": {
+        "translation_error_m": 287.38818460646087,
+        "rotation_error_deg": 93.66855375147806,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3815",
+      "reference_id": "reference_4137",
+      "rank": 3,
+      "score": 0.9351125359535217,
+      "distance_m": 25.085970401317557,
+      "verification": {
+        "overlap": 0.4225,
+        "rmse_m": 2.42402838283249,
+        "sector_coverage": 12,
+        "yaw_rad": 2.8002395580005133,
+        "translation_xy_m": [
+          0.88342265888398,
+          -1.1844057448241725
+        ],
+        "phase_response": 0.0483732596039772
+      },
+      "verification_ms": 28.4625130002496,
+      "pose_error": {
+        "translation_error_m": 24.275422199678264,
+        "rotation_error_deg": 160.22377648874937,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3921",
+      "reference_id": "reference_4250",
+      "rank": 1,
+      "score": 0.9359531402587891,
+      "distance_m": 11.239816273245633,
+      "verification": {
+        "overlap": 0.7475,
+        "rmse_m": 1.3956537648515173,
+        "sector_coverage": 12,
+        "yaw_rad": 0.013355597607323546,
+        "translation_xy_m": [
+          11.157707919649042,
+          0.3269856637031547
+        ],
+        "phase_response": 0.46849741466576234
+      },
+      "verification_ms": 35.75794700009283,
+      "pose_error": {
+        "translation_error_m": 0.11199908900937734,
+        "rotation_error_deg": 0.3595491959838388,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_3921",
+      "reference_id": "reference_4400",
+      "rank": 2,
+      "score": 0.9153158664703369,
+      "distance_m": 270.8178772145478,
+      "verification": {
+        "overlap": 0.4825,
+        "rmse_m": 1.9228824459987715,
+        "sector_coverage": 10,
+        "yaw_rad": -3.005020038496384,
+        "translation_xy_m": [
+          2.575672798215575,
+          0.047140094809517516
+        ],
+        "phase_response": 0.33865894679911435
+      },
+      "verification_ms": 36.90620100041997,
+      "pose_error": {
+        "translation_error_m": 272.2136124805148,
+        "rotation_error_deg": 176.4886167416955,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_3921",
+      "reference_id": "reference_188",
+      "rank": 3,
+      "score": 0.9143854379653931,
+      "distance_m": 417.58687720187055,
+      "verification": {
+        "overlap": 0.4825,
+        "rmse_m": 1.7930291182538285,
+        "sector_coverage": 12,
+        "yaw_rad": -0.5189805049659328,
+        "translation_xy_m": [
+          -0.8354238117587476,
+          0.26719560796615377
+        ],
+        "phase_response": 0.4100128172431141
+      },
+      "verification_ms": 36.92380200027401,
+      "pose_error": {
+        "translation_error_m": 418.3735273536302,
+        "rotation_error_deg": 157.07383073526233,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_4027",
+      "reference_id": "reference_4363",
+      "rank": 1,
+      "score": 0.9580423831939697,
+      "distance_m": 4.983938449112196,
+      "verification": {
+        "overlap": 0.9075,
+        "rmse_m": 1.1758352618909258,
+        "sector_coverage": 12,
+        "yaw_rad": 0.06732909065207623,
+        "translation_xy_m": [
+          5.042307838067897,
+          -0.13050786768306327
+        ],
+        "phase_response": 0.5689856379758567
+      },
+      "verification_ms": 32.10578300013367,
+      "pose_error": {
+        "translation_error_m": 0.060246570099629505,
+        "rotation_error_deg": 0.07679886147829323,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_4027",
+      "reference_id": "reference_3046",
+      "rank": 2,
+      "score": 0.914138913154602,
+      "distance_m": 1608.762324932011,
+      "verification": {
+        "overlap": 0.5375,
+        "rmse_m": 2.1341097487475857,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0815200913757208,
+        "translation_xy_m": [
+          2.393113068749299,
+          0.572384593940027
+        ],
+        "phase_response": 0.14455632807221264
+      },
+      "verification_ms": 34.37708500041481,
+      "pose_error": {
+        "translation_error_m": 1606.7146617261074,
+        "rotation_error_deg": 11.578035563291,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_4027",
+      "reference_id": "reference_3309",
+      "rank": 3,
+      "score": 0.912899374961853,
+      "distance_m": 1256.698363093507,
+      "verification": {
+        "overlap": 0.525,
+        "rmse_m": 2.2215262730504337,
+        "sector_coverage": 12,
+        "yaw_rad": -2.918088880642148,
+        "translation_xy_m": [
+          -1.2412838297214526,
+          0.8614398778755389
+        ],
+        "phase_response": 0.1065982966683805
+      },
+      "verification_ms": 28.764113999841356,
+      "pose_error": {
+        "translation_error_m": 1255.9926017835276,
+        "rotation_error_deg": 96.00590448027884,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "query_4133",
+      "reference_id": "reference_37",
+      "rank": 1,
+      "score": 0.9700202345848083,
+      "distance_m": 2.024480243962504,
+      "verification": {
+        "overlap": 0.9375,
+        "rmse_m": 1.0245066484624636,
+        "sector_coverage": 12,
+        "yaw_rad": -0.01622350171492034,
+        "translation_xy_m": [
+          -2.02041919811698,
+          -0.013039047996390468
+        ],
+        "phase_response": 0.705788595834747
+      },
+      "verification_ms": 32.25170099995012,
+      "pose_error": {
+        "translation_error_m": 0.05533160678279042,
+        "rotation_error_deg": 0.21305809318102134,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_4133",
+      "reference_id": "reference_0",
+      "rank": 2,
+      "score": 0.9675713777542114,
+      "distance_m": 2.0231242049176754,
+      "verification": {
+        "overlap": 0.925,
+        "rmse_m": 0.9973167472205683,
+        "sector_coverage": 12,
+        "yaw_rad": -0.02145840515504769,
+        "translation_xy_m": [
+          -1.9994768636289968,
+          -0.040267536994814244
+        ],
+        "phase_response": 0.6369831874617375
+      },
+      "verification_ms": 41.24082399994222,
+      "pose_error": {
+        "translation_error_m": 0.03915448388997706,
+        "rotation_error_deg": 0.5256851974321438,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "query_4133",
+      "reference_id": "reference_4476",
+      "rank": 3,
+      "score": 0.9570407867431641,
+      "distance_m": 3.0879542652103997,
+      "verification": {
+        "overlap": 0.9125,
+        "rmse_m": 1.2094223968952278,
+        "sector_coverage": 12,
+        "yaw_rad": -0.012364101780175059,
+        "translation_xy_m": [
+          -3.087961649891848,
+          -0.0709535685018102
+        ],
+        "phase_response": 0.4608600167557597
+      },
+      "verification_ms": 28.53095199998279,
+      "pose_error": {
+        "translation_error_m": 0.01784887642995013,
+        "rotation_error_deg": 0.29034776988425853,
+        "pose_correct": true
+      }
+    }
+  ]
+}

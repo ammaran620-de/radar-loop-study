@@ -1,0 +1,15 @@
+{
+  "name": "radar-revisit-lab",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Offline radar retrieval and geometric verification research study",
+  "scripts": {
+    "test": "node test_dashboard.cjs Radar_Revisit_Lab.html && node test_loop_dashboard.cjs Radar_Loop_Study.html && node test_validation_report.cjs Radar_Validation_Report.html && node test_console.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.0"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

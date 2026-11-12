@@ -1,0 +1,2940 @@
+{
+  "stage": "heldout",
+  "gate": {
+    "overlap": 0.7,
+    "rmse_m": 1.5
+  },
+  "model": {
+    "name": "RadarLoc",
+    "upstream": "https://github.com/jac99/RadarLoc",
+    "checkpoint_sha256": "aa36dcd85b7394d8c76fb77215fef2cc21448eecab6b86c3b24a507ef42193bb",
+    "frozen": true,
+    "training": "Authors' released pretrained checkpoint; no fine-tuning on this sample",
+    "preprocessing": "Author normalization and area-resize; full Boreas range is an out-of-domain adaptation",
+    "descriptor_dimension": 256,
+    "median_forward_ms": 9.133764499893005,
+    "p95_forward_ms": 24.237181400053476,
+    "torch_version": "2.15.0+cpu"
+  },
+  "algorithm": {
+    "name": "coarse_to_fine_phase_initialized_icp",
+    "raster_resolution_m": 1.0,
+    "raster_size": 256,
+    "coarse_points": 160,
+    "coarse_iterations": 8,
+    "refine_starts": 2,
+    "refine_iterations": 25,
+    "correspondence_m": 4.0
+  },
+  "summary": {
+    "queries": 40,
+    "selected": 13,
+    "correct_pose": 13,
+    "wrong_pose": 0,
+    "abstained": 27,
+    "pose_precision": 1.0,
+    "median_translation_error_m": 0.07074228238594005,
+    "median_rotation_error_deg": 0.15873063497922288
+  },
+  "retrieval_at_25m": {
+    "eligible_queries": 33,
+    "queries": 40,
+    "coverage": 0.825,
+    "recall_at_1": 0.6666666666666666,
+    "recall_at_5": 0.7878787878787878,
+    "hits_at_1": 22,
+    "hits_at_5": 26,
+    "top1_within_radius_all_queries": 0.55,
+    "median_top1_position_error_m": 18.00414393793523,
+    "no_positive_queries": 7
+  },
+  "timing": {
+    "median_retrieval_and_top3_registration_ms": 144.7863105001943,
+    "p95_retrieval_and_top3_registration_ms": 214.68843090010512
+  },
+  "preparation_all_frames_s": 8.28336212100021,
+  "network_wall_all_frames_s": 4.690082641000117,
+  "experiment_wall_s": 19.348515227000007,
+  "records": [
+    {
+      "query_id": "heldout_0",
+      "reference_id": "reference_37",
+      "rank": 1,
+      "score": 0.9728991389274597,
+      "distance_m": 0.5460187873653559,
+      "verification": {
+        "overlap": 0.9625,
+        "rmse_m": 0.7845347217612684,
+        "sector_coverage": 12,
+        "yaw_rad": 0.02034313595664677,
+        "translation_xy_m": [
+          -0.3332910414456158,
+          0.39044000057331907
+        ],
+        "phase_response": 0.7141156327270437
+      },
+      "verification_ms": 71.01002699982928,
+      "pose_error": {
+        "translation_error_m": 0.03495638151365186,
+        "rotation_error_deg": 0.7651168871554891,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_0",
+      "reference_id": "reference_0",
+      "rank": 2,
+      "score": 0.9713212251663208,
+      "distance_m": 0.5434198809216564,
+      "verification": {
+        "overlap": 0.9575,
+        "rmse_m": 0.7432633281740612,
+        "sector_coverage": 12,
+        "yaw_rad": 0.02048814519190785,
+        "translation_xy_m": [
+          -0.3163407471282739,
+          0.3930572125398244
+        ],
+        "phase_response": 0.7198789896210656
+      },
+      "verification_ms": 52.552955000010115,
+      "pose_error": {
+        "translation_error_m": 0.04022921319993765,
+        "rotation_error_deg": 0.7607407261295018,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_0",
+      "reference_id": "reference_4476",
+      "rank": 3,
+      "score": 0.962950587272644,
+      "distance_m": 1.4723542286347093,
+      "verification": {
+        "overlap": 0.9375,
+        "rmse_m": 1.0034858330513545,
+        "sector_coverage": 12,
+        "yaw_rad": 0.011812265489090014,
+        "translation_xy_m": [
+          -1.4192998754674586,
+          0.36557181027235475
+        ],
+        "phase_response": 0.5977218442130834
+      },
+      "verification_ms": 44.17910200027109,
+      "pose_error": {
+        "translation_error_m": 0.06465266756737417,
+        "rotation_error_deg": 0.5590921038586779,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_91",
+      "reference_id": "reference_188",
+      "rank": 1,
+      "score": 0.9291075468063354,
+      "distance_m": 15.066554151978515,
+      "verification": {
+        "overlap": 0.68,
+        "rmse_m": 1.4489000008913464,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1379240099437293,
+        "translation_xy_m": [
+          13.620637111749884,
+          -1.3198214211575707
+        ],
+        "phase_response": 0.1533446661196649
+      },
+      "verification_ms": 53.191516999959276,
+      "pose_error": {
+        "translation_error_m": 1.4101958642459607,
+        "rotation_error_deg": 0.02046820291289475,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_91",
+      "reference_id": "reference_3046",
+      "rank": 2,
+      "score": 0.9276717901229858,
+      "distance_m": 1788.7647652434564,
+      "verification": {
+        "overlap": 0.385,
+        "rmse_m": 2.1187548325908034,
+        "sector_coverage": 12,
+        "yaw_rad": 0.04764879703064543,
+        "translation_xy_m": [
+          0.453321260631232,
+          -0.959946050689331
+        ],
+        "phase_response": 0.07072824344504625
+      },
+      "verification_ms": 34.7896349999246,
+      "pose_error": {
+        "translation_error_m": 1787.9601206908987,
+        "rotation_error_deg": 9.129749176436846,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_91",
+      "reference_id": "reference_112",
+      "rank": 3,
+      "score": 0.9235431551933289,
+      "distance_m": 15.992650164031229,
+      "verification": {
+        "overlap": 0.685,
+        "rmse_m": 1.7471404641754702,
+        "sector_coverage": 12,
+        "yaw_rad": 0.36615379165570133,
+        "translation_xy_m": [
+          8.863047395923315,
+          2.5853081282829655
+        ],
+        "phase_response": 0.3209921414963901
+      },
+      "verification_ms": 58.86941400012802,
+      "pose_error": {
+        "translation_error_m": 6.7975404609321135,
+        "rotation_error_deg": 10.75137411193416,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_183",
+      "reference_id": "reference_112",
+      "rank": 1,
+      "score": 0.9288740754127502,
+      "distance_m": 8.708777601368707,
+      "verification": {
+        "overlap": 0.86,
+        "rmse_m": 1.1701497985957132,
+        "sector_coverage": 12,
+        "yaw_rad": 2.825185068259905,
+        "translation_xy_m": [
+          -9.939690852393346,
+          0.03829512603057652
+        ],
+        "phase_response": 0.6028107511810958
+      },
+      "verification_ms": 57.89547799986394,
+      "pose_error": {
+        "translation_error_m": 1.2953433271151522,
+        "rotation_error_deg": 0.5030237438743137,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_183",
+      "reference_id": "reference_1993",
+      "rank": 2,
+      "score": 0.916739821434021,
+      "distance_m": 1862.0325565178466,
+      "verification": {
+        "overlap": 0.435,
+        "rmse_m": 1.711509181905525,
+        "sector_coverage": 12,
+        "yaw_rad": 2.688696475965961,
+        "translation_xy_m": [
+          -1.9863321332370312,
+          0.5582273679173896
+        ],
+        "phase_response": 0.26405987108591944
+      },
+      "verification_ms": 47.56041299970093,
+      "pose_error": {
+        "translation_error_m": 1860.168867873427,
+        "rotation_error_deg": 94.12775949029268,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_183",
+      "reference_id": "reference_2482",
+      "rank": 3,
+      "score": 0.907880425453186,
+      "distance_m": 2137.1971512169075,
+      "verification": {
+        "overlap": 0.675,
+        "rmse_m": 2.038636121451901,
+        "sector_coverage": 12,
+        "yaw_rad": 2.473263578067037,
+        "translation_xy_m": [
+          0.8040819510429777,
+          -4.57523178846401
+        ],
+        "phase_response": 0.3680762145668268
+      },
+      "verification_ms": 50.534525999864854,
+      "pose_error": {
+        "translation_error_m": 2132.2187885550525,
+        "rotation_error_deg": 98.7178584021015,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_275",
+      "reference_id": "reference_300",
+      "rank": 1,
+      "score": 0.9787175059318542,
+      "distance_m": 0.9015549716906827,
+      "verification": {
+        "overlap": 0.9275,
+        "rmse_m": 0.9209474164015168,
+        "sector_coverage": 12,
+        "yaw_rad": 0.009736090080487175,
+        "translation_xy_m": [
+          -0.8820666587001047,
+          0.2540961562690748
+        ],
+        "phase_response": 0.7349145830376074
+      },
+      "verification_ms": 42.97736499984239,
+      "pose_error": {
+        "translation_error_m": 0.057818012049327606,
+        "rotation_error_deg": 0.09300072294939439,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_275",
+      "reference_id": "reference_3460",
+      "rank": 2,
+      "score": 0.9159799218177795,
+      "distance_m": 1160.767251450875,
+      "verification": {
+        "overlap": 0.41,
+        "rmse_m": 2.082259007066765,
+        "sector_coverage": 12,
+        "yaw_rad": 0.41489738179642577,
+        "translation_xy_m": [
+          -2.7778073545697337,
+          7.118319210049014
+        ],
+        "phase_response": 0.2554609418148175
+      },
+      "verification_ms": 44.15456600008838,
+      "pose_error": {
+        "translation_error_m": 1163.5536273265047,
+        "rotation_error_deg": 156.2873794810751,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_275",
+      "reference_id": "reference_4363",
+      "rank": 3,
+      "score": 0.9074335098266602,
+      "distance_m": 37.181347116604435,
+      "verification": {
+        "overlap": 0.5175,
+        "rmse_m": 1.7009278130852905,
+        "sector_coverage": 12,
+        "yaw_rad": 0.1273274155551197,
+        "translation_xy_m": [
+          4.071769485242102,
+          4.5620942888214016
+        ],
+        "phase_response": 0.3253127832431346
+      },
+      "verification_ms": 46.10843800037401,
+      "pose_error": {
+        "translation_error_m": 35.95346387647122,
+        "rotation_error_deg": 173.5942725080298,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_366",
+      "reference_id": "reference_4287",
+      "rank": 1,
+      "score": 0.9273728132247925,
+      "distance_m": 28.104933577563912,
+      "verification": {
+        "overlap": 0.7125,
+        "rmse_m": 1.743465012986085,
+        "sector_coverage": 12,
+        "yaw_rad": 3.1220306626945553,
+        "translation_xy_m": [
+          6.264491282418415,
+          -0.9256086037482508
+        ],
+        "phase_response": 0.3749695459846407
+      },
+      "verification_ms": 73.42078200008473,
+      "pose_error": {
+        "translation_error_m": 21.818562976064896,
+        "rotation_error_deg": 22.434253889507385,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_366",
+      "reference_id": "reference_376",
+      "rank": 2,
+      "score": 0.926112174987793,
+      "distance_m": 44.09498173332534,
+      "verification": {
+        "overlap": 0.6725,
+        "rmse_m": 1.7775170795773634,
+        "sector_coverage": 12,
+        "yaw_rad": -0.17113846272042005,
+        "translation_xy_m": [
+          -0.6324887410988411,
+          0.9783722490831527
+        ],
+        "phase_response": 0.554820335120894
+      },
+      "verification_ms": 39.8366059998807,
+      "pose_error": {
+        "translation_error_m": 44.68928530168855,
+        "rotation_error_deg": 19.552157830997942,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_366",
+      "reference_id": "reference_112",
+      "rank": 3,
+      "score": 0.9036951065063477,
+      "distance_m": 304.99977197766947,
+      "verification": {
+        "overlap": 0.645,
+        "rmse_m": 2.018478574104474,
+        "sector_coverage": 12,
+        "yaw_rad": -0.11468447272758077,
+        "translation_xy_m": [
+          0.3261490482984666,
+          4.355160438482851
+        ],
+        "phase_response": 0.2684601810760796
+      },
+      "verification_ms": 76.325739999902,
+      "pose_error": {
+        "translation_error_m": 305.14679301930823,
+        "rotation_error_deg": 155.06958530455572,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_458",
+      "reference_id": "reference_526",
+      "rank": 1,
+      "score": 0.9357361197471619,
+      "distance_m": 18.169010239798524,
+      "verification": {
+        "overlap": 0.435,
+        "rmse_m": 2.304953842540629,
+        "sector_coverage": 12,
+        "yaw_rad": -1.3680085379029208,
+        "translation_xy_m": [
+          -0.04471604382974586,
+          0.4867011383988629
+        ],
+        "phase_response": 0.04089323681546375
+      },
+      "verification_ms": 57.06891899990296,
+      "pose_error": {
+        "translation_error_m": 17.795310393688627,
+        "rotation_error_deg": 157.60775815352068,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_458",
+      "reference_id": "reference_4212",
+      "rank": 2,
+      "score": 0.9333548545837402,
+      "distance_m": 15.84247254775357,
+      "verification": {
+        "overlap": 0.405,
+        "rmse_m": 2.216646007077456,
+        "sector_coverage": 11,
+        "yaw_rad": 0.30028006206276237,
+        "translation_xy_m": [
+          6.591586446710098,
+          21.488649075580845
+        ],
+        "phase_response": 0.08802094351267442
+      },
+      "verification_ms": 94.82884599992758,
+      "pose_error": {
+        "translation_error_m": 38.16152580464632,
+        "rotation_error_deg": 141.17621633816333,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_458",
+      "reference_id": "reference_3610",
+      "rank": 3,
+      "score": 0.9331812262535095,
+      "distance_m": 577.6073190118466,
+      "verification": {
+        "overlap": 0.445,
+        "rmse_m": 2.2630563265229573,
+        "sector_coverage": 12,
+        "yaw_rad": -0.5788466112372795,
+        "translation_xy_m": [
+          0.8423065540283546,
+          0.5630245355048304
+        ],
+        "phase_response": 0.006027435068972409
+      },
+      "verification_ms": 39.34827300008692,
+      "pose_error": {
+        "translation_error_m": 576.6895152196364,
+        "rotation_error_deg": 142.9829799730791,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_550",
+      "reference_id": "reference_601",
+      "rank": 1,
+      "score": 0.9374985694885254,
+      "distance_m": 161.30297808654728,
+      "verification": {
+        "overlap": 0.4125,
+        "rmse_m": 2.2444462521089674,
+        "sector_coverage": 12,
+        "yaw_rad": -2.9787996631292093,
+        "translation_xy_m": [
+          1.4893357300848253,
+          1.1036784882766324
+        ],
+        "phase_response": 0.10619455750565976
+      },
+      "verification_ms": 74.03144699992481,
+      "pose_error": {
+        "translation_error_m": 159.79900240038805,
+        "rotation_error_deg": 166.4865147212391,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_550",
+      "reference_id": "reference_3610",
+      "rank": 2,
+      "score": 0.932619571685791,
+      "distance_m": 264.13044602687665,
+      "verification": {
+        "overlap": 0.42,
+        "rmse_m": 2.197762585043907,
+        "sector_coverage": 12,
+        "yaw_rad": 3.1087966492384282,
+        "translation_xy_m": [
+          -3.2489794669240775,
+          4.658732311807785
+        ],
+        "phase_response": 0.04138973471708596
+      },
+      "verification_ms": 171.022666999761,
+      "pose_error": {
+        "translation_error_m": 267.4562822888028,
+        "rotation_error_deg": 8.488618971451485,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_550",
+      "reference_id": "reference_977",
+      "rank": 3,
+      "score": 0.9321134090423584,
+      "distance_m": 21.479178549102166,
+      "verification": {
+        "overlap": 0.4875,
+        "rmse_m": 2.2196207306654903,
+        "sector_coverage": 12,
+        "yaw_rad": -2.827189590980081,
+        "translation_xy_m": [
+          0.397881030599164,
+          -0.5121650814034514
+        ],
+        "phase_response": 0.010737398260971531
+      },
+      "verification_ms": 38.16639900014707,
+      "pose_error": {
+        "translation_error_m": 21.859046945519694,
+        "rotation_error_deg": 164.51644764710534,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_641",
+      "reference_id": "reference_940",
+      "rank": 1,
+      "score": 0.9569507837295532,
+      "distance_m": 6.491971182292609,
+      "verification": {
+        "overlap": 0.735,
+        "rmse_m": 1.3793732100061813,
+        "sector_coverage": 12,
+        "yaw_rad": 0.022991306796124097,
+        "translation_xy_m": [
+          -6.312592414280149,
+          -0.29546238564218635
+        ],
+        "phase_response": 0.22889991430565715
+      },
+      "verification_ms": 54.60923600003298,
+      "pose_error": {
+        "translation_error_m": 0.20036004012010905,
+        "rotation_error_deg": 0.15873063497922288,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_641",
+      "reference_id": "reference_977",
+      "rank": 2,
+      "score": 0.9559292793273926,
+      "distance_m": 6.491970434777028,
+      "verification": {
+        "overlap": 0.7525,
+        "rmse_m": 1.285336512643768,
+        "sector_coverage": 12,
+        "yaw_rad": 0.02298168254587875,
+        "translation_xy_m": [
+          -6.398195108378225,
+          -0.2766789218123114
+        ],
+        "phase_response": 0.23654046092997305
+      },
+      "verification_ms": 44.7249680000823,
+      "pose_error": {
+        "translation_error_m": 0.1186911583012012,
+        "rotation_error_deg": 0.15974777473382287,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_641",
+      "reference_id": "reference_827",
+      "rank": 3,
+      "score": 0.9550907611846924,
+      "distance_m": 6.491954337217864,
+      "verification": {
+        "overlap": 0.7225,
+        "rmse_m": 1.3150369507057118,
+        "sector_coverage": 12,
+        "yaw_rad": 0.02049744053052147,
+        "translation_xy_m": [
+          -6.328292710601451,
+          -0.26439793755011437
+        ],
+        "phase_response": 0.43050733424024656
+      },
+      "verification_ms": 45.18822999989425,
+      "pose_error": {
+        "translation_error_m": 0.1731158147947647,
+        "rotation_error_deg": 0.019479807498031253,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_733",
+      "reference_id": "reference_1053",
+      "rank": 1,
+      "score": 0.943621039390564,
+      "distance_m": 8.93817805832687,
+      "verification": {
+        "overlap": 0.685,
+        "rmse_m": 1.6553417492694156,
+        "sector_coverage": 12,
+        "yaw_rad": -0.009631953150125362,
+        "translation_xy_m": [
+          8.995898389371309,
+          0.32890764144264134
+        ],
+        "phase_response": 0.41001015924848616
+      },
+      "verification_ms": 42.61598800030697,
+      "pose_error": {
+        "translation_error_m": 0.09982828862740585,
+        "rotation_error_deg": 0.05387219948898457,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_733",
+      "reference_id": "reference_4062",
+      "rank": 2,
+      "score": 0.9378282427787781,
+      "distance_m": 92.66122469326565,
+      "verification": {
+        "overlap": 0.47,
+        "rmse_m": 2.3520436803767897,
+        "sector_coverage": 12,
+        "yaw_rad": -0.009646721272853953,
+        "translation_xy_m": [
+          -2.6966574439429096,
+          1.6432339745943416
+        ],
+        "phase_response": 0.07405969058163464
+      },
+      "verification_ms": 59.11891999994623,
+      "pose_error": {
+        "translation_error_m": 90.10020311958452,
+        "rotation_error_deg": 173.08165119647174,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_733",
+      "reference_id": "reference_4024",
+      "rank": 3,
+      "score": 0.9355126619338989,
+      "distance_m": 19.867321858707236,
+      "verification": {
+        "overlap": 0.45,
+        "rmse_m": 2.479100396298157,
+        "sector_coverage": 12,
+        "yaw_rad": -0.3216097160363129,
+        "translation_xy_m": [
+          -0.9293560832919707,
+          -0.3089291171094785
+        ],
+        "phase_response": 0.11300730786751956
+      },
+      "verification_ms": 39.66609700000845,
+      "pose_error": {
+        "translation_error_m": 18.952344420953292,
+        "rotation_error_deg": 162.7549816707897,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_825",
+      "reference_id": "reference_1128",
+      "rank": 1,
+      "score": 0.9562622308731079,
+      "distance_m": 5.037663319490329,
+      "verification": {
+        "overlap": 0.675,
+        "rmse_m": 1.719587351527586,
+        "sector_coverage": 12,
+        "yaw_rad": -0.016166424430107965,
+        "translation_xy_m": [
+          -4.411578735965276,
+          -0.934445030232258
+        ],
+        "phase_response": 0.13951413141330704
+      },
+      "verification_ms": 43.58391400000983,
+      "pose_error": {
+        "translation_error_m": 0.6835685719784446,
+        "rotation_error_deg": 1.269851047089258,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_825",
+      "reference_id": "reference_1241",
+      "rank": 2,
+      "score": 0.9546465873718262,
+      "distance_m": 5.037906421861141,
+      "verification": {
+        "overlap": 0.6475,
+        "rmse_m": 1.3243904128875894,
+        "sector_coverage": 12,
+        "yaw_rad": 0.007131108710922462,
+        "translation_xy_m": [
+          -5.000759490683948,
+          -0.5669348642647827
+        ],
+        "phase_response": 0.2930104580009356
+      },
+      "verification_ms": 43.42999099981171,
+      "pose_error": {
+        "translation_error_m": 0.024706854865498788,
+        "rotation_error_deg": 0.0624591316930483,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_825",
+      "reference_id": "reference_1203",
+      "rank": 3,
+      "score": 0.9533392190933228,
+      "distance_m": 5.037905164239213,
+      "verification": {
+        "overlap": 0.6375,
+        "rmse_m": 1.4394637509705839,
+        "sector_coverage": 12,
+        "yaw_rad": 0.004312696826832901,
+        "translation_xy_m": [
+          -5.029268292927323,
+          -0.5835391618366212
+        ],
+        "phase_response": 0.05471058189868927
+      },
+      "verification_ms": 56.878773999869736,
+      "pose_error": {
+        "translation_error_m": 0.027376849792606052,
+        "rotation_error_deg": 0.09666709050709707,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_916",
+      "reference_id": "reference_1278",
+      "rank": 1,
+      "score": 0.9330891966819763,
+      "distance_m": 17.839277636071934,
+      "verification": {
+        "overlap": 0.625,
+        "rmse_m": 1.5391551369333625,
+        "sector_coverage": 12,
+        "yaw_rad": -0.005249728003044588,
+        "translation_xy_m": [
+          17.63153901333984,
+          -0.005669940014086495
+        ],
+        "phase_response": 0.3218425348168239
+      },
+      "verification_ms": 44.316429999980755,
+      "pose_error": {
+        "translation_error_m": 0.3616080119879221,
+        "rotation_error_deg": 0.39392257558406263,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_916",
+      "reference_id": "reference_1090",
+      "rank": 2,
+      "score": 0.9298526048660278,
+      "distance_m": 108.42742433720363,
+      "verification": {
+        "overlap": 0.5475,
+        "rmse_m": 2.0193553821367147,
+        "sector_coverage": 11,
+        "yaw_rad": -0.010416570374923701,
+        "translation_xy_m": [
+          -0.1710554014968048,
+          -2.1563570780142705
+        ],
+        "phase_response": 0.007898029289208353
+      },
+      "verification_ms": 51.86483199986469,
+      "pose_error": {
+        "translation_error_m": 108.65840467586281,
+        "rotation_error_deg": 0.812253534820615,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_916",
+      "reference_id": "reference_601",
+      "rank": 3,
+      "score": 0.9215637445449829,
+      "distance_m": 447.79844942925934,
+      "verification": {
+        "overlap": 0.4375,
+        "rmse_m": 2.3838833966799258,
+        "sector_coverage": 12,
+        "yaw_rad": 0.3277215636586276,
+        "translation_xy_m": [
+          0.7149656975287084,
+          0.025876425214345786
+        ],
+        "phase_response": 0.06606538651976734
+      },
+      "verification_ms": 53.669909999825904,
+      "pose_error": {
+        "translation_error_m": 447.0849310755911,
+        "rotation_error_deg": 29.897626296946594,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1008",
+      "reference_id": "reference_1429",
+      "rank": 1,
+      "score": 0.9732012152671814,
+      "distance_m": 1.6143667813016964,
+      "verification": {
+        "overlap": 0.8625,
+        "rmse_m": 1.1100450052108253,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0037239079881663164,
+        "translation_xy_m": [
+          1.6028421860949376,
+          -0.09132014706006335
+        ],
+        "phase_response": 0.3463731030933559
+      },
+      "verification_ms": 161.06090899984338,
+      "pose_error": {
+        "translation_error_m": 0.06537834630453684,
+        "rotation_error_deg": 0.10665066950805493,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1008",
+      "reference_id": "reference_1391",
+      "rank": 2,
+      "score": 0.9525799751281738,
+      "distance_m": 5.368311277631146,
+      "verification": {
+        "overlap": 0.8325,
+        "rmse_m": 1.166521616466751,
+        "sector_coverage": 12,
+        "yaw_rad": 0.001992238347467079,
+        "translation_xy_m": [
+          5.527321178918697,
+          0.0474072383145554
+        ],
+        "phase_response": 0.25265675655100495
+      },
+      "verification_ms": 48.94184300019333,
+      "pose_error": {
+        "translation_error_m": 0.1679146121561249,
+        "rotation_error_deg": 0.18764928448642657,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1008",
+      "reference_id": "reference_1354",
+      "rank": 3,
+      "score": 0.9435513019561768,
+      "distance_m": 16.338467253855463,
+      "verification": {
+        "overlap": 0.755,
+        "rmse_m": 1.3757239551128586,
+        "sector_coverage": 12,
+        "yaw_rad": -0.009538854068937551,
+        "translation_xy_m": [
+          16.158624243205573,
+          0.22730118825038254
+        ],
+        "phase_response": 0.44268885045312345
+      },
+      "verification_ms": 43.359515000247484,
+      "pose_error": {
+        "translation_error_m": 0.2021693244094251,
+        "rotation_error_deg": 0.07728858785337885,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1100",
+      "reference_id": "reference_1466",
+      "rank": 1,
+      "score": 0.9621367454528809,
+      "distance_m": 3.839705753959228,
+      "verification": {
+        "overlap": 0.84,
+        "rmse_m": 1.1957779162640885,
+        "sector_coverage": 12,
+        "yaw_rad": 0.2904537130132809,
+        "translation_xy_m": [
+          -3.7107217705567894,
+          -0.06057342726051953
+        ],
+        "phase_response": 0.6314739268273115
+      },
+      "verification_ms": 49.63807500007533,
+      "pose_error": {
+        "translation_error_m": 0.13918663115091903,
+        "rotation_error_deg": 0.5259151401728978,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1100",
+      "reference_id": "reference_1354",
+      "rank": 2,
+      "score": 0.9388413429260254,
+      "distance_m": 26.87064363180023,
+      "verification": {
+        "overlap": 0.6925,
+        "rmse_m": 1.5807246500273586,
+        "sector_coverage": 12,
+        "yaw_rad": -0.10265352075699975,
+        "translation_xy_m": [
+          26.63763242682177,
+          -0.10333732916297156
+        ],
+        "phase_response": 0.2581675173714757
+      },
+      "verification_ms": 52.3589469999024,
+      "pose_error": {
+        "translation_error_m": 0.24058453705219443,
+        "rotation_error_deg": 0.2530583671108134,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1100",
+      "reference_id": "reference_2557",
+      "rank": 3,
+      "score": 0.9355916976928711,
+      "distance_m": 1032.5901722994988,
+      "verification": {
+        "overlap": 0.54,
+        "rmse_m": 2.1310878992138007,
+        "sector_coverage": 12,
+        "yaw_rad": 0.39541300583042394,
+        "translation_xy_m": [
+          -7.92347822880408,
+          -2.823695304474295
+        ],
+        "phase_response": 0.12102871236857027
+      },
+      "verification_ms": 48.81914699990375,
+      "pose_error": {
+        "translation_error_m": 1024.1670441341253,
+        "rotation_error_deg": 5.075904691825521,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1191",
+      "reference_id": "reference_3347",
+      "rank": 1,
+      "score": 0.9522364139556885,
+      "distance_m": 8.748862389980106,
+      "verification": {
+        "overlap": 0.835,
+        "rmse_m": 1.541887141296433,
+        "sector_coverage": 12,
+        "yaw_rad": 3.107611849523412,
+        "translation_xy_m": [
+          -7.845652264033121,
+          -5.044012643184956
+        ],
+        "phase_response": 0.5862039453350008
+      },
+      "verification_ms": 39.62179300015123,
+      "pose_error": {
+        "translation_error_m": 0.7913382977608584,
+        "rotation_error_deg": 0.7103626705955228,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1191",
+      "reference_id": "reference_1617",
+      "rank": 2,
+      "score": 0.9456291198730469,
+      "distance_m": 218.08176367257235,
+      "verification": {
+        "overlap": 0.6075,
+        "rmse_m": 2.2156870969854023,
+        "sector_coverage": 12,
+        "yaw_rad": -2.749753373806495,
+        "translation_xy_m": [
+          -0.21132822700336748,
+          -0.30263356781642875
+        ],
+        "phase_response": 0.09952370123937726
+      },
+      "verification_ms": 62.81396599979416,
+      "pose_error": {
+        "translation_error_m": 217.81005567942847,
+        "rotation_error_deg": 174.56635194498176,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1191",
+      "reference_id": "reference_1654",
+      "rank": 3,
+      "score": 0.9420979022979736,
+      "distance_m": 351.92879646245564,
+      "verification": {
+        "overlap": 0.565,
+        "rmse_m": 2.0769345933489207,
+        "sector_coverage": 12,
+        "yaw_rad": -0.08279052028433675,
+        "translation_xy_m": [
+          2.4092041325822056,
+          -0.5984929073005228
+        ],
+        "phase_response": 0.08547813876066357
+      },
+      "verification_ms": 41.71135999968101,
+      "pose_error": {
+        "translation_error_m": 354.3775607733105,
+        "rotation_error_deg": 14.914685057380204,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1283",
+      "reference_id": "reference_2783",
+      "rank": 1,
+      "score": 0.936958372592926,
+      "distance_m": 666.8423631470931,
+      "verification": {
+        "overlap": 0.545,
+        "rmse_m": 2.035793833515017,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1293807540603695,
+        "translation_xy_m": [
+          1.1972400004467274,
+          -0.3199827331714358
+        ],
+        "phase_response": 0.12488512881100178
+      },
+      "verification_ms": 49.119687999791495,
+      "pose_error": {
+        "translation_error_m": 665.6711088617676,
+        "rotation_error_deg": 148.72340202039962,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1283",
+      "reference_id": "reference_1579",
+      "rank": 2,
+      "score": 0.9363481998443604,
+      "distance_m": 232.06091706692828,
+      "verification": {
+        "overlap": 0.5675,
+        "rmse_m": 2.128514613956496,
+        "sector_coverage": 12,
+        "yaw_rad": 2.832356995641751,
+        "translation_xy_m": [
+          0.3444896129738437,
+          -3.989753362630315
+        ],
+        "phase_response": 0.07649689691606909
+      },
+      "verification_ms": 55.1774799996565,
+      "pose_error": {
+        "translation_error_m": 231.49628214949058,
+        "rotation_error_deg": 164.6027593161695,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1283",
+      "reference_id": "reference_3272",
+      "rank": 3,
+      "score": 0.9351071715354919,
+      "distance_m": 52.84860149943155,
+      "verification": {
+        "overlap": 0.53,
+        "rmse_m": 2.0440695270779563,
+        "sector_coverage": 12,
+        "yaw_rad": -3.0129858988594975,
+        "translation_xy_m": [
+          -2.021459731683803,
+          -2.247899795625249
+        ],
+        "phase_response": 0.0777786182006821
+      },
+      "verification_ms": 56.4075940001203,
+      "pose_error": {
+        "translation_error_m": 50.65782398794754,
+        "rotation_error_deg": 6.552997061287971,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1375",
+      "reference_id": "reference_3347",
+      "rank": 1,
+      "score": 0.9434967637062073,
+      "distance_m": 544.5770794483877,
+      "verification": {
+        "overlap": 0.64,
+        "rmse_m": 2.053483376257988,
+        "sector_coverage": 12,
+        "yaw_rad": -0.0904296359977263,
+        "translation_xy_m": [
+          11.64431446781654,
+          -0.06974997805376457
+        ],
+        "phase_response": 0.24216639233054593
+      },
+      "verification_ms": 44.83521300016946,
+      "pose_error": {
+        "translation_error_m": 555.9901402909069,
+        "rotation_error_deg": 172.90749811668647,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1375",
+      "reference_id": "reference_2557",
+      "rank": 2,
+      "score": 0.9394828081130981,
+      "distance_m": 1108.6738870499364,
+      "verification": {
+        "overlap": 0.5875,
+        "rmse_m": 2.0571284994972774,
+        "sector_coverage": 12,
+        "yaw_rad": 0.08240130507935797,
+        "translation_xy_m": [
+          -0.6392760210900497,
+          -0.6804872162819904
+        ],
+        "phase_response": 0.05661951319780201
+      },
+      "verification_ms": 50.22257000018726,
+      "pose_error": {
+        "translation_error_m": 1107.768205341774,
+        "rotation_error_deg": 64.91418615720868,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1375",
+      "reference_id": "reference_3197",
+      "rank": 3,
+      "score": 0.9381022453308105,
+      "distance_m": 61.55067306390583,
+      "verification": {
+        "overlap": 0.735,
+        "rmse_m": 1.8948567099036575,
+        "sector_coverage": 12,
+        "yaw_rad": -0.06212204158534971,
+        "translation_xy_m": [
+          4.3231743192657355,
+          0.27366339575644344
+        ],
+        "phase_response": 0.3152822970878333
+      },
+      "verification_ms": 55.329850999896735,
+      "pose_error": {
+        "translation_error_m": 65.87835627868519,
+        "rotation_error_deg": 174.4826710072666,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1466",
+      "reference_id": "reference_3046",
+      "rank": 1,
+      "score": 0.9513126611709595,
+      "distance_m": 4.423333484707329,
+      "verification": {
+        "overlap": 0.85,
+        "rmse_m": 1.5071521317992014,
+        "sector_coverage": 12,
+        "yaw_rad": 3.028649803242695,
+        "translation_xy_m": [
+          2.3193020134618982,
+          -3.157944008957177
+        ],
+        "phase_response": 0.38286214298568666
+      },
+      "verification_ms": 41.44868899993526,
+      "pose_error": {
+        "translation_error_m": 0.6135372233379203,
+        "rotation_error_deg": 0.44570200669924626,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1466",
+      "reference_id": "reference_3272",
+      "rank": 2,
+      "score": 0.935758113861084,
+      "distance_m": 466.49120074482084,
+      "verification": {
+        "overlap": 0.5175,
+        "rmse_m": 2.356797269323095,
+        "sector_coverage": 12,
+        "yaw_rad": -2.972553310012996,
+        "translation_xy_m": [
+          1.8160473934546495,
+          -2.69959554719806
+        ],
+        "phase_response": 0.055681539117358625
+      },
+      "verification_ms": 46.95150299994566,
+      "pose_error": {
+        "translation_error_m": 467.1914514067821,
+        "rotation_error_deg": 62.1108053852826,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1466",
+      "reference_id": "reference_1654",
+      "rank": 3,
+      "score": 0.9343246817588806,
+      "distance_m": 383.542740103773,
+      "verification": {
+        "overlap": 0.4975,
+        "rmse_m": 2.0173578636125606,
+        "sector_coverage": 12,
+        "yaw_rad": -0.11957655552058477,
+        "translation_xy_m": [
+          -2.873441955421721,
+          0.8731509869517612
+        ],
+        "phase_response": 0.24986306601203978
+      },
+      "verification_ms": 52.907336999851395,
+      "pose_error": {
+        "translation_error_m": 385.95016410526887,
+        "rotation_error_deg": 76.33994062153413,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1558",
+      "reference_id": "reference_1955",
+      "rank": 1,
+      "score": 0.9495307207107544,
+      "distance_m": 4.90916260207726,
+      "verification": {
+        "overlap": 0.8675,
+        "rmse_m": 1.276089437416661,
+        "sector_coverage": 12,
+        "yaw_rad": -0.002227361979988604,
+        "translation_xy_m": [
+          4.929025698822745,
+          -0.12752099493025795
+        ],
+        "phase_response": 0.6119379851734266
+      },
+      "verification_ms": 46.69689499996821,
+      "pose_error": {
+        "translation_error_m": 0.028576055241829587,
+        "rotation_error_deg": 0.15044430565159664,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1558",
+      "reference_id": "reference_1918",
+      "rank": 2,
+      "score": 0.937248945236206,
+      "distance_m": 46.98143862182453,
+      "verification": {
+        "overlap": 0.5225,
+        "rmse_m": 2.305916055348122,
+        "sector_coverage": 12,
+        "yaw_rad": 2.981715848293142,
+        "translation_xy_m": [
+          0.23915371036719035,
+          0.1593626587506615
+        ],
+        "phase_response": 0.07814558036625385
+      },
+      "verification_ms": 59.35556100030226,
+      "pose_error": {
+        "translation_error_m": 46.737532612603864,
+        "rotation_error_deg": 172.34877382651115,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1558",
+      "reference_id": "reference_1617",
+      "rank": 3,
+      "score": 0.9361203908920288,
+      "distance_m": 490.61408468846287,
+      "verification": {
+        "overlap": 0.62,
+        "rmse_m": 2.113478357839229,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0977337434121675,
+        "translation_xy_m": [
+          -5.660658729937958,
+          -2.902859593538315
+        ],
+        "phase_response": 0.18673489388311282
+      },
+      "verification_ms": 49.042815000120754,
+      "pose_error": {
+        "translation_error_m": 496.7197764233637,
+        "rotation_error_deg": 143.76714277689615,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1650",
+      "reference_id": "reference_1579",
+      "rank": 1,
+      "score": 0.943544864654541,
+      "distance_m": 655.4200164992907,
+      "verification": {
+        "overlap": 0.665,
+        "rmse_m": 1.9779129747105326,
+        "sector_coverage": 12,
+        "yaw_rad": -0.16073401570055657,
+        "translation_xy_m": [
+          5.32523643855243,
+          0.37852210745309206
+        ],
+        "phase_response": 0.26465244335122406
+      },
+      "verification_ms": 62.088610000046174,
+      "pose_error": {
+        "translation_error_m": 652.1109987745035,
+        "rotation_error_deg": 133.77509388253256,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1650",
+      "reference_id": "reference_3272",
+      "rank": 2,
+      "score": 0.9434539079666138,
+      "distance_m": 596.2383765905228,
+      "verification": {
+        "overlap": 0.61,
+        "rmse_m": 2.374193694428437,
+        "sector_coverage": 12,
+        "yaw_rad": 3.0204724594042056,
+        "translation_xy_m": [
+          -1.1939994177856244,
+          -2.598721166775906
+        ],
+        "phase_response": 0.12834550793922972
+      },
+      "verification_ms": 38.39573699997345,
+      "pose_error": {
+        "translation_error_m": 593.3301214732476,
+        "rotation_error_deg": 134.60370643860963,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1650",
+      "reference_id": "reference_3197",
+      "rank": 3,
+      "score": 0.9433727264404297,
+      "distance_m": 556.6506302949673,
+      "verification": {
+        "overlap": 0.6775,
+        "rmse_m": 2.18177807540238,
+        "sector_coverage": 12,
+        "yaw_rad": 0.006747109546341744,
+        "translation_xy_m": [
+          1.933850099009154,
+          0.05329926436122666
+        ],
+        "phase_response": 0.08200114103965461
+      },
+      "verification_ms": 38.05891899992275,
+      "pose_error": {
+        "translation_error_m": 556.8479615776532,
+        "rotation_error_deg": 64.64021305937122,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1741",
+      "reference_id": "reference_3460",
+      "rank": 1,
+      "score": 0.9211227893829346,
+      "distance_m": 892.6531234556005,
+      "verification": {
+        "overlap": 0.495,
+        "rmse_m": 2.297678036860371,
+        "sector_coverage": 12,
+        "yaw_rad": 0.26049518623860685,
+        "translation_xy_m": [
+          0.9273192430513573,
+          2.737958413508445
+        ],
+        "phase_response": 0.14732369140256196
+      },
+      "verification_ms": 53.70627699994657,
+      "pose_error": {
+        "translation_error_m": 891.9542481884125,
+        "rotation_error_deg": 153.57577932646652,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1741",
+      "reference_id": "reference_300",
+      "rank": 2,
+      "score": 0.9174413681030273,
+      "distance_m": 2002.8907454410191,
+      "verification": {
+        "overlap": 0.6175,
+        "rmse_m": 1.9136148685517596,
+        "sector_coverage": 12,
+        "yaw_rad": 0.06261038418981436,
+        "translation_xy_m": [
+          -0.05305282639099808,
+          -1.703726391772222
+        ],
+        "phase_response": 0.24047559616155922
+      },
+      "verification_ms": 64.68649999987974,
+      "pose_error": {
+        "translation_error_m": 2002.5947686257816,
+        "rotation_error_deg": 38.410901714913116,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1741",
+      "reference_id": "reference_2181",
+      "rank": 3,
+      "score": 0.9151229858398438,
+      "distance_m": 49.7553357212445,
+      "verification": {
+        "overlap": 0.6825,
+        "rmse_m": 1.9121334351276056,
+        "sector_coverage": 12,
+        "yaw_rad": 0.005442749217467749,
+        "translation_xy_m": [
+          1.1146052669442463,
+          -0.3431169476839363
+        ],
+        "phase_response": 0.2970022573135793
+      },
+      "verification_ms": 55.66545000010592,
+      "pose_error": {
+        "translation_error_m": 50.86751019113833,
+        "rotation_error_deg": 0.023338860976855492,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1833",
+      "reference_id": "reference_2256",
+      "rank": 1,
+      "score": 0.9749985933303833,
+      "distance_m": 1.9743024232005766,
+      "verification": {
+        "overlap": 0.9025,
+        "rmse_m": 0.9143572677126444,
+        "sector_coverage": 12,
+        "yaw_rad": -0.008769518326707117,
+        "translation_xy_m": [
+          1.829488288389101,
+          0.48789913621526787
+        ],
+        "phase_response": 0.8580840551294386
+      },
+      "verification_ms": 46.810136000203784,
+      "pose_error": {
+        "translation_error_m": 0.09891930014750842,
+        "rotation_error_deg": 0.12756358111091137,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_1833",
+      "reference_id": "reference_2332",
+      "rank": 2,
+      "score": 0.9388914108276367,
+      "distance_m": 155.26790991451657,
+      "verification": {
+        "overlap": 0.585,
+        "rmse_m": 2.1833908468210312,
+        "sector_coverage": 12,
+        "yaw_rad": -0.10380694011551937,
+        "translation_xy_m": [
+          -2.990155693549576,
+          0.501441849015897
+        ],
+        "phase_response": 0.15325820865109563
+      },
+      "verification_ms": 39.927575000092475,
+      "pose_error": {
+        "translation_error_m": 152.47968161667674,
+        "rotation_error_deg": 36.68966394243246,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1833",
+      "reference_id": "reference_2821",
+      "rank": 3,
+      "score": 0.938724935054779,
+      "distance_m": 492.5572036093098,
+      "verification": {
+        "overlap": 0.66,
+        "rmse_m": 2.038207156768493,
+        "sector_coverage": 12,
+        "yaw_rad": -3.0696506645013604,
+        "translation_xy_m": [
+          1.8836422847683145,
+          -5.831046443212889
+        ],
+        "phase_response": 0.15950774552766234
+      },
+      "verification_ms": 50.69487600030698,
+      "pose_error": {
+        "translation_error_m": 494.36566591401726,
+        "rotation_error_deg": 4.563642072965411,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1925",
+      "reference_id": "reference_2745",
+      "rank": 1,
+      "score": 0.9453475475311279,
+      "distance_m": 478.75276093897463,
+      "verification": {
+        "overlap": 0.645,
+        "rmse_m": 2.2093767252176826,
+        "sector_coverage": 12,
+        "yaw_rad": -0.269075693365613,
+        "translation_xy_m": [
+          -1.068880741789079,
+          -1.3675652210215445
+        ],
+        "phase_response": 0.06149146053940058
+      },
+      "verification_ms": 55.260550000184594,
+      "pose_error": {
+        "translation_error_m": 477.50840234526106,
+        "rotation_error_deg": 43.68909174743935,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1925",
+      "reference_id": "reference_1654",
+      "rank": 2,
+      "score": 0.9400081038475037,
+      "distance_m": 1082.245333516863,
+      "verification": {
+        "overlap": 0.565,
+        "rmse_m": 2.183255066077052,
+        "sector_coverage": 12,
+        "yaw_rad": -0.12662795215162753,
+        "translation_xy_m": [
+          -3.764476839189585,
+          1.0882312850153781
+        ],
+        "phase_response": 0.11491540272254497
+      },
+      "verification_ms": 55.9216749998086,
+      "pose_error": {
+        "translation_error_m": 1079.13126265683,
+        "rotation_error_deg": 94.28132150299562,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_1925",
+      "reference_id": "reference_3272",
+      "rank": 3,
+      "score": 0.9363283514976501,
+      "distance_m": 1051.6934546561852,
+      "verification": {
+        "overlap": 0.49,
+        "rmse_m": 2.155237790373229,
+        "sector_coverage": 11,
+        "yaw_rad": 0.06865890108043278,
+        "translation_xy_m": [
+          0.2961705789317773,
+          -0.8181990612675427
+        ],
+        "phase_response": 0.049640520475804806
+      },
+      "verification_ms": 45.25692599963804,
+      "pose_error": {
+        "translation_error_m": 1050.8222162716095,
+        "rotation_error_deg": 76.81725857625626,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2016",
+      "reference_id": "reference_2557",
+      "rank": 1,
+      "score": 0.9348154664039612,
+      "distance_m": 170.31006096539267,
+      "verification": {
+        "overlap": 0.4275,
+        "rmse_m": 2.1562429717778686,
+        "sector_coverage": 11,
+        "yaw_rad": -2.6996261502501038,
+        "translation_xy_m": [
+          0.09977903350335204,
+          -1.2245031388394876
+        ],
+        "phase_response": 0.1897013788111508
+      },
+      "verification_ms": 57.83070699999371,
+      "pose_error": {
+        "translation_error_m": 170.92814635938808,
+        "rotation_error_deg": 93.61602371944626,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2016",
+      "reference_id": "reference_3309",
+      "rank": 2,
+      "score": 0.9336363673210144,
+      "distance_m": 917.0628332679065,
+      "verification": {
+        "overlap": 0.535,
+        "rmse_m": 2.0820896825894497,
+        "sector_coverage": 11,
+        "yaw_rad": 2.925022696693493,
+        "translation_xy_m": [
+          -0.853733231885278,
+          -4.115139415438143
+        ],
+        "phase_response": 0.31731504877097905
+      },
+      "verification_ms": 49.440825000147015,
+      "pose_error": {
+        "translation_error_m": 913.5479050421001,
+        "rotation_error_deg": 17.130089407667537,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2016",
+      "reference_id": "reference_338",
+      "rank": 3,
+      "score": 0.9286718368530273,
+      "distance_m": 2036.999882243482,
+      "verification": {
+        "overlap": 0.4525,
+        "rmse_m": 1.8967856189604397,
+        "sector_coverage": 9,
+        "yaw_rad": 1.7166488150569574,
+        "translation_xy_m": [
+          -2.0922561941514104,
+          1.021573522454985
+        ],
+        "phase_response": 0.18943026033230126
+      },
+      "verification_ms": 46.42653600012636,
+      "pose_error": {
+        "translation_error_m": 2038.7053390894905,
+        "rotation_error_deg": 173.50596573829324,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2108",
+      "reference_id": "reference_2557",
+      "rank": 1,
+      "score": 0.942010223865509,
+      "distance_m": 18.785961659772326,
+      "verification": {
+        "overlap": 0.7525,
+        "rmse_m": 1.5158143946258271,
+        "sector_coverage": 12,
+        "yaw_rad": 0.37094145305158976,
+        "translation_xy_m": [
+          -18.078316735365622,
+          -4.098830604171942
+        ],
+        "phase_response": 0.2650793045759201
+      },
+      "verification_ms": 45.689279999805876,
+      "pose_error": {
+        "translation_error_m": 0.2584747330650292,
+        "rotation_error_deg": 0.3484762159519539,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_2108",
+      "reference_id": "reference_1918",
+      "rank": 2,
+      "score": 0.938935399055481,
+      "distance_m": 968.8972747417516,
+      "verification": {
+        "overlap": 0.5975,
+        "rmse_m": 1.9642114852725339,
+        "sector_coverage": 12,
+        "yaw_rad": -2.912194857419255,
+        "translation_xy_m": [
+          -7.1741142440837775,
+          -5.280930228098165
+        ],
+        "phase_response": 0.15752650040667504
+      },
+      "verification_ms": 39.28982800016456,
+      "pose_error": {
+        "translation_error_m": 974.1975737055756,
+        "rotation_error_deg": 104.49168492155566,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2108",
+      "reference_id": "reference_2520",
+      "rank": 3,
+      "score": 0.938301146030426,
+      "distance_m": 54.48589189763507,
+      "verification": {
+        "overlap": 0.69,
+        "rmse_m": 1.8022434295590612,
+        "sector_coverage": 12,
+        "yaw_rad": 0.16153739256914879,
+        "translation_xy_m": [
+          -4.431348696835052,
+          1.65528330522181
+        ],
+        "phase_response": 0.13944124476984143
+      },
+      "verification_ms": 42.25840400022207,
+      "pose_error": {
+        "translation_error_m": 58.774318795053254,
+        "rotation_error_deg": 4.717115920670612,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2200",
+      "reference_id": "reference_2256",
+      "rank": 1,
+      "score": 0.9512847661972046,
+      "distance_m": 4.913357067971803,
+      "verification": {
+        "overlap": 0.86,
+        "rmse_m": 1.5170282784473457,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1333787848414243,
+        "translation_xy_m": [
+          1.548939102566488,
+          -4.635666683816038
+        ],
+        "phase_response": 0.5139740951126441
+      },
+      "verification_ms": 46.72884899991914,
+      "pose_error": {
+        "translation_error_m": 0.5340601130567881,
+        "rotation_error_deg": 0.6468658856225628,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_2200",
+      "reference_id": "reference_2332",
+      "rank": 2,
+      "score": 0.9356551170349121,
+      "distance_m": 156.00691810390836,
+      "verification": {
+        "overlap": 0.5225,
+        "rmse_m": 2.3251745484950233,
+        "sector_coverage": 12,
+        "yaw_rad": -3.1209348464211155,
+        "translation_xy_m": [
+          -1.350290081446248,
+          -2.0806398817525573
+        ],
+        "phase_response": 0.004181930795311928
+      },
+      "verification_ms": 57.89611199998035,
+      "pose_error": {
+        "translation_error_m": 155.93727879705165,
+        "rotation_error_deg": 43.61956258895275,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2200",
+      "reference_id": "reference_1993",
+      "rank": 3,
+      "score": 0.9331825375556946,
+      "distance_m": 758.1427191625471,
+      "verification": {
+        "overlap": 0.5325,
+        "rmse_m": 2.2511488014839287,
+        "sector_coverage": 12,
+        "yaw_rad": 0.18570502017726512,
+        "translation_xy_m": [
+          -0.04943004018897309,
+          -0.16824897560259305
+        ],
+        "phase_response": 0.23967230191919953
+      },
+      "verification_ms": 47.58309900034874,
+      "pose_error": {
+        "translation_error_m": 757.9885972700608,
+        "rotation_error_deg": 176.11726785792465,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2291",
+      "reference_id": "reference_2557",
+      "rank": 1,
+      "score": 0.9287720918655396,
+      "distance_m": 384.49941589266666,
+      "verification": {
+        "overlap": 0.575,
+        "rmse_m": 2.0942279910574038,
+        "sector_coverage": 12,
+        "yaw_rad": -3.053509848204977,
+        "translation_xy_m": [
+          -2.3097366038611615,
+          1.816089970350769
+        ],
+        "phase_response": 0.21210647057159804
+      },
+      "verification_ms": 47.96500499969625,
+      "pose_error": {
+        "translation_error_m": 385.8156094725724,
+        "rotation_error_deg": 64.47799703296273,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2291",
+      "reference_id": "reference_2708",
+      "rank": 2,
+      "score": 0.9260480999946594,
+      "distance_m": 64.0551450264816,
+      "verification": {
+        "overlap": 0.6125,
+        "rmse_m": 1.790200110029129,
+        "sector_coverage": 12,
+        "yaw_rad": -0.05863649871033321,
+        "translation_xy_m": [
+          -6.0666904049196475,
+          -0.023154216612288926
+        ],
+        "phase_response": 0.30114040500484407
+      },
+      "verification_ms": 41.685911000058695,
+      "pose_error": {
+        "translation_error_m": 70.12231052556301,
+        "rotation_error_deg": 3.210097737822711,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2291",
+      "reference_id": "reference_2332",
+      "rank": 3,
+      "score": 0.9225555658340454,
+      "distance_m": 453.62485891167705,
+      "verification": {
+        "overlap": 0.53,
+        "rmse_m": 2.1251187711570094,
+        "sector_coverage": 12,
+        "yaw_rad": 2.8839401324319844,
+        "translation_xy_m": [
+          1.0442746278783048,
+          0.27479746723462456
+        ],
+        "phase_response": 0.1281372949888464
+      },
+      "verification_ms": 37.7913330003139,
+      "pose_error": {
+        "translation_error_m": 454.23159604689016,
+        "rotation_error_deg": 35.76960264473098,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2383",
+      "reference_id": "reference_2821",
+      "rank": 1,
+      "score": 0.9796562790870667,
+      "distance_m": 0.584407461947902,
+      "verification": {
+        "overlap": 0.9575,
+        "rmse_m": 1.0104079705890707,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0026933103858779164,
+        "translation_xy_m": [
+          0.11106260482956822,
+          0.5784236189788359
+        ],
+        "phase_response": 0.5969978568609804
+      },
+      "verification_ms": 43.86539400002221,
+      "pose_error": {
+        "translation_error_m": 0.004637233028342839,
+        "rotation_error_deg": 0.3363210435960892,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_2383",
+      "reference_id": "reference_2256",
+      "rank": 2,
+      "score": 0.9535946846008301,
+      "distance_m": 490.7477163302482,
+      "verification": {
+        "overlap": 0.66,
+        "rmse_m": 1.98199863034756,
+        "sector_coverage": 12,
+        "yaw_rad": 3.079645230756484,
+        "translation_xy_m": [
+          0.2823736574681979,
+          -5.293926077928537
+        ],
+        "phase_response": 0.2751871842192486
+      },
+      "verification_ms": 43.01384299969868,
+      "pose_error": {
+        "translation_error_m": 490.9333513545803,
+        "rotation_error_deg": 3.44093085373569,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2383",
+      "reference_id": "reference_2745",
+      "rank": 3,
+      "score": 0.9535914063453674,
+      "distance_m": 164.1723508682075,
+      "verification": {
+        "overlap": 0.6,
+        "rmse_m": 2.1041309139306485,
+        "sector_coverage": 12,
+        "yaw_rad": 2.90019397131604,
+        "translation_xy_m": [
+          1.1007087580383301,
+          1.6025414388428547
+        ],
+        "phase_response": 0.19657838786952198
+      },
+      "verification_ms": 48.29168399965056,
+      "pose_error": {
+        "translation_error_m": 162.87056365461976,
+        "rotation_error_deg": 165.27083895694767,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2475",
+      "reference_id": "reference_1918",
+      "rank": 1,
+      "score": 0.939383327960968,
+      "distance_m": 123.87225004155668,
+      "verification": {
+        "overlap": 0.5325,
+        "rmse_m": 2.2394240106293233,
+        "sector_coverage": 12,
+        "yaw_rad": 0.20485371875484448,
+        "translation_xy_m": [
+          -0.7106816751815629,
+          -0.8317976139514173
+        ],
+        "phase_response": 0.08188954542856663
+      },
+      "verification_ms": 46.47919500030184,
+      "pose_error": {
+        "translation_error_m": 124.39112356716322,
+        "rotation_error_deg": 158.30930290663818,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2475",
+      "reference_id": "reference_3347",
+      "rank": 2,
+      "score": 0.932727575302124,
+      "distance_m": 655.7743946849664,
+      "verification": {
+        "overlap": 0.6675,
+        "rmse_m": 2.1170197675539297,
+        "sector_coverage": 12,
+        "yaw_rad": -0.11841031733410161,
+        "translation_xy_m": [
+          1.0620486372524345,
+          -1.8047985585910025
+        ],
+        "phase_response": 0.2206087043741718
+      },
+      "verification_ms": 45.55385599996953,
+      "pose_error": {
+        "translation_error_m": 655.9012440904802,
+        "rotation_error_deg": 128.06800194326118,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2475",
+      "reference_id": "reference_1692",
+      "rank": 3,
+      "score": 0.9326781034469604,
+      "distance_m": 357.8842138618976,
+      "verification": {
+        "overlap": 0.575,
+        "rmse_m": 2.0447496814597215,
+        "sector_coverage": 12,
+        "yaw_rad": -0.09650665749376464,
+        "translation_xy_m": [
+          -1.486382307324517,
+          0.6017201836238029
+        ],
+        "phase_response": 0.05836331460159272
+      },
+      "verification_ms": 44.18164799972146,
+      "pose_error": {
+        "translation_error_m": 357.9687525467177,
+        "rotation_error_deg": 48.940547917998884,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2566",
+      "reference_id": "reference_1918",
+      "rank": 1,
+      "score": 0.9405105113983154,
+      "distance_m": 64.95723973654933,
+      "verification": {
+        "overlap": 0.63,
+        "rmse_m": 2.1753275835037953,
+        "sector_coverage": 12,
+        "yaw_rad": 0.1204955767685288,
+        "translation_xy_m": [
+          0.23588336390428785,
+          -1.9719458412890167
+        ],
+        "phase_response": 0.17142947809770703
+      },
+      "verification_ms": 54.231007000453246,
+      "pose_error": {
+        "translation_error_m": 65.22623944908223,
+        "rotation_error_deg": 157.52533495236437,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2566",
+      "reference_id": "reference_3197",
+      "rank": 2,
+      "score": 0.9335556030273438,
+      "distance_m": 313.65019504493347,
+      "verification": {
+        "overlap": 0.67,
+        "rmse_m": 2.2435203479792425,
+        "sector_coverage": 12,
+        "yaw_rad": 0.09330315720858794,
+        "translation_xy_m": [
+          0.18408534662395865,
+          0.9177217579786086
+        ],
+        "phase_response": 0.11466585053130984
+      },
+      "verification_ms": 37.34409200023947,
+      "pose_error": {
+        "translation_error_m": 314.34112214110456,
+        "rotation_error_deg": 113.5712355741171,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2566",
+      "reference_id": "reference_2595",
+      "rank": 3,
+      "score": 0.9322161078453064,
+      "distance_m": 1004.658661119578,
+      "verification": {
+        "overlap": 0.6175,
+        "rmse_m": 1.956414023059005,
+        "sector_coverage": 12,
+        "yaw_rad": -0.07628117184546362,
+        "translation_xy_m": [
+          0.0536227250904733,
+          0.5679467680508605
+        ],
+        "phase_response": -0.04143053316511214
+      },
+      "verification_ms": 44.81925600020986,
+      "pose_error": {
+        "translation_error_m": 1004.6082407137596,
+        "rotation_error_deg": 5.091220840569491,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2658",
+      "reference_id": "reference_2557",
+      "rank": 1,
+      "score": 0.9349082708358765,
+      "distance_m": 1168.4166057652467,
+      "verification": {
+        "overlap": 0.5725,
+        "rmse_m": 1.9234237500100715,
+        "sector_coverage": 12,
+        "yaw_rad": 0.33693125899928694,
+        "translation_xy_m": [
+          1.0035612898138118,
+          1.377100405567172
+        ],
+        "phase_response": 0.20608712430112064
+      },
+      "verification_ms": 37.63053700004093,
+      "pose_error": {
+        "translation_error_m": 1170.0468120460562,
+        "rotation_error_deg": 137.9520540455637,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2658",
+      "reference_id": "reference_3272",
+      "rank": 2,
+      "score": 0.9274653196334839,
+      "distance_m": 414.799857410433,
+      "verification": {
+        "overlap": 0.46,
+        "rmse_m": 2.226089861496975,
+        "sector_coverage": 12,
+        "yaw_rad": 0.018529890828158105,
+        "translation_xy_m": [
+          -0.329926730872647,
+          -2.34249269513334
+        ],
+        "phase_response": 0.21143660554662347
+      },
+      "verification_ms": 44.691576000332134,
+      "pose_error": {
+        "translation_error_m": 413.864934474242,
+        "rotation_error_deg": 39.27933823690211,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2658",
+      "reference_id": "reference_4175",
+      "rank": 3,
+      "score": 0.9266893863677979,
+      "distance_m": 1241.5878672970061,
+      "verification": {
+        "overlap": 0.475,
+        "rmse_m": 2.4897409924317686,
+        "sector_coverage": 12,
+        "yaw_rad": 0.6500112300303033,
+        "translation_xy_m": [
+          2.5261059686213923,
+          4.955650245221218
+        ],
+        "phase_response": 0.10302944353315979
+      },
+      "verification_ms": 46.90845999994053,
+      "pose_error": {
+        "translation_error_m": 1240.2565193379153,
+        "rotation_error_deg": 95.56016655909133,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2750",
+      "reference_id": "reference_2632",
+      "rank": 1,
+      "score": 0.9417164325714111,
+      "distance_m": 1026.693112326969,
+      "verification": {
+        "overlap": 0.6675,
+        "rmse_m": 2.0301950480186166,
+        "sector_coverage": 12,
+        "yaw_rad": -0.06601381593578545,
+        "translation_xy_m": [
+          -5.316672850547325,
+          1.2560074056210642
+        ],
+        "phase_response": 0.1649617524817586
+      },
+      "verification_ms": 40.27399899996453,
+      "pose_error": {
+        "translation_error_m": 1032.0913696400582,
+        "rotation_error_deg": 127.36201682442761,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2750",
+      "reference_id": "reference_3347",
+      "rank": 2,
+      "score": 0.9404805898666382,
+      "distance_m": 466.1329540428973,
+      "verification": {
+        "overlap": 0.6225,
+        "rmse_m": 1.9617839493011986,
+        "sector_coverage": 12,
+        "yaw_rad": 3.003130486080744,
+        "translation_xy_m": [
+          11.35040671240694,
+          -8.009070120397961
+        ],
+        "phase_response": 0.2635063473135233
+      },
+      "verification_ms": 56.26546399980725,
+      "pose_error": {
+        "translation_error_m": 478.92267037055416,
+        "rotation_error_deg": 177.9793183871208,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2750",
+      "reference_id": "reference_1730",
+      "rank": 3,
+      "score": 0.9390926361083984,
+      "distance_m": 21.65573804382388,
+      "verification": {
+        "overlap": 0.6225,
+        "rmse_m": 2.026595688922305,
+        "sector_coverage": 11,
+        "yaw_rad": -0.00912793117342978,
+        "translation_xy_m": [
+          2.8510139560396626,
+          -0.0931543933826523
+        ],
+        "phase_response": 0.13723451166879386
+      },
+      "verification_ms": 115.37640400001692,
+      "pose_error": {
+        "translation_error_m": 24.395774916197187,
+        "rotation_error_deg": 179.75753320209986,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2841",
+      "reference_id": "reference_2595",
+      "rank": 1,
+      "score": 0.933228075504303,
+      "distance_m": 966.0500953889244,
+      "verification": {
+        "overlap": 0.6375,
+        "rmse_m": 2.022421300591461,
+        "sector_coverage": 12,
+        "yaw_rad": 0.18990166258065871,
+        "translation_xy_m": [
+          -1.7345675118877375,
+          -1.1782354286822403
+        ],
+        "phase_response": 0.18557585263624787
+      },
+      "verification_ms": 36.28410600003917,
+      "pose_error": {
+        "translation_error_m": 966.6793374569253,
+        "rotation_error_deg": 156.43342907778347,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2841",
+      "reference_id": "reference_4363",
+      "rank": 2,
+      "score": 0.9309366941452026,
+      "distance_m": 1256.6294791295222,
+      "verification": {
+        "overlap": 0.605,
+        "rmse_m": 2.2503567441660537,
+        "sector_coverage": 12,
+        "yaw_rad": -3.0801442106319077,
+        "translation_xy_m": [
+          -4.468061045319822,
+          -3.2431519477033257
+        ],
+        "phase_response": 0.055518921348266304
+      },
+      "verification_ms": 50.75638700009222,
+      "pose_error": {
+        "translation_error_m": 1253.1058357596953,
+        "rotation_error_deg": 80.94934381669592,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2841",
+      "reference_id": "reference_2181",
+      "rank": 3,
+      "score": 0.9267545938491821,
+      "distance_m": 751.9543822398608,
+      "verification": {
+        "overlap": 0.5825,
+        "rmse_m": 2.203077246575945,
+        "sector_coverage": 12,
+        "yaw_rad": 0.11956864627370001,
+        "translation_xy_m": [
+          -0.7613859627938955,
+          -1.0056507559323005
+        ],
+        "phase_response": 0.00030797976069152355
+      },
+      "verification_ms": 45.70028300031481,
+      "pose_error": {
+        "translation_error_m": 752.0883832139743,
+        "rotation_error_deg": 35.713077936201174,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2933",
+      "reference_id": "reference_1843",
+      "rank": 1,
+      "score": 0.9309860467910767,
+      "distance_m": 829.6740738142881,
+      "verification": {
+        "overlap": 0.46,
+        "rmse_m": 2.1856123643286463,
+        "sector_coverage": 12,
+        "yaw_rad": 0.18581645190295884,
+        "translation_xy_m": [
+          1.3979737407300032,
+          0.14898775260759145
+        ],
+        "phase_response": 0.1405707141966559
+      },
+      "verification_ms": 40.46874699997716,
+      "pose_error": {
+        "translation_error_m": 830.4137347381659,
+        "rotation_error_deg": 130.07090880772026,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2933",
+      "reference_id": "reference_2332",
+      "rank": 2,
+      "score": 0.9109524488449097,
+      "distance_m": 1043.6469283723518,
+      "verification": {
+        "overlap": 0.5875,
+        "rmse_m": 2.1633129184524664,
+        "sector_coverage": 12,
+        "yaw_rad": -0.5483098818285999,
+        "translation_xy_m": [
+          0.9458987086039226,
+          -1.3333662021330244
+        ],
+        "phase_response": -0.0027642458444461226
+      },
+      "verification_ms": 40.16214700004639,
+      "pose_error": {
+        "translation_error_m": 1044.9575681851675,
+        "rotation_error_deg": 48.95755148589838,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_2933",
+      "reference_id": "reference_1617",
+      "rank": 3,
+      "score": 0.9109150171279907,
+      "distance_m": 335.6557331811822,
+      "verification": {
+        "overlap": 0.62,
+        "rmse_m": 2.1850904853244493,
+        "sector_coverage": 12,
+        "yaw_rad": -0.21932093440638886,
+        "translation_xy_m": [
+          0.4043095841916886,
+          0.03048220596365126
+        ],
+        "phase_response": 0.16785652795806527
+      },
+      "verification_ms": 42.04107700024906,
+      "pose_error": {
+        "translation_error_m": 336.0945915019057,
+        "rotation_error_deg": 142.23864882349022,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3025",
+      "reference_id": "reference_3535",
+      "rank": 1,
+      "score": 0.9253783226013184,
+      "distance_m": 53.56723202517867,
+      "verification": {
+        "overlap": 0.6125,
+        "rmse_m": 1.9490207271806914,
+        "sector_coverage": 12,
+        "yaw_rad": 0.030299398894282105,
+        "translation_xy_m": [
+          -0.1810802935620924,
+          -2.534379283830446
+        ],
+        "phase_response": 0.12097739859018475
+      },
+      "verification_ms": 47.70229299992934,
+      "pose_error": {
+        "translation_error_m": 53.2277565754121,
+        "rotation_error_deg": 0.5567783160459685,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3025",
+      "reference_id": "reference_1466",
+      "rank": 2,
+      "score": 0.9169973134994507,
+      "distance_m": 237.0454340860688,
+      "verification": {
+        "overlap": 0.6375,
+        "rmse_m": 2.007998007746931,
+        "sector_coverage": 12,
+        "yaw_rad": 0.3577483972328545,
+        "translation_xy_m": [
+          -0.2466492262561037,
+          -2.7420914630123483
+        ],
+        "phase_response": 0.09268988913390785
+      },
+      "verification_ms": 53.899860000001354,
+      "pose_error": {
+        "translation_error_m": 235.6568960214281,
+        "rotation_error_deg": 176.36567403696176,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3025",
+      "reference_id": "reference_3573",
+      "rank": 3,
+      "score": 0.9152339696884155,
+      "distance_m": 66.51207929382204,
+      "verification": {
+        "overlap": 0.5325,
+        "rmse_m": 2.0223411034919563,
+        "sector_coverage": 12,
+        "yaw_rad": 0.0781260167883242,
+        "translation_xy_m": [
+          -1.374841748211831,
+          -2.480284722538099
+        ],
+        "phase_response": -0.005270938854664564
+      },
+      "verification_ms": 51.89122899992071,
+      "pose_error": {
+        "translation_error_m": 64.9961077975383,
+        "rotation_error_deg": 2.924631089785263,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3116",
+      "reference_id": "reference_3686",
+      "rank": 1,
+      "score": 0.9304958581924438,
+      "distance_m": 74.56246976596957,
+      "verification": {
+        "overlap": 0.49,
+        "rmse_m": 2.29258199823878,
+        "sector_coverage": 12,
+        "yaw_rad": -1.6454098013018337,
+        "translation_xy_m": [
+          -15.862031693196581,
+          -5.123743714924467
+        ],
+        "phase_response": 0.08868393255397677
+      },
+      "verification_ms": 39.612830000351096,
+      "pose_error": {
+        "translation_error_m": 58.5891138385009,
+        "rotation_error_deg": 94.29889347965903,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3116",
+      "reference_id": "reference_1090",
+      "rank": 2,
+      "score": 0.92960125207901,
+      "distance_m": 54.559112520775386,
+      "verification": {
+        "overlap": 0.4375,
+        "rmse_m": 2.385261337409063,
+        "sector_coverage": 12,
+        "yaw_rad": -2.8515507197220042,
+        "translation_xy_m": [
+          -6.880417944627204,
+          0.5457652046902132
+        ],
+        "phase_response": 0.05705401604063809
+      },
+      "verification_ms": 44.64257100016766,
+      "pose_error": {
+        "translation_error_m": 61.44801612458654,
+        "rotation_error_deg": 16.226431834660122,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3116",
+      "reference_id": "reference_677",
+      "rank": 3,
+      "score": 0.9284480810165405,
+      "distance_m": 253.23645207630707,
+      "verification": {
+        "overlap": 0.4425,
+        "rmse_m": 2.3768256468959907,
+        "sector_coverage": 12,
+        "yaw_rad": 2.798149796176546,
+        "translation_xy_m": [
+          -2.95948651703093,
+          0.6496700084724077
+        ],
+        "phase_response": 0.03211437747813761
+      },
+      "verification_ms": 44.188441000187595,
+      "pose_error": {
+        "translation_error_m": 256.26151651467933,
+        "rotation_error_deg": 9.685571157666546,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3208",
+      "reference_id": "reference_4062",
+      "rank": 1,
+      "score": 0.9432199001312256,
+      "distance_m": 15.5041195833854,
+      "verification": {
+        "overlap": 0.7475,
+        "rmse_m": 1.4937136289547517,
+        "sector_coverage": 12,
+        "yaw_rad": 0.019481177116728907,
+        "translation_xy_m": [
+          15.223663676394255,
+          -2.464308654907529
+        ],
+        "phase_response": 0.17384198622312397
+      },
+      "verification_ms": 49.741713000003074,
+      "pose_error": {
+        "translation_error_m": 0.08825403034740284,
+        "rotation_error_deg": 0.407191494485516,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_3208",
+      "reference_id": "reference_677",
+      "rank": 2,
+      "score": 0.9359535574913025,
+      "distance_m": 25.025194938341212,
+      "verification": {
+        "overlap": 0.4775,
+        "rmse_m": 2.2755400711494884,
+        "sector_coverage": 12,
+        "yaw_rad": -0.030437394006156658,
+        "translation_xy_m": [
+          0.1713322495790124,
+          0.5652357189891363
+        ],
+        "phase_response": 0.04633643769193441
+      },
+      "verification_ms": 37.36177500013582,
+      "pose_error": {
+        "translation_error_m": 25.375121502677455,
+        "rotation_error_deg": 178.62296065862182,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3208",
+      "reference_id": "reference_1241",
+      "rank": 3,
+      "score": 0.9321378469467163,
+      "distance_m": 247.8312395298825,
+      "verification": {
+        "overlap": 0.4425,
+        "rmse_m": 2.3632475213656954,
+        "sector_coverage": 12,
+        "yaw_rad": -0.20403317508208596,
+        "translation_xy_m": [
+          2.5793869507079297,
+          -0.7766971011192296
+        ],
+        "phase_response": 0.016018750437069684
+      },
+      "verification_ms": 38.98233400013851,
+      "pose_error": {
+        "translation_error_m": 250.32445987771547,
+        "rotation_error_deg": 158.5434329975634,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3300",
+      "reference_id": "reference_4175",
+      "rank": 1,
+      "score": 0.9552810192108154,
+      "distance_m": 5.062214000578917,
+      "verification": {
+        "overlap": 0.785,
+        "rmse_m": 1.4344334154785032,
+        "sector_coverage": 12,
+        "yaw_rad": 0.16336301047001436,
+        "translation_xy_m": [
+          -4.85265814227923,
+          -0.47260887567592025
+        ],
+        "phase_response": 0.33267243712907657
+      },
+      "verification_ms": 31.979810000393627,
+      "pose_error": {
+        "translation_error_m": 0.18907139251155886,
+        "rotation_error_deg": 0.31467210813071117,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_3300",
+      "reference_id": "reference_4137",
+      "rank": 2,
+      "score": 0.9381552934646606,
+      "distance_m": 27.28521744612989,
+      "verification": {
+        "overlap": 0.4625,
+        "rmse_m": 2.243428670351172,
+        "sector_coverage": 12,
+        "yaw_rad": 2.6641903384507475,
+        "translation_xy_m": [
+          0.8536612226080678,
+          0.9835239968154447
+        ],
+        "phase_response": -0.031840784940868616
+      },
+      "verification_ms": 48.835051000423846,
+      "pose_error": {
+        "translation_error_m": 26.42428626313686,
+        "rotation_error_deg": 152.71700060110462,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3300",
+      "reference_id": "reference_3610",
+      "rank": 3,
+      "score": 0.9358234405517578,
+      "distance_m": 581.611765222387,
+      "verification": {
+        "overlap": 0.445,
+        "rmse_m": 2.3617689830982833,
+        "sector_coverage": 12,
+        "yaw_rad": -0.26527315142944474,
+        "translation_xy_m": [
+          -0.5388059663217316,
+          -0.014637326906670184
+        ],
+        "phase_response": 0.15978954290039837
+      },
+      "verification_ms": 45.55641800016019,
+      "pose_error": {
+        "translation_error_m": 582.1296395120867,
+        "rotation_error_deg": 25.887609950186015,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3391",
+      "reference_id": "reference_3610",
+      "rank": 1,
+      "score": 0.9178183078765869,
+      "distance_m": 612.5119431207147,
+      "verification": {
+        "overlap": 0.3875,
+        "rmse_m": 2.205632164071027,
+        "sector_coverage": 12,
+        "yaw_rad": 2.7264605274890954,
+        "translation_xy_m": [
+          -7.625560829080422,
+          -7.218292409650341
+        ],
+        "phase_response": 0.2306823953986168
+      },
+      "verification_ms": 51.09831399977338,
+      "pose_error": {
+        "translation_error_m": 619.9777835116745,
+        "rotation_error_deg": 131.0501132407414,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3391",
+      "reference_id": "reference_4400",
+      "rank": 2,
+      "score": 0.9160236716270447,
+      "distance_m": 264.5225576959354,
+      "verification": {
+        "overlap": 0.48,
+        "rmse_m": 1.9489946152650701,
+        "sector_coverage": 11,
+        "yaw_rad": 3.028836504831992,
+        "translation_xy_m": [
+          2.4443325951428676,
+          0.012618966522909343
+        ],
+        "phase_response": 0.44133362773573026
+      },
+      "verification_ms": 43.936840999776905,
+      "pose_error": {
+        "translation_error_m": 265.76595672188625,
+        "rotation_error_deg": 156.47915324941428,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3391",
+      "reference_id": "reference_4250",
+      "rank": 3,
+      "score": 0.9146419167518616,
+      "distance_m": 20.5234449009535,
+      "verification": {
+        "overlap": 0.6475,
+        "rmse_m": 1.5526631432101796,
+        "sector_coverage": 12,
+        "yaw_rad": 0.11783276390888878,
+        "translation_xy_m": [
+          20.2117820292746,
+          0.6447424278639577
+        ],
+        "phase_response": 0.24190626153722405
+      },
+      "verification_ms": 43.43750799989721,
+      "pose_error": {
+        "translation_error_m": 0.3066261444717603,
+        "rotation_error_deg": 0.0851925175099168,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_3483",
+      "reference_id": "reference_4363",
+      "rank": 1,
+      "score": 0.9747312068939209,
+      "distance_m": 1.1505404451736514,
+      "verification": {
+        "overlap": 0.965,
+        "rmse_m": 1.0022030078900024,
+        "sector_coverage": 12,
+        "yaw_rad": 0.06571669253205918,
+        "translation_xy_m": [
+          -1.1897678224592763,
+          -0.18743651690298035
+        ],
+        "phase_response": 0.7838610166218132
+      },
+      "verification_ms": 46.6184419997262,
+      "pose_error": {
+        "translation_error_m": 0.07074228238594005,
+        "rotation_error_deg": 0.010379101455300063,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_3483",
+      "reference_id": "reference_2783",
+      "rank": 2,
+      "score": 0.9202519655227661,
+      "distance_m": 1934.34062669677,
+      "verification": {
+        "overlap": 0.555,
+        "rmse_m": 2.3034958286675367,
+        "sector_coverage": 12,
+        "yaw_rad": 0.10569498668744005,
+        "translation_xy_m": [
+          11.55100204368129,
+          -3.998737848894598
+        ],
+        "phase_response": 0.08838669629767537
+      },
+      "verification_ms": 46.498338999754196,
+      "pose_error": {
+        "translation_error_m": 1926.3554975804327,
+        "rotation_error_deg": 60.752489502003804,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3483",
+      "reference_id": "reference_2181",
+      "rank": 3,
+      "score": 0.9143033027648926,
+      "distance_m": 1996.773340010799,
+      "verification": {
+        "overlap": 0.6025,
+        "rmse_m": 1.910179657123865,
+        "sector_coverage": 12,
+        "yaw_rad": 0.011711875852597222,
+        "translation_xy_m": [
+          2.2828329097036724,
+          -1.472454000674702
+        ],
+        "phase_response": 0.18837382836500183
+      },
+      "verification_ms": 39.99792299964611,
+      "pose_error": {
+        "translation_error_m": 1999.29230014912,
+        "rotation_error_deg": 141.20631886314973,
+        "pose_correct": false
+      }
+    },
+    {
+      "query_id": "heldout_3575",
+      "reference_id": "reference_37",
+      "rank": 1,
+      "score": 0.9638780355453491,
+      "distance_m": 3.0453320270468525,
+      "verification": {
+        "overlap": 0.9425,
+        "rmse_m": 1.1346353063226111,
+        "sector_coverage": 12,
+        "yaw_rad": -0.007090504831499083,
+        "translation_xy_m": [
+          -2.966130737892345,
+          0.4650917383193766
+        ],
+        "phase_response": 0.6384356671478599
+      },
+      "verification_ms": 38.44394599991574,
+      "pose_error": {
+        "translation_error_m": 0.046184390069883605,
+        "rotation_error_deg": 0.0068749945140230825,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_3575",
+      "reference_id": "reference_0",
+      "rank": 2,
+      "score": 0.9604682922363281,
+      "distance_m": 3.0435702065182677,
+      "verification": {
+        "overlap": 0.925,
+        "rmse_m": 1.1468343771148248,
+        "sector_coverage": 12,
+        "yaw_rad": -0.005289270011668655,
+        "translation_xy_m": [
+          -2.9776296504551856,
+          0.4314920783576654
+        ],
+        "phase_response": 0.5831595234340057
+      },
+      "verification_ms": 40.63850000011371,
+      "pose_error": {
+        "translation_error_m": 0.05825837121456183,
+        "rotation_error_deg": 0.09744704331616061,
+        "pose_correct": true
+      }
+    },
+    {
+      "query_id": "heldout_3575",
+      "reference_id": "reference_4476",
+      "rank": 3,
+      "score": 0.9574350118637085,
+      "distance_m": 4.099244411656632,
+      "verification": {
+        "overlap": 0.88,
+        "rmse_m": 1.2045141005536328,
+        "sector_coverage": 12,
+        "yaw_rad": -0.015217444622415772,
+        "translation_xy_m": [
+          -4.01719512901601,
+          0.43898221167667945
+        ],
+        "phase_response": 0.38065849151462317
+      },
+      "verification_ms": 30.470265999611,
+      "pose_error": {
+        "translation_error_m": 0.08336794219270795,
+        "rotation_error_deg": 0.17599228110206502,
+        "pose_correct": true
+      }
+    }
+  ]
+}
