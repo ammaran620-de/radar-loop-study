@@ -67,7 +67,7 @@ This is **not a complete SLAM system**: no sequential odometry, temporal loop co
 - `data/manifest.json`: source URLs, scan hashes, exact pose coordinates and timestamps.
 - `results/learned_metrics.json`: compact recorded results; candidate_packets.jsonl: label-free proposals.
 - `third_party/radarloc/PROVENANCE.json`: upstream source and file checksums; LICENSE: upstream MIT terms.
-- `EXPERIMENT_REPORT.md`, `docs/RED_TEAM_REVIEW.md`, `INTERVIEW_GUIDE.md`: findings, criticism, and explanation.
+- `EXPERIMENT_REPORT.md`, `docs/RED_TEAM_REVIEW.md`: findings and criticism.
 - `VALIDATION.md`: numerical/model/DOM checks and remaining visual review.
 
 Optional DOM checks, after both HTML files have been generated:

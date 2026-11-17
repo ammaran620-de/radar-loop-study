@@ -4,7 +4,7 @@
 
 The question: when learned radar descriptors propose revisits, can scan-only geometric checks retain useful constraints and prevent damaging ones? This is aligned with the public IST project's feature extraction, place recognition, localization, mapping and drift-reduction objectives. The lab's internal stack and hardware remain unknown.
 
-The neural network is the **authors' frozen RadarLoc checkpoint**. It is not a new network trained here. Original integration and experiments were prepared with AI assistance; model/data attribution is retained.
+The neural network is the **authors' frozen RadarLoc checkpoint**. It is not a new network trained here. The original work here is the integration, the registration and validation code, and the experiments. Model and data credits are in `SOURCES.md`.
 
 ## Measured results
 
@@ -79,7 +79,6 @@ Unchecked graphs are negative controls, not state-of-the-art baselines. The robu
 - docs/UPGRADE_PROTOCOL.md — protocol and availability amendment.
 - results/frozen_gate.json, *_v4.json — settings and inspectable recorded results.
 - build_validation_report.py — scientific figure and self-contained HTML report.
-- INTERVIEW_GUIDE.md — explain contributions, results and limitations honestly.
 
 For historical dashboard DOM tests: npm ci, then npm test after generating all HTML files. A report DOM test is included. Scientific figures were rendered and inspected; DOM tests do not establish every browser layout.
 
